@@ -15,7 +15,7 @@ export const portfolioImages: ImageCategory[] = {
   })),
   'Exterior': Array.from({ length: 16 }, (_, i) => ({
     id: `exteriors-${i + 1}`,
-    url: `/images/portfolio/exteriors/exteriors-${i + 1}.jpeg`,
+    url: `/images/portfolio/exteriors/exteriors-${i + 1}.jpg`,
     title: `Exterior Project ${i + 1}`,
     description: 'Professional exterior renovation and improvement'
   })),
