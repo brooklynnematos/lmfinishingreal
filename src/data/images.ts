@@ -3,13 +3,13 @@ import { ImageCategory } from '../types';
 export const portfolioImages: ImageCategory[] = {
   'Basement Finishing': Array.from({ length: 9 }, (_, i) => ({
     id: `basement-${i + 1}`,
-    url: `/images/portfolio/basement/basement-${i + 1}.jpeg`,
+    url: `/images/portfolio/basement/basement-${i + 1}.jpg`,  // 🔥 Changed .jpeg → .jpg
     title: `Basement Project ${i + 1}`,
     description: 'Expert basement finishing and design'
   })),
   'Custom Carpentry': Array.from({ length: 40 }, (_, i) => ({
     id: `carpentry-${i + 1}`,
-    url: `/images/portfolio/carpentry/carpentry-${i + 1}.jpeg`,
+    url: `/images/portfolio/carpentry/carpentry-${i + 1}.jpg`, // 🔥 Changed .jpeg → .jpg
     title: `Custom Carpentry Project ${i + 1}`,
     description: 'Expert carpentry craftsmanship and detail'
   })),
@@ -21,11 +21,12 @@ export const portfolioImages: ImageCategory[] = {
   })),
   'Home Renovations': Array.from({ length: 40 }, (_, i) => ({
     id: `renovations-${i + 1}`,
-    url: `/images/portfolio/renovations/renovations-${i + 1}.jpeg`,
+    url: `/images/portfolio/renovations/renovations-${i + 1}.jpg`, // 🔥 Changed .jpeg → .jpg
     title: `Home Renovation Project ${i + 1}`,
     description: 'Complete home transformation and upgrade'
   }))
 };
+
 
 export const serviceImages = {
   'Basement Finishing': {
