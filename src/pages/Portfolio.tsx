@@ -97,10 +97,7 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
                   <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-6">
                     <p className="text-xl font-semibold mb-2">{image.title}</p>
-                    <p className="text-primary-light mb-4">{image.description}</p>
-                    <button className="px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-primary transition-colors duration-300">
-                      View Details
-                    </button>
+                    <p className="text-primary-light">{image.description}</p>
                   </div>
                 </div>
               </motion.div>
