@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Home as HomeIcon, PenTool as Tool } from 'lucide-react';
 import { services } from '../data/content';
 import GoogleReviews from '../components/GoogleReviews';
@@ -43,19 +44,19 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
             >
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-[#4A90E2] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#357ABD] transition-colors flex items-center justify-center"
               >
                 Get a Free Estimate
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href="/portfolio"
+              </Link>
+              <Link
+                to="/portfolio"
                 className="bg-white text-primary-600 px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
               >
                 View Our Work
-              </a>
+              </Link>
             </motion.div>
           </div>
         </div>
@@ -154,13 +155,13 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-white mb-8">
             Ready to Start Your Project?
           </h2>
-          <a
-            href="/contact"
+          <Link
+            to="/contact"
             className="inline-flex items-center bg-white text-[#4A90E2] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
           >
             Get Your Free Estimate
             <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
+          </Link>
         </div>
       </section>
     </div>
