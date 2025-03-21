@@ -99,7 +99,7 @@ const About = () => {
               className="relative"
             >
               <img
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296"
+                src="/images/about/IMG_9924.JPG"
                 alt="Leo Matos"
                 className="rounded-lg shadow-xl w-full h-[500px] object-cover"
               />
