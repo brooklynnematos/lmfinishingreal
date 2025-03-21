@@ -28,7 +28,7 @@ export const services: Service[] = [
   {
     title: "Custom Carpentry",
     description: "Expert craftsmanship for all your custom woodworking and carpentry needs.",
-    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    imageUrl: "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
     features: [
       "Built-in entertainment centers",
       "Custom cabinets and shelving",
@@ -39,7 +39,7 @@ export const services: Service[] = [
   {
     title: "Exterior Services",
     description: "Enhance your home's curb appeal and outdoor living spaces.",
-    imageUrl: "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
+    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
     features: [
       "Custom deck construction",
       "Patio installations",
