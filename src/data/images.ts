@@ -3,25 +3,25 @@ import { ImageCategory } from '../types';
 export const portfolioImages: ImageCategory[] = {
   'Basement Finishing': Array.from({ length: 9 }, (_, i) => ({
     id: `basement-${i + 1}`,
-    url: `/images/portfolio/basement/basement-${i + 1}.jpg`,  // 🔥 Changed .jpeg → .jpg
+    url: `/images/portfolio/basement/basement-${i + 1}.webp`,  // 🔥 Changed .jpeg → .webp
     title: `Basement Project ${i + 1}`,
     description: 'Expert basement finishing and design'
   })),
   'Custom Carpentry': Array.from({ length: 40 }, (_, i) => ({
     id: `carpentry-${i + 1}`,
-    url: `/images/portfolio/carpentry/carpentry-${i + 1}.jpg`, // 🔥 Changed .jpeg → .jpg
+    url: `/images/portfolio/carpentry/carpentry-${i + 1}.webp`, // 🔥 Changed .jpeg → .webp
     title: `Custom Carpentry Project ${i + 1}`,
     description: 'Expert carpentry craftsmanship and detail'
   })),
   'Exterior': Array.from({ length: 24 }, (_, i) => ({
     id: `exteriors-${i + 1}`,
-    url: `/images/portfolio/exteriors/exteriors-${i + 1}.jpg`,
+    url: `/images/portfolio/exteriors/exteriors-${i + 1}.webp`,  // 🔥 Using optimized WebP format
     title: `Exterior Project ${i + 1}`,
     description: 'Professional exterior renovation and improvement'
   })),
   'Home Renovations': Array.from({ length: 40 }, (_, i) => ({
     id: `renovations-${i + 1}`,
-    url: `/images/portfolio/renovations/renovations-${i + 1}.jpg`, // 🔥 Changed .jpeg → .jpg
+    url: `/images/portfolio/renovations/renovations-${i + 1}.webp`, // 🔥 Changed .jpeg → .webp
     title: `Home Renovation Project ${i + 1}`,
     description: 'Complete home transformation and upgrade'
   }))
