@@ -1,11 +1,26 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Star, Users, Home as HomeIcon, PenTool as Tool } from 'lucide-react';
+import { ArrowRight, Star, Users, Home as HomeIcon, PenTool as Tool, Image } from 'lucide-react';
 import { services } from '../data/content';
 import GoogleReviews from '../components/GoogleReviews';
 
 const Home = () => {
+  const getCategoryFromTitle = (title: string) => {
+    switch (title) {
+      case "Basement Finishing":
+        return "Basement Finishing";
+      case "Home Renovations":
+        return "Home Renovations";
+      case "Custom Carpentry":
+        return "Custom Carpentry";
+      case "Exterior Services":
+        return "Exterior";
+      default:
+        return "All";
+    }
+  };
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -131,7 +146,7 @@ const Home = () => {
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2">
+                  <ul className="space-y-2 mb-6">
                     {service.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-gray-600">
                         <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
@@ -139,6 +154,22 @@ const Home = () => {
                       </li>
                     ))}
                   </ul>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link
+                      to="/contact"
+                      className="flex items-center justify-center bg-[#4A90E2] text-white px-6 py-2 rounded-md font-medium hover:bg-[#357ABD] transition-colors"
+                    >
+                      Get Started
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                    <Link
+                      to={`/portfolio?category=${getCategoryFromTitle(service.title)}`}
+                      className="flex items-center justify-center border-2 border-[#4A90E2] text-[#4A90E2] px-6 py-2 rounded-md font-medium hover:bg-[#4A90E2] hover:text-white transition-colors"
+                    >
+                      View Work
+                      <Image className="ml-2 h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
               </motion.div>
             ))}
