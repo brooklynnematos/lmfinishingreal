@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
+import { portfolioImages } from '../data/images';
 
 const Portfolio = () => {
   const location = useLocation();
@@ -17,58 +18,13 @@ const Portfolio = () => {
   
   const categories = [
     'All',
-    'Basement Finishing',
-    'Home Renovations',
-    'Custom Carpentry',
-    'Exterior'
-  ];
-  
-  const projects = [
-    {
-      category: 'Basement Finishing',
-      imageUrl: 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d',
-      title: 'Modern Entertainment Space'
-    },
-    {
-      category: 'Home Renovations',
-      imageUrl: 'https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3',
-      title: 'Kitchen Transformation'
-    },
-    {
-      category: 'Custom Carpentry',
-      imageUrl: 'https://images.unsplash.com/photo-1600573472591-ee6981cf35b6',
-      title: 'Built-in Entertainment Center'
-    },
-    {
-      category: 'Exterior',
-      imageUrl: 'https://images.unsplash.com/photo-1600585152220-90363fe7e115',
-      title: 'Custom Deck Installation'
-    },
-    {
-      category: 'Basement Finishing',
-      imageUrl: 'https://images.unsplash.com/photo-1600573472587-f65e4dd27566',
-      title: 'Home Theater Setup'
-    },
-    {
-      category: 'Home Renovations',
-      imageUrl: 'https://images.unsplash.com/photo-1600566752355-35792bedcfea',
-      title: 'Master Bath Remodel'
-    },
-    {
-      category: 'Custom Carpentry',
-      imageUrl: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c',
-      title: 'Custom Shelving Units'
-    },
-    {
-      category: 'Exterior',
-      imageUrl: 'https://images.unsplash.com/photo-1600573472592-999f3a79fde0',
-      title: 'Outdoor Living Space'
-    }
+    ...Object.keys(portfolioImages)
   ];
 
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+  // Flatten all images into a single array when 'All' is selected
+  const allImages = selectedCategory === 'All'
+    ? Object.values(portfolioImages).flat()
+    : portfolioImages[selectedCategory] || [];
 
   return (
     <div className="w-full bg-primary-lighter">
@@ -123,9 +79,9 @@ const Portfolio = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             layout
           >
-            {filteredProjects.map((project, index) => (
+            {allImages.map((image) => (
               <motion.div
-                key={index}
+                key={image.id}
                 layout
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -134,14 +90,14 @@ const Portfolio = () => {
                 className="relative group overflow-hidden rounded-lg shadow-lg aspect-square"
               >
                 <img
-                  src={project.imageUrl}
-                  alt={project.title}
+                  src={image.url}
+                  alt={image.title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
                   <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-6">
-                    <p className="text-xl font-semibold mb-2">{project.title}</p>
-                    <p className="text-primary-light mb-4">{project.category}</p>
+                    <p className="text-xl font-semibold mb-2">{image.title}</p>
+                    <p className="text-primary-light mb-4">{image.description}</p>
                     <button className="px-6 py-2 border-2 border-white text-white hover:bg-white hover:text-primary transition-colors duration-300">
                       View Details
                     </button>
