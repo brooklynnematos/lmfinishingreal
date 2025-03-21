@@ -26,14 +26,16 @@ const ImageModal = ({ image, onClose }: { image: any; onClose: () => void }) => 
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       exit={{ scale: 0.9, opacity: 0 }}
-      className="relative max-w-7xl max-h-[90vh] w-full"
+      className="relative w-full max-w-4xl"
       onClick={(e) => e.stopPropagation()}
     >
-      <img
-        src={image.url}
-        alt={image.title}
-        className="w-full h-full object-contain rounded-lg"
-      />
+      <div className="relative aspect-[4/3] w-full">
+        <img
+          src={image.url}
+          alt={image.title}
+          className="rounded-lg w-full h-full object-contain"
+        />
+      </div>
       <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 text-white p-4 rounded-b-lg">
         <h3 className="text-xl font-semibold">{image.title}</h3>
         <p className="text-gray-300">{image.description}</p>
