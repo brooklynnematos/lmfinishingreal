@@ -15,13 +15,13 @@ export const portfolioImages: ImageCategory[] = {
   })),
   'Exterior': Array.from({ length: 16 }, (_, i) => ({
     id: `exterior-${i + 1}`,
-    url: `/images/portfolio/exteriors/exterior-${i + 1}.jpeg`,
+    url: `/images/portfolio/exteriors/exteriors-${i + 1}.jpeg`,
     title: `Exterior Project ${i + 1}`,
     description: 'Professional exterior renovation and improvement'
   })),
   'Home Renovations': Array.from({ length: 37 }, (_, i) => ({
     id: `renovation-${i + 1}`,
-    url: `/images/portfolio/renovations/renovation-${i + 1}.jpeg`,
+    url: `/images/portfolio/renovations/renovations-${i + 1}.jpeg`,
     title: `Home Renovation Project ${i + 1}`,
     description: 'Complete home transformation and upgrade'
   }))
