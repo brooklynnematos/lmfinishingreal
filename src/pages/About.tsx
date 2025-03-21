@@ -101,7 +101,7 @@ const About = () => {
               <img
                 src="/images/about/IMG_9924.JPG"
                 alt="Leo Matos"
-                className="rounded-lg shadow-xl w-full h-[500px] object-cover"
+                className="rounded-lg shadow-xl w-full h-[400px] object-cover"
               />
             </motion.div>
             <motion.div
