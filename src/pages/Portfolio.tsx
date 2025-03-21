@@ -3,11 +3,15 @@ import { motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 import { portfolioImages } from '../data/images';
 
+const ImageSkeleton = () => (
+  <div className="aspect-square bg-gray-200 rounded-lg animate-pulse" />
+);
+
 const Portfolio = () => {
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [imagesLoaded, setImagesLoaded] = useState<{[key: string]: boolean}>({});
   
-  // Get category from URL search params
   useEffect(() => {
     const params = new URLSearchParams(location.search);
     const category = params.get('category');
@@ -21,10 +25,16 @@ const Portfolio = () => {
     ...Object.keys(portfolioImages)
   ];
 
-  // Flatten all images into a single array when 'All' is selected
   const allImages = selectedCategory === 'All'
     ? Object.values(portfolioImages).flat()
     : portfolioImages[selectedCategory] || [];
+
+  const handleImageLoad = (imageId: string) => {
+    setImagesLoaded(prev => ({
+      ...prev,
+      [imageId]: true
+    }));
+  };
 
   return (
     <div className="w-full bg-primary-lighter">
@@ -79,7 +89,7 @@ const Portfolio = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
             layout
           >
-            {allImages.map((image) => (
+            {allImages.map((image, index) => (
               <motion.div
                 key={image.id}
                 layout
@@ -89,10 +99,15 @@ const Portfolio = () => {
                 transition={{ duration: 0.5 }}
                 className="relative group overflow-hidden rounded-lg shadow-lg aspect-square"
               >
+                {!imagesLoaded[image.id] && <ImageSkeleton />}
                 <img
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  loading={index > 5 ? "lazy" : "eager"}
+                  onLoad={() => handleImageLoad(image.id)}
+                  className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${
+                    imagesLoaded[image.id] ? 'opacity-100' : 'opacity-0'
+                  }`}
                 />
                 <div className="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
                   <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-6">
