@@ -4,7 +4,7 @@ export const services: Service[] = [
   {
     title: "Basement Finishing",
     description: "Transform your unfinished basement into a beautiful, functional living space that adds value to your home.",
-    imageUrl: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+    imageUrl: `/images/portfolio/basement/basement-3.webp`,
     features: [
       "Custom design and planning",
       "Full electrical and plumbing work",
@@ -16,7 +16,7 @@ export const services: Service[] = [
   {
     title: "Home Renovations",
     description: "Upgrade your living spaces with our comprehensive home renovation services.",
-    imageUrl: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+    imageUrl: `/images/portfolio/renovations/renovations-2.webp`,
     features: [
       "Kitchen remodeling",
       "Bathroom upgrades",
@@ -28,7 +28,7 @@ export const services: Service[] = [
   {
     title: "Custom Carpentry",
     description: "Expert craftsmanship for all your custom woodworking and carpentry needs.",
-    imageUrl: "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
+    imageUrl: `/images/portfolio/carpentry/carpentry-38.webp`,
     features: [
       "Built-in entertainment centers",
       "Custom cabinets and shelving",
@@ -39,7 +39,7 @@ export const services: Service[] = [
   {
     title: "Exterior Services",
     description: "Enhance your home's curb appeal and outdoor living spaces.",
-    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    imageUrl: `/images/portfolio/exteriors/exteriors-2.webp`,
     features: [
       "Custom deck construction",
       "Patio installations",
