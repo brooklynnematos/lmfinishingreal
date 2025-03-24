@@ -39,7 +39,7 @@ export const services: Service[] = [
   {
     title: "Exterior Services",
     description: "Enhance your home's curb appeal and outdoor living spaces.",
-    imageUrl: `/images/portfolio/exteriors/exteriors-2.webp`,
+    imageUrl: `/images/portfolio/exteriors/exteriors-9.webp`,
     features: [
       "Custom deck construction",
       "Patio installations",
