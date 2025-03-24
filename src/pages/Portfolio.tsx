@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Loader2 } from 'lucide-react';
 import { portfolioImages } from '../data/images';
 
+const LoadingSpinner = () => (
+  <div className="absolute inset-0 flex items-center justify-center bg-gray-100 rounded-lg">
+    <Loader2 className="w-8 h-8 text-primary animate-spin" />
+  </div>
+);
+
 const ImageSkeleton = () => (
-  <div className="aspect-square bg-gray-200 rounded-lg animate-pulse" />
+  <div className="aspect-square bg-gray-200 rounded-lg animate-pulse flex items-center justify-center">
+    <LoadingSpinner />
+  </div>
 );
 
 const ImageModal = ({ 
@@ -19,6 +27,8 @@ const ImageModal = ({
   onNext: () => void;
   onPrevious: () => void;
 }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
       if (e.key === 'Escape') onClose();
@@ -74,10 +84,18 @@ const ImageModal = ({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="relative aspect-[4/3] w-full">
+          {isLoading && (
+            <div className="absolute inset-0 flex items-center justify-center">
+              <LoadingSpinner />
+            </div>
+          )}
           <img
             src={image.url}
             alt={image.title}
-            className="rounded-lg w-full h-full object-contain"
+            onLoad={() => setIsLoading(false)}
+            className={`rounded-lg w-full h-full object-contain transition-opacity duration-300 ${
+              isLoading ? 'opacity-0' : 'opacity-100'
+            }`}
             style={{ objectFit: 'contain', imageOrientation: 'from-image' }}
           />
         </div>
