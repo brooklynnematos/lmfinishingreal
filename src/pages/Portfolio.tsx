@@ -78,6 +78,7 @@ const ImageModal = ({
             src={image.url}
             alt={image.title}
             className="rounded-lg w-full h-full object-contain"
+            style={{ objectFit: 'contain', imageOrientation: 'from-image' }}
           />
         </div>
         <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-75 text-white p-4 rounded-b-lg">
@@ -210,7 +211,14 @@ const Portfolio = () => {
                   className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 ${
                     imagesLoaded[image.id] ? 'opacity-100' : 'opacity-0'
                   }`}
+                  style={{ objectFit: 'cover', imageOrientation: 'from-image' }}
                 />
+                <div className="absolute inset-0 bg-primary bg-opacity-0 group-hover:bg-opacity-80 transition-all duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-6">
+                    <p className="text-xl font-semibold mb-2">{image.title}</p>
+                    <p className="text-primary-light mb-4">{image.category}</p>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </motion.div>
