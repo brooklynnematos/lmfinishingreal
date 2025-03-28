@@ -184,14 +184,24 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-primary mt-1" />
                     <div className="ml-4">
                       <h3 className="text-lg font-medium text-primary">Phone</h3>
-                      <p className="text-primary-medium">(385) 500-8437</p>
+                      <a 
+                        href="tel:+13855008437" 
+                        className="text-primary-medium hover:text-primary transition-colors"
+                      >
+                        (385) 500-8437
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Mail className="h-6 w-6 text-primary mt-1" />
                     <div className="ml-4">
                       <h3 className="text-lg font-medium text-primary">Email</h3>
-                      <p className="text-primary-medium">leomatos.construction@gmail.com</p>
+                      <a 
+                        href="mailto:leomatos.construction@gmail.com"
+                        className="text-primary-medium hover:text-primary transition-colors"
+                      >
+                        leomatos.construction@gmail.com
+                      </a>
                     </div>
                   </div>
                   <div className="flex items-start">
