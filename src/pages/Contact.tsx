@@ -181,31 +181,31 @@ const Contact = () => {
                 <h2 className="text-2xl font-bold text-primary mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-primary mt-1" />
+                    <Phone className="h-6 w-6 text-[#4A90E2] mt-1" />
                     <div className="ml-4">
                       <h3 className="text-lg font-medium text-primary">Phone</h3>
                       <a 
                         href="tel:+13855008437" 
-                        className="text-primary-medium hover:text-primary transition-colors"
+                        className="text-[#4A90E2] hover:underline font-medium"
                       >
                         (385) 500-8437
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-primary mt-1" />
+                    <Mail className="h-6 w-6 text-[#4A90E2] mt-1" />
                     <div className="ml-4">
                       <h3 className="text-lg font-medium text-primary">Email</h3>
                       <a 
                         href="mailto:leomatos.construction@gmail.com"
-                        className="text-primary-medium hover:text-primary transition-colors"
+                        className="text-[#4A90E2] hover:underline font-medium"
                       >
                         leomatos.construction@gmail.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-primary mt-1" />
+                    <Clock className="h-6 w-6 text-[#4A90E2] mt-1" />
                     <div className="ml-4">
                       <h3 className="text-lg font-medium text-primary">Business Hours</h3>
                       <p className="text-primary-medium">
