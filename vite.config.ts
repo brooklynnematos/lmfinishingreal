@@ -1,12 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { splitVendorChunkPlugin } from 'vite';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    splitVendorChunkPlugin()
-  ],
+  plugins: [react()],
   build: {
     rollupOptions: {
       output: {
@@ -25,7 +21,8 @@ export default defineConfig({
         drop_console: true,
         drop_debugger: true
       }
-    }
+    },
+    sourcemap: false
   },
   optimizeDeps: {
     exclude: ['lucide-react'],
