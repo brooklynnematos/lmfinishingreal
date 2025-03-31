@@ -1,10 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Award, Clock, ThumbsUp, Users } from 'lucide-react';
+import SEOHead from '../components/SEOHead';
 
 const About = () => {
   return (
     <div className="w-full">
+      <SEOHead
+        title="About Us"
+        description="Learn about LM Finishing and Construction, Utah's trusted experts in home renovation and construction. With over 8 years of experience serving Utah County, Salt Lake County, and surrounding areas."
+        canonicalUrl="https://lmfinishingandconstruction.com/about"
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">

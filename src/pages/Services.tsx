@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { services } from '../data/content';
 import { ArrowRight, CheckCircle, Image } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 
 const Services = () => {
   const navigate = useNavigate();
@@ -28,6 +29,11 @@ const Services = () => {
 
   return (
     <div className="w-full">
+      <SEOHead
+        title="Services"
+        description="Expert home renovation services in Utah including basement finishing, custom carpentry, and complete home renovations. Serving Utah County, Salt Lake County, and surrounding areas."
+        canonicalUrl="https://lmfinishingandconstruction.com/services"
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">

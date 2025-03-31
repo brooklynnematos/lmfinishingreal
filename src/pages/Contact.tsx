@@ -2,6 +2,7 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Clock } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
@@ -43,6 +44,11 @@ const Contact = () => {
 
   return (
     <div className="w-full">
+      <SEOHead
+        title="Contact Us"
+        description="Get in touch with Utah's premier home renovation experts. Free estimates for basement finishing, custom carpentry, and home renovations in Utah County, Salt Lake County, and surrounding areas."
+        canonicalUrl="https://lmfinishingandconstruction.com/contact"
+      />
       {/* Hero Section */}
       <section className="relative py-24 bg-primary">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">
