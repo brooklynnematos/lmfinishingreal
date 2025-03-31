@@ -5,6 +5,7 @@ import { ArrowRight, Star, Users, Home as HomeIcon, PenTool as Tool, Image } fro
 import { services } from '../data/content';
 import GoogleReviews from '../components/GoogleReviews';
 import SEOHead from '../components/SEOHead';
+import ImageOptimizer from '../components/ImageOptimizer';
 
 const Home = () => {
   const getCategoryFromTitle = (title: string) => {
@@ -34,10 +35,13 @@ const Home = () => {
       <section className="relative h-screen" aria-label="Welcome to LM Finishing and Construction">
         <div className="absolute inset-0">
           <div className="w-full h-full overflow-hidden">
-            <img
+            <ImageOptimizer
               src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
               alt="Modern home interior showcasing our renovation expertise"
               className="w-full h-[120%] object-cover object-top"
+              priority={true}
+              width={1920}
+              height={1080}
             />
           </div>
           <div className="absolute inset-0 bg-gray-900 bg-opacity-80"></div>
@@ -147,10 +151,13 @@ const Home = () => {
                 transition={{ duration: 0.5 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden"
               >
-                <img
+                <ImageOptimizer
                   src={service.imageUrl}
                   alt={`${service.title} service showcase`}
                   className="w-full h-64 object-cover"
+                  width={800}
+                  height={400}
+                  priority={index < 2}
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
