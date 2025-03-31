@@ -3,7 +3,16 @@ import { createRoot } from 'react-dom/client';
 import './index.css';
 
 // Lazy load the main App component
-const App = lazy(() => import('./App'));
+const App = lazy(() => 
+  import('./App').then(module => {
+    return new Promise(resolve => {
+      // Artificial delay to prevent loading flash
+      setTimeout(() => {
+        resolve(module);
+      }, 0);
+    });
+  })
+);
 
 // Loading fallback component
 const LoadingFallback = () => (
@@ -12,10 +21,15 @@ const LoadingFallback = () => (
   </div>
 );
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <Suspense fallback={<LoadingFallback />}>
-      <App />
-    </Suspense>
-  </StrictMode>
-);
+// Create root with type assertion
+const container = document.getElementById('root');
+if (container) {
+  const root = createRoot(container);
+  root.render(
+    <StrictMode>
+      <Suspense fallback={<LoadingFallback />}>
+        <App />
+      </Suspense>
+    </StrictMode>
+  );
+}

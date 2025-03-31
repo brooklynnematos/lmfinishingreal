@@ -9,7 +9,9 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'framer': ['framer-motion'],
-          'email': ['@emailjs/browser']
+          'email': ['@emailjs/browser'],
+          'icons': ['lucide-react'],
+          'seo': ['react-helmet-async']
         }
       }
     },
@@ -19,13 +21,29 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
+      },
+      mangle: {
+        safari10: true
+      },
+      format: {
+        comments: false
       }
     },
-    sourcemap: false
+    sourcemap: false,
+    target: 'esnext',
+    assetsInlineLimit: 4096,
+    modulePreload: {
+      polyfill: true
+    }
   },
   optimizeDeps: {
-    exclude: ['lucide-react'],
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion']
+    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', '@emailjs/browser', 'lucide-react', 'react-helmet-async']
+  },
+  server: {
+    headers: {
+      'Cache-Control': 'public, max-age=31536000'
+    }
   }
 });
