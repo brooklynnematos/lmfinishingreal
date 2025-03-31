@@ -25,7 +25,6 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   const [imageSrc, setImageSrc] = useState(src);
 
   useEffect(() => {
-    // Reset states when src changes
     setIsLoading(!priority);
     setError(false);
     setImageSrc(src);
@@ -41,33 +40,56 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     setIsLoading(false);
   };
 
-  // Construct srcset for responsive images
+  // Optimize Unsplash images
+  const optimizeUnsplashImage = (url: string) => {
+    if (!url.includes('unsplash.com')) return url;
+    
+    // Extract base URL without existing parameters
+    const baseUrl = url.split('?')[0];
+    
+    // Add optimization parameters
+    return `${baseUrl}?auto=compress&q=80&fit=crop&w=${width || 800}&h=${height || 600}`;
+  };
+
+  // Generate responsive srcset
   const generateSrcSet = () => {
     if (!src.includes('unsplash.com')) return undefined;
     
-    const sizes = [400, 800, 1200, 1600];
+    const sizes = [400, 800, 1200];
+    const optimizedSrc = optimizeUnsplashImage(src);
+    
     return sizes
-      .map(size => `${src}&w=${size} ${size}w`)
+      .map(size => {
+        const sizeUrl = optimizedSrc.replace(/w=\d+/, `w=${size}`);
+        return `${sizeUrl} ${size}w`;
+      })
       .join(', ');
   };
 
+  const optimizedSrc = optimizeUnsplashImage(imageSrc);
+
   if (error) {
     return (
-      <div className={`bg-gray-200 flex items-center justify-center ${className}`}>
-        <span className="text-gray-500">Failed to load image</span>
+      <div 
+        className={`bg-gray-200 flex items-center justify-center ${className}`}
+        style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : '300px' }}
+        role="img"
+        aria-label={`Failed to load: ${alt}`}
+      >
+        <span className="text-gray-500">Image failed to load</span>
       </div>
     );
   }
 
   return (
-    <div className="relative">
+    <div className="relative" style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : 'auto' }}>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center bg-gray-100">
-          <Loader2 className="w-8 h-8 text-[#213555] animate-spin" />
+          <Loader2 className="w-8 h-8 text-[#213555] animate-spin" aria-hidden="true" />
         </div>
       )}
       <img
-        src={imageSrc}
+        src={optimizedSrc}
         alt={alt}
         width={width}
         height={height}
@@ -77,7 +99,8 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         loading={priority ? "eager" : "lazy"}
         decoding={priority ? "sync" : "async"}
         srcSet={generateSrcSet()}
-        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+        style={{ objectFit: 'cover' }}
       />
     </div>
   );
