@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { ArrowRight, Star, Users, Home as HomeIcon, PenTool as Tool, Image } from 'lucide-react';
 import { services } from '../data/content';
 import GoogleReviews from '../components/GoogleReviews';
+import SEOHead from '../components/SEOHead';
 
 const Home = () => {
   const getCategoryFromTitle = (title: string) => {
@@ -23,6 +24,12 @@ const Home = () => {
 
   return (
     <div className="w-full">
+      <SEOHead
+        title="Home"
+        description="Transform your space with Utah's premier home renovation experts. Specializing in basement finishing, custom carpentry, and complete home renovations in Utah County, Salt Lake County, and surrounding areas."
+        canonicalUrl="https://lmfinishingandconstruction.com"
+      />
+      
       {/* Hero Section */}
       <section className="relative h-screen">
         <div className="absolute inset-0">
