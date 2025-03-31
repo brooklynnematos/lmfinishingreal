@@ -49,10 +49,14 @@ const Contact = () => {
         description="Get in touch with Utah's premier home renovation experts. Free estimates for basement finishing, custom carpentry, and home renovations in Utah County, Salt Lake County, and surrounding areas."
         canonicalUrl="https://lmfinishingandconstruction.com/contact"
       />
+      
       {/* Hero Section */}
-      <section className="relative py-24 bg-primary">
+      <section 
+        className="relative py-24 bg-[#213555]"
+        aria-label="Contact Information"
+      >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-primary bg-opacity-90"></div>
+          <div className="absolute inset-0 bg-[#213555] bg-opacity-85"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -68,7 +72,7 @@ const Contact = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl text-primary-light max-w-3xl mx-auto"
+              className="text-2xl text-white max-w-3xl mx-auto"
             >
               Get in touch with us to start your renovation journey.
             </motion.p>
@@ -77,7 +81,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form and Info */}
-      <section className="py-20 bg-primary-lighter">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {/* Contact Form */}
@@ -87,53 +91,62 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <h2 className="text-2xl font-bold text-primary mb-6">Get Your Free Estimate</h2>
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
+              <h2 className="text-2xl font-bold text-[#213555] mb-6">Get Your Free Estimate</h2>
+              <form 
+                ref={formRef} 
+                onSubmit={handleSubmit} 
+                className="space-y-6"
+                aria-label="Contact form"
+              >
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-primary-medium mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
-                    className="w-full px-4 py-2 border border-primary-light rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
+                    aria-required="true"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-primary-medium mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
                   <input
                     type="email"
                     id="email"
                     name="email"
-                    className="w-full px-4 py-2 border border-primary-light rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
+                    aria-required="true"
                   />
                 </div>
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-primary-medium mb-2">
+                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     Phone Number
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-2 border border-primary-light rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
+                    aria-required="true"
                   />
                 </div>
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-primary-medium mb-2">
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
                     Service Interested In
                   </label>
                   <select
                     id="service"
                     name="service"
-                    className="w-full px-4 py-2 border border-primary-light rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
+                    aria-required="true"
                   >
                     <option value="">Select a service</option>
                     <option value="Basement Finishing">Basement Finishing</option>
@@ -144,15 +157,16 @@ const Contact = () => {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="details" className="block text-sm font-medium text-primary-medium mb-2">
+                  <label htmlFor="details" className="block text-sm font-medium text-gray-700 mb-2">
                     Project Details
                   </label>
                   <textarea
                     id="details"
                     name="details"
                     rows={4}
-                    className="w-full px-4 py-2 border border-primary-light rounded-md focus:ring-2 focus:ring-primary focus:border-primary"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
+                    aria-required="true"
                   ></textarea>
                 </div>
                 {submitStatus.type && (
@@ -160,6 +174,8 @@ const Contact = () => {
                     className={`p-4 rounded-md ${
                       submitStatus.type === 'success' ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'
                     }`}
+                    role="alert"
+                    aria-live="polite"
                   >
                     {submitStatus.message}
                   </div>
@@ -167,9 +183,10 @@ const Contact = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-primary text-white px-6 py-3 rounded-md text-lg font-medium transition-colors ${
-                    isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-primary-dark'
+                  className={`w-full bg-[#213555] text-white px-6 py-3 rounded-md text-lg font-medium transition-colors ${
+                    isSubmitting ? 'opacity-50 cursor-not-allowed' : 'hover:bg-[#182943]'
                   }`}
+                  aria-disabled={isSubmitting}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
@@ -184,39 +201,41 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-primary mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold text-[#213555] mb-6">Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <Phone className="h-6 w-6 text-[#4A90E2] mt-1" />
+                    <Phone className="h-6 w-6 text-[#4A90E2] mt-1" aria-hidden="true" />
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-primary">Phone</h3>
+                      <h3 className="text-lg font-medium text-[#213555]">Phone</h3>
                       <a 
                         href="tel:+13855008437" 
                         className="text-[#4A90E2] hover:underline font-medium"
+                        aria-label="Call us at (385) 500-8437"
                       >
                         (385) 500-8437
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Mail className="h-6 w-6 text-[#4A90E2] mt-1" />
+                    <Mail className="h-6 w-6 text-[#4A90E2] mt-1" aria-hidden="true" />
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-primary">Email</h3>
+                      <h3 className="text-lg font-medium text-[#213555]">Email</h3>
                       <a 
                         href="mailto:leomatos.construction@gmail.com"
                         className="text-[#4A90E2] hover:underline font-medium"
+                        aria-label="Email us at leomatos.construction@gmail.com"
                       >
                         leomatos.construction@gmail.com
                       </a>
                     </div>
                   </div>
                   <div className="flex items-start">
-                    <Clock className="h-6 w-6 text-[#4A90E2] mt-1" />
+                    <Clock className="h-6 w-6 text-[#4A90E2] mt-1" aria-hidden="true" />
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-primary">Business Hours</h3>
-                      <p className="text-primary-medium">
-                        Monday - Friday: 8:00 AM - 5:00 PM<br />
-                        Saturday - Sunday: Closed
+                      <h3 className="text-lg font-medium text-[#213555]">Business Hours</h3>
+                      <p className="text-gray-700">
+                        <time>Monday - Friday: 8:00 AM - 5:00 PM</time><br />
+                        <time>Saturday - Sunday: Closed</time>
                       </p>
                     </div>
                   </div>
@@ -225,31 +244,23 @@ const Contact = () => {
 
               {/* Service Area Summary */}
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-primary mb-4">Service Areas</h3>
-                <p className="text-primary-medium mb-4">
+                <h3 className="text-xl font-bold text-[#213555] mb-4">Service Areas</h3>
+                <p className="text-gray-700 mb-4">
                   We proudly serve the following counties in Utah:
                 </p>
-                <ul className="space-y-2 text-primary-medium">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                    Utah County
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                    Salt Lake County
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                    Davis County
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                    Wasatch County
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
-                    Summit County
-                  </li>
+                <ul className="space-y-2 text-gray-700" role="list">
+                  {[
+                    'Utah County',
+                    'Salt Lake County',
+                    'Davis County',
+                    'Wasatch County',
+                    'Summit County'
+                  ].map((county, index) => (
+                    <li key={index} className="flex items-center" role="listitem">
+                      <span className="w-2 h-2 bg-[#213555] rounded-full mr-2" aria-hidden="true"></span>
+                      {county}
+                    </li>
+                  ))}
                 </ul>
               </div>
             </motion.div>

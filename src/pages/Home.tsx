@@ -31,16 +31,16 @@ const Home = () => {
       />
       
       {/* Hero Section */}
-      <section className="relative h-screen">
+      <section className="relative h-screen" aria-label="Welcome to LM Finishing and Construction">
         <div className="absolute inset-0">
           <div className="w-full h-full overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
-              alt="Modern home interior"
+              alt="Modern home interior showcasing our renovation expertise"
               className="w-full h-[120%] object-cover object-top"
             />
           </div>
-          <div className="absolute inset-0 bg-gray-900 bg-opacity-70"></div>
+          <div className="absolute inset-0 bg-gray-900 bg-opacity-80"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
           <div className="text-center md:text-left">
@@ -56,7 +56,7 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-200 mb-8 max-w-2xl"
+              className="text-xl text-white mb-8 max-w-2xl"
             >
               Expert basement finishing and home renovations that bring your vision to life.
             </motion.p>
@@ -68,14 +68,16 @@ const Home = () => {
             >
               <Link
                 to="/contact"
-                className="bg-[#4A90E2] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#357ABD] transition-colors flex items-center justify-center"
+                aria-label="Get a free estimate for your renovation project"
+                className="bg-[#2563EB] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#1D4ED8] transition-colors flex items-center justify-center"
               >
                 Get a Free Estimate
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
               </Link>
               <Link
                 to="/portfolio"
-                className="bg-white text-primary-600 px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
+                aria-label="View our portfolio of completed projects"
+                className="bg-white text-[#2563EB] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
               >
                 View Our Work
               </Link>
@@ -85,28 +87,28 @@ const Home = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               We bring expertise, quality, and dedication to every project we undertake.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                icon: <Star className="h-8 w-8 text-primary-600" />,
+                icon: <Star className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
                 title: "Quality Craftsmanship",
                 description: "Expert workmanship and attention to detail in every project."
               },
               {
-                icon: <Users className="h-8 w-8 text-primary-600" />,
+                icon: <Users className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
                 title: "Experienced Team",
                 description: "Skilled professionals with years of industry experience."
               },
               {
-                icon: <Tool className="h-8 w-8 text-primary-600" />,
+                icon: <Tool className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
                 title: "Full Service Solutions",
                 description: "Comprehensive renovation services under one roof."
               }
@@ -118,9 +120,9 @@ const Home = () => {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="bg-white p-8 rounded-lg shadow-lg text-center"
               >
-                <div className="flex justify-center mb-4">{feature.icon}</div>
+                <div className="flex justify-center mb-4" aria-hidden="true">{feature.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
+                <p className="text-gray-700">{feature.description}</p>
               </motion.div>
             ))}
           </div>
@@ -128,11 +130,11 @@ const Home = () => {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20">
+      <section className="py-20" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
               Comprehensive renovation solutions tailored to your needs.
             </p>
           </div>
@@ -147,16 +149,16 @@ const Home = () => {
               >
                 <img
                   src={service.imageUrl}
-                  alt={service.title}
+                  alt={`${service.title} service showcase`}
                   className="w-full h-64 object-cover"
                 />
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6">
+                  <p className="text-gray-700 mb-4">{service.description}</p>
+                  <ul className="space-y-2 mb-6" aria-label={`Features of ${service.title}`}>
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-600">
-                        <ArrowRight className="h-4 w-4 text-primary-600 mr-2" />
+                      <li key={featureIndex} className="flex items-center text-gray-700">
+                        <ArrowRight className="h-4 w-4 text-[#2563EB] mr-2" aria-hidden="true" />
                         {feature}
                       </li>
                     ))}
@@ -164,17 +166,19 @@ const Home = () => {
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link
                       to="/contact"
-                      className="flex items-center justify-center bg-[#4A90E2] text-white px-6 py-2 rounded-md font-medium hover:bg-[#357ABD] transition-colors"
+                      aria-label={`Get started with ${service.title}`}
+                      className="flex items-center justify-center bg-[#2563EB] text-white px-6 py-2 rounded-md font-medium hover:bg-[#1D4ED8] transition-colors"
                     >
                       Get Started
-                      <ArrowRight className="ml-2 h-4 w-4" />
+                      <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
                     </Link>
                     <Link
                       to={`/portfolio?category=${getCategoryFromTitle(service.title)}`}
-                      className="flex items-center justify-center border-2 border-[#4A90E2] text-[#4A90E2] px-6 py-2 rounded-md font-medium hover:bg-[#4A90E2] hover:text-white transition-colors"
+                      aria-label={`View ${service.title} portfolio`}
+                      className="flex items-center justify-center border-2 border-[#2563EB] text-[#2563EB] px-6 py-2 rounded-md font-medium hover:bg-[#2563EB] hover:text-white transition-colors"
                     >
                       View Work
-                      <Image className="ml-2 h-4 w-4" />
+                      <Image className="ml-2 h-4 w-4" aria-hidden="true" />
                     </Link>
                   </div>
                 </div>
@@ -188,17 +192,18 @@ const Home = () => {
       <GoogleReviews />
 
       {/* CTA Section */}
-      <section className="bg-[#4A90E2] py-20">
+      <section className="bg-[#2563EB] py-20" aria-labelledby="cta-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-8">
+          <h2 id="cta-heading" className="text-3xl font-bold text-white mb-8">
             Ready to Start Your Project?
           </h2>
           <Link
             to="/contact"
-            className="inline-flex items-center bg-white text-[#4A90E2] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
+            aria-label="Get your free project estimate"
+            className="inline-flex items-center bg-white text-[#2563EB] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
           >
             Get Your Free Estimate
-            <ArrowRight className="ml-2 h-5 w-5" />
+            <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
           </Link>
         </div>
       </section>
