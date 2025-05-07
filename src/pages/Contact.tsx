@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
-  
+
     const recaptchaValue = recaptchaRef.current?.getValue();
     if (!recaptchaValue) {
       setSubmitStatus({
@@ -26,9 +26,12 @@ const Contact = () => {
       });
       return;
     }
-  
-    // ✅ Verify reCAPTCHA via Netlify serverless function
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
     try {
+      // Verify reCAPTCHA first
       const verifyResponse = await fetch('/.netlify/functions/verify-recaptcha', {
         method: 'POST',
         headers: {
@@ -36,51 +39,40 @@ const Contact = () => {
         },
         body: JSON.stringify({ token: recaptchaValue }),
       });
-  
-      const verifyResult = await verifyResponse.json();
-  
-      if (!verifyResult.success) {
-        setSubmitStatus({
-          type: 'error',
-          message: 'reCAPTCHA verification failed. Please try again.',
-        });
-        return;
+
+      const verifyData = await verifyResponse.json();
+      console.log('Verification response:', verifyData);
+
+      if (!verifyResponse.ok || !verifyData.success) {
+        throw new Error('reCAPTCHA verification failed');
       }
-    } catch (error) {
-      setSubmitStatus({
-        type: 'error',
-        message: 'Could not verify reCAPTCHA. Please try again.',
-      });
-      return;
-    }
-  
-    // ✅ Continue with form submission
-    setIsSubmitting(true);
-    setSubmitStatus({ type: null, message: '' });
-  
-    try {
+
+      // If verification successful, send email
       await emailjs.sendForm(
         'service_tn8jn2l',
         'template_eld62cq',
         formRef.current,
         'cBCcCtgOHyewXyCDU'
       );
-  
+
       setSubmitStatus({
         type: 'success',
-        message: 'Thank you! We will get back to you soon.',
+        message: 'Thank you! We will get back to you soon.'
       });
       formRef.current.reset();
       recaptchaRef.current?.reset();
     } catch (error) {
+      console.error('Form submission error:', error);
       setSubmitStatus({
         type: 'error',
-        message: 'Sorry, something went wrong. Please try again later.',
+        message: error instanceof Error && error.message === 'reCAPTCHA verification failed'
+          ? 'reCAPTCHA verification failed. Please try again.'
+          : 'Sorry, something went wrong. Please try again later.'
       });
     } finally {
       setIsSubmitting(false);
     }
-  };  
+  };
 
   return (
     <div className="w-full">
@@ -209,10 +201,10 @@ const Contact = () => {
                     aria-required="true"
                   ></textarea>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center mb-4">
                   <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                    sitekey="6LeasTErAAAAAB6GWM-JAQY9iw-1kl5mgha_JnR"
                     theme="light"
                   />
                 </div>
