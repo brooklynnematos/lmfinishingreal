@@ -6,7 +6,6 @@ export const handler: Handler = async (event) => {
     'Access-Control-Allow-Headers': 'Content-Type',
   };
 
-  // Handle preflight requests
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
@@ -17,26 +16,22 @@ export const handler: Handler = async (event) => {
 
   try {
     const { token } = JSON.parse(event.body || '{}');
+    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
 
-    if (!token) {
+    if (!token || !secretKey) {
       return {
         statusCode: 400,
         headers: {
           'Content-Type': 'application/json',
           ...corsHeaders,
         },
-        body: JSON.stringify({ success: false, message: 'Token is required' }),
+        body: JSON.stringify({ success: false, message: 'Missing token or secret key' }),
       };
     }
 
-    const verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
-
-    const response = await fetch(verifyUrl, {
+    const response = await fetch('https://www.google.com/recaptcha/api/siteverify', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: `secret=${secretKey}&response=${token}`,
     });
 
@@ -48,7 +43,7 @@ export const handler: Handler = async (event) => {
         'Content-Type': 'application/json',
         ...corsHeaders,
       },
-      body: JSON.stringify({ success: data.success }),
+      body: JSON.stringify({ success: data.success, score: data.score || null }),
     };
   } catch (error) {
     return {
@@ -57,7 +52,7 @@ export const handler: Handler = async (event) => {
         'Content-Type': 'application/json',
         ...corsHeaders,
       },
-      body: JSON.stringify({ success: false, message: error.message }),
+      body: JSON.stringify({ success: false, message: 'Server error', error: error.message }),
     };
   }
 };

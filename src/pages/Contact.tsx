@@ -17,7 +17,7 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
-
+  
     const recaptchaValue = recaptchaRef.current?.getValue();
     if (!recaptchaValue) {
       setSubmitStatus({
@@ -26,10 +26,38 @@ const Contact = () => {
       });
       return;
     }
-
+  
+    // ✅ Verify reCAPTCHA via Netlify serverless function
+    try {
+      const verifyResponse = await fetch('/.netlify/functions/verify-recaptcha', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ token: recaptchaValue }),
+      });
+  
+      const verifyResult = await verifyResponse.json();
+  
+      if (!verifyResult.success) {
+        setSubmitStatus({
+          type: 'error',
+          message: 'reCAPTCHA verification failed. Please try again.',
+        });
+        return;
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Could not verify reCAPTCHA. Please try again.',
+      });
+      return;
+    }
+  
+    // ✅ Continue with form submission
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
-
+  
     try {
       await emailjs.sendForm(
         'service_tn8jn2l',
@@ -37,22 +65,22 @@ const Contact = () => {
         formRef.current,
         'cBCcCtgOHyewXyCDU'
       );
-
+  
       setSubmitStatus({
         type: 'success',
-        message: 'Thank you! We will get back to you soon.'
+        message: 'Thank you! We will get back to you soon.',
       });
       formRef.current.reset();
       recaptchaRef.current?.reset();
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'Sorry, something went wrong. Please try again later.'
+        message: 'Sorry, something went wrong. Please try again later.',
       });
     } finally {
       setIsSubmitting(false);
     }
-  };
+  };  
 
   return (
     <div className="w-full">
