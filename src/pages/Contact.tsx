@@ -204,7 +204,7 @@ const Contact = () => {
                 <div className="flex justify-center mb-4">
                   <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey="6LeasTErAAAAAB6GWM-JAQY9iw-1kl5mgha_JnR"
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                     theme="light"
                   />
                 </div>
