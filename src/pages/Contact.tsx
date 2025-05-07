@@ -184,7 +184,7 @@ const Contact = () => {
                 <div className="flex justify-center">
                   <ReCAPTCHA
                     ref={recaptchaRef}
-                    sitekey="6LfVDYApAAAAALwXWxvhTVxlEPeXI0vWs5LmOJBt"
+                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                     theme="light"
                   />
                 </div>
@@ -269,4 +269,25 @@ const Contact = () => {
                 </p>
                 <ul className="space-y-2 text-gray-700" role="list">
                   {[
-                    'Utah 
+                    'Utah County',
+                    'Salt Lake County',
+                    'Davis County',
+                    'Wasatch County',
+                    'Summit County'
+                  ].map((county, index) => (
+                    <li key={index} className="flex items-center" role="listitem">
+                      <span className="w-2 h-2 bg-[#213555] rounded-full mr-2" aria-hidden="true"></span>
+                      {county}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default Contact;
