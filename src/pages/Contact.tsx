@@ -2,10 +2,12 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Clock } from 'lucide-react';
 import emailjs from '@emailjs/browser';
+import ReCAPTCHA from 'react-google-recaptcha';
 import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null;
@@ -15,6 +17,15 @@ const Contact = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
+
+    const recaptchaValue = recaptchaRef.current?.getValue();
+    if (!recaptchaValue) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please complete the reCAPTCHA verification.'
+      });
+      return;
+    }
 
     setIsSubmitting(true);
     setSubmitStatus({ type: null, message: '' });
@@ -32,6 +43,7 @@ const Contact = () => {
         message: 'Thank you! We will get back to you soon.'
       });
       formRef.current.reset();
+      recaptchaRef.current?.reset();
     } catch (error) {
       setSubmitStatus({
         type: 'error',
@@ -168,6 +180,13 @@ const Contact = () => {
                     required
                     aria-required="true"
                   ></textarea>
+                </div>
+                <div className="flex justify-center">
+                  <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey="6LfVDYApAAAAALwXWxvhTVxlEPeXI0vWs5LmOJBt"
+                    theme="light"
+                  />
                 </div>
                 {submitStatus.type && (
                   <div
