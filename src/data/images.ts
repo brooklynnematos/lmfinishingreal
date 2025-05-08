@@ -57,244 +57,244 @@ export const portfolioImages: ImageCategory[] = {
       description: 'Modern wet bar featuring granite countertops, under-cabinet lighting, and custom cabinetry with wine storage'
     }
   ],
-'Home Renovations': [
+'Home renovations': [
   {
-    id: 'renovation-1',
-    url: '/images/portfolio/renovations/renovation-1.webp',
+    id: 'renovations-1',
+    url: '/images/portfolio/renovations/renovations-1.webp',
     title: 'Gourmet Kitchen Transformation 1',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-2',
-    url: '/images/portfolio/renovations/renovation-2.webp',
+    id: 'renovations-2',
+    url: '/images/portfolio/renovations/renovations-2.webp',
     title: 'Spa-Like Master Bathroom 1',
     description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-3',
-    url: '/images/portfolio/renovations/renovation-3.webp',
+    id: 'renovations-3',
+    url: '/images/portfolio/renovations/renovations-3.webp',
     title: 'Open Concept Living Room Design 1',
     description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-4',
-    url: '/images/portfolio/renovations/renovation-4.webp',
+    id: 'renovations-4',
+    url: '/images/portfolio/renovations/renovations-4.webp',
     title: 'Gourmet Kitchen Transformation 2',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-5',
-    url: '/images/portfolio/renovations/renovation-5.webp',
+    id: 'renovations-5',
+    url: '/images/portfolio/renovations/renovations-5.webp',
     title: 'Spa-Like Master Bathroom 2',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-6',
-    url: '/images/portfolio/renovations/renovation-6.webp',
+    id: 'renovations-6',
+    url: '/images/portfolio/renovations/renovations-6.webp',
     title: 'Open Concept Living Room Design 2',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-7',
-    url: '/images/portfolio/renovations/renovation-7.webp',
+    id: 'renovations-7',
+    url: '/images/portfolio/renovations/renovations-7.webp',
     title: 'Gourmet Kitchen Transformation 3',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-8',
-    url: '/images/portfolio/renovations/renovation-8.webp',
+    id: 'renovations-8',
+    url: '/images/portfolio/renovations/renovations-8.webp',
     title: 'Spa-Like Master Bathroom 3',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-9',
-    url: '/images/portfolio/renovations/renovation-9.webp',
+    id: 'renovations-9',
+    url: '/images/portfolio/renovations/renovations-9.webp',
     title: 'Open Concept Living Room Design 3',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-10',
-    url: '/images/portfolio/renovations/renovation-10.webp',
+    id: 'renovations-10',
+    url: '/images/portfolio/renovations/renovations-10.webp',
     title: 'Gourmet Kitchen Transformation 4',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-11',
-    url: '/images/portfolio/renovations/renovation-11.webp',
+    id: 'renovations-11',
+    url: '/images/portfolio/renovations/renovations-11.webp',
     title: 'Spa-Like Master Bathroom 4',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-12',
-    url: '/images/portfolio/renovations/renovation-12.webp',
+    id: 'renovations-12',
+    url: '/images/portfolio/renovations/renovations-12.webp',
     title: 'Open Concept Living Room Design 4',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-13',
-    url: '/images/portfolio/renovations/renovation-13.webp',
+    id: 'renovations-13',
+    url: '/images/portfolio/renovations/renovations-13.webp',
     title: 'Gourmet Kitchen Transformation 5',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-14',
-    url: '/images/portfolio/renovations/renovation-14.webp',
+    id: 'renovations-14',
+    url: '/images/portfolio/renovations/renovations-14.webp',
     title: 'Spa-Like Master Bathroom 5',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-15',
-    url: '/images/portfolio/renovations/renovation-15.webp',
+    id: 'renovations-15',
+    url: '/images/portfolio/renovations/renovations-15.webp',
     title: 'Open Concept Living Room Design 5',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-16',
-    url: '/images/portfolio/renovations/renovation-16.webp',
+    id: 'renovations-16',
+    url: '/images/portfolio/renovations/renovations-16.webp',
     title: 'Gourmet Kitchen Transformation 6',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-17',
-    url: '/images/portfolio/renovations/renovation-17.webp',
+    id: 'renovations-17',
+    url: '/images/portfolio/renovations/renovations-17.webp',
     title: 'Spa-Like Master Bathroom 6',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-18',
-    url: '/images/portfolio/renovations/renovation-18.webp',
+    id: 'renovations-18',
+    url: '/images/portfolio/renovations/renovations-18.webp',
     title: 'Open Concept Living Room Design 6',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-19',
-    url: '/images/portfolio/renovations/renovation-19.webp',
+    id: 'renovations-19',
+    url: '/images/portfolio/renovations/renovations-19.webp',
     title: 'Gourmet Kitchen Transformation 7',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-20',
-    url: '/images/portfolio/renovations/renovation-20.webp',
+    id: 'renovations-20',
+    url: '/images/portfolio/renovations/renovations-20.webp',
     title: 'Spa-Like Master Bathroom 7',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-21',
-    url: '/images/portfolio/renovations/renovation-21.webp',
+    id: 'renovations-21',
+    url: '/images/portfolio/renovations/renovations-21.webp',
     title: 'Open Concept Living Room Design 7',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-22',
-    url: '/images/portfolio/renovations/renovation-22.webp',
+    id: 'renovations-22',
+    url: '/images/portfolio/renovations/renovations-22.webp',
     title: 'Gourmet Kitchen Transformation 8',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-23',
-    url: '/images/portfolio/renovations/renovation-23.webp',
+    id: 'renovations-23',
+    url: '/images/portfolio/renovations/renovations-23.webp',
     title: 'Spa-Like Master Bathroom 8',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-24',
-    url: '/images/portfolio/renovations/renovation-24.webp',
+    id: 'renovations-24',
+    url: '/images/portfolio/renovations/renovations-24.webp',
     title: 'Open Concept Living Room Design 8',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-25',
-    url: '/images/portfolio/renovations/renovation-25.webp',
+    id: 'renovations-25',
+    url: '/images/portfolio/renovations/renovations-25.webp',
     title: 'Gourmet Kitchen Transformation 9',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-26',
-    url: '/images/portfolio/renovations/renovation-26.webp',
+    id: 'renovations-26',
+    url: '/images/portfolio/renovations/renovations-26.webp',
     title: 'Spa-Like Master Bathroom 9',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-27',
-    url: '/images/portfolio/renovations/renovation-27.webp',
+    id: 'renovations-27',
+    url: '/images/portfolio/renovations/renovations-27.webp',
     title: 'Open Concept Living Room Design 9',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-28',
-    url: '/images/portfolio/renovations/renovation-28.webp',
+    id: 'renovations-28',
+    url: '/images/portfolio/renovations/renovations-28.webp',
     title: 'Gourmet Kitchen Transformation 10',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-29',
-    url: '/images/portfolio/renovations/renovation-29.webp',
+    id: 'renovations-29',
+    url: '/images/portfolio/renovations/renovations-29.webp',
     title: 'Spa-Like Master Bathroom 10',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-30',
-    url: '/images/portfolio/renovations/renovation-30.webp',
+    id: 'renovations-30',
+    url: '/images/portfolio/renovations/renovations-30.webp',
     title: 'Open Concept Living Room Design 10',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-31',
-    url: '/images/portfolio/renovations/renovation-31.webp',
+    id: 'renovations-31',
+    url: '/images/portfolio/renovations/renovations-31.webp',
     title: 'Gourmet Kitchen Transformation 11',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-32',
-    url: '/images/portfolio/renovations/renovation-32.webp',
+    id: 'renovations-32',
+    url: '/images/portfolio/renovations/renovations-32.webp',
     title: 'Spa-Like Master Bathroom 11',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-33',
-    url: '/images/portfolio/renovations/renovation-33.webp',
+    id: 'renovations-33',
+    url: '/images/portfolio/renovations/renovations-33.webp',
     title: 'Open Concept Living Room Design 11',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-34',
-    url: '/images/portfolio/renovations/renovation-34.webp',
+    id: 'renovations-34',
+    url: '/images/portfolio/renovations/renovations-34.webp',
     title: 'Gourmet Kitchen Transformation 12',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-35',
-    url: '/images/portfolio/renovations/renovation-35.webp',
+    id: 'renovations-35',
+    url: '/images/portfolio/renovations/renovations-35.webp',
     title: 'Spa-Like Master Bathroom 12',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-36',
-    url: '/images/portfolio/renovations/renovation-36.webp',
+    id: 'renovations-36',
+    url: '/images/portfolio/renovations/renovations-36.webp',
     title: 'Open Concept Living Room Design 12',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-37',
-    url: '/images/portfolio/renovations/renovation-37.webp',
+    id: 'renovations-37',
+    url: '/images/portfolio/renovations/renovations-37.webp',
     title: 'Gourmet Kitchen Transformation 13',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
   {
-    id: 'renovation-38',
-    url: '/images/portfolio/renovations/renovation-38.webp',
+    id: 'renovations-38',
+    url: '/images/portfolio/renovations/renovations-38.webp',
     title: 'Spa-Like Master Bathroom 13',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
   },
   {
-    id: 'renovation-39',
-    url: '/images/portfolio/renovations/renovation-39.webp',
+    id: 'renovations-39',
+    url: '/images/portfolio/renovations/renovations-39.webp',
     title: 'Open Concept Living Room Design 13',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
   },
   {
-    id: 'renovation-40',
-    url: '/images/portfolio/renovations/renovation-40.webp',
+    id: 'renovations-40',
+    url: '/images/portfolio/renovations/renovations-40.webp',
     title: 'Gourmet Kitchen Transformation 14',
     description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
   },
@@ -541,150 +541,150 @@ export const portfolioImages: ImageCategory[] = {
     description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
   }
 ],
-  'Exterior': [
+  'exteriors': [
   {
-    id: 'exterior-1',
-    url: '/images/portfolio/exterior/exterior-1.webp',
+    id: 'exteriors-1',
+    url: '/images/portfolio/exteriors/exteriors-1.webp',
     title: 'Multi-Level Composite Deck 1',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-2',
-    url: '/images/portfolio/exterior/exterior-2.webp',
+    id: 'exteriors-2',
+    url: '/images/portfolio/exteriors/exteriors-2.webp',
     title: 'Covered Outdoor Living Space 1',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-3',
-    url: '/images/portfolio/exterior/exterior-3.webp',
-    title: 'Custom Exterior Trim Work 1',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-3',
+    url: '/images/portfolio/exteriors/exteriors-3.webp',
+    title: 'Custom exteriors Trim Work 1',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   },
   {
-    id: 'exterior-4',
-    url: '/images/portfolio/exterior/exterior-4.webp',
+    id: 'exteriors-4',
+    url: '/images/portfolio/exteriors/exteriors-4.webp',
     title: 'Multi-Level Composite Deck 2',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-5',
-    url: '/images/portfolio/exterior/exterior-5.webp',
+    id: 'exteriors-5',
+    url: '/images/portfolio/exteriors/exteriors-5.webp',
     title: 'Covered Outdoor Living Space 2',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-6',
-    url: '/images/portfolio/exterior/exterior-6.webp',
-    title: 'Custom Exterior Trim Work 2',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-6',
+    url: '/images/portfolio/exteriors/exteriors-6.webp',
+    title: 'Custom exteriors Trim Work 2',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   },
   {
-    id: 'exterior-7',
-    url: '/images/portfolio/exterior/exterior-7.webp',
+    id: 'exteriors-7',
+    url: '/images/portfolio/exteriors/exteriors-7.webp',
     title: 'Multi-Level Composite Deck 3',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-8',
-    url: '/images/portfolio/exterior/exterior-8.webp',
+    id: 'exteriors-8',
+    url: '/images/portfolio/exteriors/exteriors-8.webp',
     title: 'Covered Outdoor Living Space 3',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-9',
-    url: '/images/portfolio/exterior/exterior-9.webp',
-    title: 'Custom Exterior Trim Work 3',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-9',
+    url: '/images/portfolio/exteriors/exteriors-9.webp',
+    title: 'Custom exteriors Trim Work 3',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   },
   {
-    id: 'exterior-10',
-    url: '/images/portfolio/exterior/exterior-10.webp',
+    id: 'exteriors-10',
+    url: '/images/portfolio/exteriors/exteriors-10.webp',
     title: 'Multi-Level Composite Deck 4',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-11',
-    url: '/images/portfolio/exterior/exterior-11.webp',
+    id: 'exteriors-11',
+    url: '/images/portfolio/exteriors/exteriors-11.webp',
     title: 'Covered Outdoor Living Space 4',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-12',
-    url: '/images/portfolio/exterior/exterior-12.webp',
-    title: 'Custom Exterior Trim Work 4',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-12',
+    url: '/images/portfolio/exteriors/exteriors-12.webp',
+    title: 'Custom exteriors Trim Work 4',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   },
   {
-    id: 'exterior-13',
-    url: '/images/portfolio/exterior/exterior-13.webp',
+    id: 'exteriors-13',
+    url: '/images/portfolio/exteriors/exteriors-13.webp',
     title: 'Multi-Level Composite Deck 5',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-14',
-    url: '/images/portfolio/exterior/exterior-14.webp',
+    id: 'exteriors-14',
+    url: '/images/portfolio/exteriors/exteriors-14.webp',
     title: 'Covered Outdoor Living Space 5',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-15',
-    url: '/images/portfolio/exterior/exterior-15.webp',
-    title: 'Custom Exterior Trim Work 5',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-15',
+    url: '/images/portfolio/exteriors/exteriors-15.webp',
+    title: 'Custom exteriors Trim Work 5',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   },
   {
-    id: 'exterior-16',
-    url: '/images/portfolio/exterior/exterior-16.webp',
+    id: 'exteriors-16',
+    url: '/images/portfolio/exteriors/exteriors-16.webp',
     title: 'Multi-Level Composite Deck 6',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-17',
-    url: '/images/portfolio/exterior/exterior-17.webp',
+    id: 'exteriors-17',
+    url: '/images/portfolio/exteriors/exteriors-17.webp',
     title: 'Covered Outdoor Living Space 6',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-18',
-    url: '/images/portfolio/exterior/exterior-18.webp',
-    title: 'Custom Exterior Trim Work 6',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-18',
+    url: '/images/portfolio/exteriors/exteriors-18.webp',
+    title: 'Custom exteriors Trim Work 6',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   },
   {
-    id: 'exterior-19',
-    url: '/images/portfolio/exterior/exterior-19.webp',
+    id: 'exteriors-19',
+    url: '/images/portfolio/exteriors/exteriors-19.webp',
     title: 'Multi-Level Composite Deck 7',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-20',
-    url: '/images/portfolio/exterior/exterior-20.webp',
+    id: 'exteriors-20',
+    url: '/images/portfolio/exteriors/exteriors-20.webp',
     title: 'Covered Outdoor Living Space 7',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-21',
-    url: '/images/portfolio/exterior/exterior-21.webp',
-    title: 'Custom Exterior Trim Work 7',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-21',
+    url: '/images/portfolio/exteriors/exteriors-21.webp',
+    title: 'Custom exteriors Trim Work 7',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   },
   {
-    id: 'exterior-22',
-    url: '/images/portfolio/exterior/exterior-22.webp',
+    id: 'exteriors-22',
+    url: '/images/portfolio/exteriors/exteriors-22.webp',
     title: 'Multi-Level Composite Deck 8',
     description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
   },
   {
-    id: 'exterior-23',
-    url: '/images/portfolio/exterior/exterior-23.webp',
+    id: 'exteriors-23',
+    url: '/images/portfolio/exteriors/exteriors-23.webp',
     title: 'Covered Outdoor Living Space 8',
     description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
   },
   {
-    id: 'exterior-24',
-    url: '/images/portfolio/exterior/exterior-24.webp',
-    title: 'Custom Exterior Trim Work 8',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    id: 'exteriors-24',
+    url: '/images/portfolio/exteriors/exteriors-24.webp',
+    title: 'Custom exteriors Trim Work 8',
+    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   }
 ]
 };
