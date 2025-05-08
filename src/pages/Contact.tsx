@@ -18,6 +18,18 @@ const Contact = () => {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Check honeypot field
+    const honeypotField = formRef.current.querySelector('input[name="website"]') as HTMLInputElement;
+    if (honeypotField && honeypotField.value) {
+      // Silently reject bot submissions
+      console.log('Bot submission detected');
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you! We will get back to you soon.'
+      });
+      return;
+    }
+
     const recaptchaValue = recaptchaRef.current?.getValue();
     if (!recaptchaValue) {
       setSubmitStatus({
@@ -130,6 +142,18 @@ const Contact = () => {
                 className="space-y-6"
                 aria-label="Contact form"
               >
+                {/* Honeypot field - hidden from users but visible to bots */}
+                <div className="hidden">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
+                </div>
+
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name
