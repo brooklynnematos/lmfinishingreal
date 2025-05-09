@@ -541,7 +541,7 @@ export const portfolioImages: ImageCategory[] = {
     description: 'Minimalist railing with natural wood and black spindles complements the modern space'
   }
 ],
-  'exteriors': [
+  'Exteriors': [
   {
     id: 'exteriors-1',
     url: '/images/portfolio/exteriors/exteriors-1.webp',
@@ -551,7 +551,7 @@ export const portfolioImages: ImageCategory[] = {
   {
     id: 'exteriors-2',
     url: '/images/portfolio/exteriors/exteriors-2.webp',
-    title: 'Board and Batton Accent Siding',
+    title: 'Board and Batten Accent Siding',
     description: 'Crisp white board and batten detailing enhances this modern farmhouse exterior'
   },
   {
@@ -593,8 +593,8 @@ export const portfolioImages: ImageCategory[] = {
   {
     id: 'exteriors-9',
     url: '/images/portfolio/exteriors/exteriors-9.webp',
-    title: 'Large-scale Board and Batten Home',
-    description: 'Elegand board and batton siding elevages this multi-gabled home for the curb appeal'
+    title: 'Large-Scale Board and Batten Home',
+    description: 'Elegant board and batten siding elevages this multi-gabled home for the curb appeal'
   },
   {
     id: 'exteriors-10',
@@ -648,7 +648,7 @@ export const portfolioImages: ImageCategory[] = {
     id: 'exteriors-18',
     url: '/images/portfolio/exteriors/exteriors-18.webp',
     title: 'Dark Stained Ceiling with Recessed Lighting',
-    description: 'Bold tongue-and-groove ceiling stained dark with integrated lighting, adding warmth and contrast to an exterior overhand'
+    description: 'Bold tongue-and-groove ceiling stained dark with integrated lighting, adding warmth and contrast to an exterior overhang'
   },
   {
     id: 'exteriors-19',
@@ -684,7 +684,7 @@ export const portfolioImages: ImageCategory[] = {
     id: 'exteriors-24',
     url: '/images/portfolio/exteriors/exteriors-24.webp',
     title: 'Modern Farmhouse Porch',
-    description: 'Classic board and batton siding meets a wide front porch, ready for finishing touches'
+    description: 'Classic board and batten siding meets a wide front porch, ready for finishing touches'
   }
 ]
 };
