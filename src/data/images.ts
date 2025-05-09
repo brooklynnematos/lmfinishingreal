@@ -57,7 +57,7 @@ export const portfolioImages: ImageCategory[] = {
       description: 'Statement stairs'
     }
   ],
-'Home renovations': [
+'Home Renovations': [
   {
     id: 'renovations-1',
     url: '/images/portfolio/renovations/renovations-1.webp',
