@@ -436,12 +436,12 @@ export const portfolioImages: ImageCategory[] = {
     id: 'carpentry-23',
     url: '/images/portfolio/carpentry/carpentry-23.webp',
     title: 'Slat Accent Wall',
-    description: 'Beginning stages of a modern slat wall install to add texture and contrast this room'
+    description: 'A modern slat wall install to add texture and contrast this room'
   },
   {
     id: 'carpentry-24',
     url: '/images/portfolio/carpentry/carpentry-24.webp',
-    title: 'Finished Slat Feature Wall',
+    title: 'Slat Feature Wall',
     description: 'A modern slat wall brings warmth and architectural interest to the space'
   },
   {
@@ -483,208 +483,208 @@ export const portfolioImages: ImageCategory[] = {
   {
     id: 'carpentry-31',
     url: '/images/portfolio/carpentry/carpentry-31.webp',
-    title: 'Built-in Entertainment Center with Storage 11',
-    description: ' '
+    title: 'Modern Railing Installation',
+    description: 'Sleek wood and black metal railing creates a clean, open feel in this hallway'
   },
   {
     id: 'carpentry-32',
     url: '/images/portfolio/carpentry/carpentry-32.webp',
-    title: 'Floor-to-Ceiling Library Shelving 11',
-    description: ' '
+    title: 'Corner Shelving System',
+    description: 'Functional, wraparound shelving adds storage and character to this custom built wall'
   },
   {
     id: 'carpentry-33',
     url: '/images/portfolio/carpentry/carpentry-33.webp',
-    title: 'Detailed Crown Molding Installation 11',
-    description: ' '
+    title: 'Custom Mudroom Bench',
+    description: 'L-shaped bench with shiplap back provides the perfect drop zone for busy homes'
   },
   {
     id: 'carpentry-34',
     url: '/images/portfolio/carpentry/carpentry-34.webp',
-    title: 'Built-in Entertainment Center with Storage 12',
-    description: ' '
+    title: 'Entryway',
+    description: 'Freshly trimmed space'
   },
   {
     id: 'carpentry-35',
     url: '/images/portfolio/carpentry/carpentry-35.webp',
-    title: 'Floor-to-Ceiling Library Shelving 12',
-    description: ' '
+    title: 'Oak Display Shelves',
+    description: 'Built-in oak shelves framed in dark accents add warmth and sophistication'
   },
   {
     id: 'carpentry-36',
     url: '/images/portfolio/carpentry/carpentry-36.webp',
-    title: 'Detailed Crown Molding Installation 12',
-    description: ' '
+    title: 'Fireplace Built-ins',
+    description: 'Symmetrical built-ins frame the fireplace, enhancing storage and style in the living room'
   },
   {
     id: 'carpentry-37',
     url: '/images/portfolio/carpentry/carpentry-37.webp',
-    title: 'Built-in Entertainment Center with Storage 13',
-    description: ' '
+    title: 'Staircase and Paneling Combo',
+    description: 'Elegant trim work and railing upgrade both the look and safety of this stairwell'
   },
   {
     id: 'carpentry-38',
     url: '/images/portfolio/carpentry/carpentry-38.webp',
-    title: 'Floor-to-Ceiling Library Shelving 13',
-    description: ' '
+    title: 'Full-Wall Library',
+    description: 'Custom painted shelves with brass lighting create the perfect home library setup'
   },
   {
     id: 'carpentry-39',
     url: '/images/portfolio/carpentry/carpentry-39.webp',
-    title: 'Detailed Crown Molding Installation 13',
-    description: ' '
+    title: 'Bold Black Shiplap Accent',
+    description: 'This deep black shiplap feature wall adds dramatic contrast to a neutral room'
   },
   {
     id: 'carpentry-40',
     url: '/images/portfolio/carpentry/carpentry-40.webp',
-    title: 'Built-in Entertainment Center with Storage 14',
-    description: ' '
+    title: 'Clean Stair Railing Install',
+    description: 'Minimalist railing with natural wood and black spindles complements the modern space'
   }
 ],
   'exteriors': [
   {
     id: 'exteriors-1',
     url: '/images/portfolio/exteriors/exteriors-1.webp',
-    title: 'Multi-Level Composite Deck 1',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Mountain Deck with View',
+    description: 'Durable composite decking paired with thick cedar railing, perfect for a mountain retreat'
   },
   {
     id: 'exteriors-2',
     url: '/images/portfolio/exteriors/exteriors-2.webp',
-    title: 'Covered Outdoor Living Space 1',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'Board and Batton Accent Siding',
+    description: 'Cript white board and batten detailing enhances this modern farmhouse exterior'
   },
   {
     id: 'exteriors-3',
     url: '/images/portfolio/exteriors/exteriors-3.webp',
-    title: 'Custom exteriors Trim Work 1',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Cedar Lake Deck',
+    description: 'Stunning cedar deck with a high-gloss protective finish, built for lakefront relaxation'
   },
   {
     id: 'exteriors-4',
     url: '/images/portfolio/exteriors/exteriors-4.webp',
-    title: 'Multi-Level Composite Deck 2',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Custom Deck with Natural Stain',
+    description: 'Freshly installed and stained cedar deck brings warmth and charm to the backyard'
   },
   {
     id: 'exteriors-5',
     url: '/images/portfolio/exteriors/exteriors-5.webp',
-    title: 'Covered Outdoor Living Space 2',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'AC Unit Cover',
+    description: 'Clean lined horizontal slat cover conceals outdoor utilities without sacrificing airflow'
   },
   {
     id: 'exteriors-6',
     url: '/images/portfolio/exteriors/exteriors-6.webp',
-    title: 'Custom exteriors Trim Work 2',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Tonge-and-Groove Porch Ceiling',
+    description: 'Painted tongue-and-groove ceiling with recessed lighting adds a polished touch to this front porch'
   },
   {
     id: 'exteriors-7',
     url: '/images/portfolio/exteriors/exteriors-7.webp',
-    title: 'Multi-Level Composite Deck 3',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Decking Wrap Detail',
+    description: 'Meticulous craftmanship in edge trim and post anchoring for a long-lasting, secure deck'
   },
   {
     id: 'exteriors-8',
     url: '/images/portfolio/exteriors/exteriors-8.webp',
-    title: 'Covered Outdoor Living Space 3',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'Utility Box Enclosure',
+    description: 'Minimalist slatted design to descreetly hide small exterior units or meters'
   },
   {
     id: 'exteriors-9',
     url: '/images/portfolio/exteriors/exteriors-9.webp',
-    title: 'Custom exteriors Trim Work 3',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Large-scale Board and Batten Home',
+    description: 'Elegand board and batton siding elevages this multi-gabled home for the curb appeal'
   },
   {
     id: 'exteriors-10',
     url: '/images/portfolio/exteriors/exteriors-10.webp',
-    title: 'Multi-Level Composite Deck 4',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Corner Utility Enclosure',
+    description: 'Custom L-shaped slatted enclosure blends seamlessly with stonework and landscaping'
   },
   {
     id: 'exteriors-11',
     url: '/images/portfolio/exteriors/exteriors-11.webp',
-    title: 'Covered Outdoor Living Space 4',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'Raised Backyard Deck',
+    description: 'Elevated composite deck with black metal railings for a clean, modern finish'
   },
   {
     id: 'exteriors-12',
     url: '/images/portfolio/exteriors/exteriors-12.webp',
-    title: 'Custom exteriors Trim Work 4',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Back Porch and Covered Entry',
+    description: 'Covered porch with recessed lighting and clean white posts for everyday comfort'
   },
   {
     id: 'exteriors-13',
     url: '/images/portfolio/exteriors/exteriors-13.webp',
-    title: 'Multi-Level Composite Deck 5',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Rear Exterior',
+    description: 'Board and batten siding paired with black-framed windows for a bold contrast'
   },
   {
     id: 'exteriors-14',
     url: '/images/portfolio/exteriors/exteriors-14.webp',
-    title: 'Covered Outdoor Living Space 5',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'Stone and Siding Combo',
+    description: 'Neutral stone accents blend with vertical siding for a timeless look'
   },
   {
     id: 'exteriors-15',
     url: '/images/portfolio/exteriors/exteriors-15.webp',
-    title: 'Custom exteriors Trim Work 5',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Composite Steps with Landing',
+    description: 'Durable steps and platform provide a low-maintenance, high-traffic solution'
   },
   {
     id: 'exteriors-16',
     url: '/images/portfolio/exteriors/exteriors-16.webp',
-    title: 'Multi-Level Composite Deck 6',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Deck Fascia Detail',
+    description: 'Wrapped composite decking with crisp fascia trim for a polished finish'
   },
   {
     id: 'exteriors-17',
     url: '/images/portfolio/exteriors/exteriors-17.webp',
-    title: 'Covered Outdoor Living Space 6',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'Deck Rail and Gate Addition',
+    description: 'Custom railing with matching safety gate enhances both form and function'
   },
   {
     id: 'exteriors-18',
     url: '/images/portfolio/exteriors/exteriors-18.webp',
-    title: 'Custom exteriors Trim Work 6',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Side Utility Wall',
+    description: 'Descreet utility access finished to match the home with clean exterior lines'
   },
   {
     id: 'exteriors-19',
     url: '/images/portfolio/exteriors/exteriors-19.webp',
-    title: 'Multi-Level Composite Deck 7',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Backyard Access Steps',
+    description: 'Simple and sturdy rear steps built for daily durabiliyt'
   },
   {
     id: 'exteriors-20',
     url: '/images/portfolio/exteriors/exteriors-20.webp',
-    title: 'Covered Outdoor Living Space 7',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'L-Shaped Corner Enclosure',
+    description: 'Custom corner utility enclosure blends with siding for a seamless look'
   },
   {
     id: 'exteriors-21',
     url: '/images/portfolio/exteriors/exteriors-21.webp',
-    title: 'Custom exteriors Trim Work 7',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Narrow Balcony Walkway',
+    description: 'Durable composite decking and metal railing make this upper-level walkway both safe and sleek'
   },
   {
     id: 'exteriors-22',
     url: '/images/portfolio/exteriors/exteriors-22.webp',
-    title: 'Multi-Level Composite Deck 8',
-    description: 'Custom deck installation with Trex composite decking, glass panel railings, and integrated LED stair lighting'
+    title: 'Rooftop Deck with Stone Accents',
+    description: 'This elevated deck pairs warm-toned wood with modern stacked-stone columns for a high-end look'
   },
   {
     id: 'exteriors-23',
     url: '/images/portfolio/exteriors/exteriors-23.webp',
-    title: 'Covered Outdoor Living Space 8',
-    description: 'Luxurious outdoor living area featuring a cedar pergola, built-in kitchen, and stone fireplace'
+    title: 'Dutch Colonial Siding Update',
+    description: 'A fresh exterior makeover featuring shake siding, crisp trim, and black window frames'
   },
   {
     id: 'exteriors-24',
     url: '/images/portfolio/exteriors/exteriors-24.webp',
-    title: 'Custom exteriors Trim Work 8',
-    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    title: 'Modern Farmhouse Porch',
+    description: 'Classic board and batton siding meets a wide front porch, ready for finishing touches'
   }
 ]
 };
