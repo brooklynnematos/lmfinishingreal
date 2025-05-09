@@ -484,13 +484,13 @@ export const portfolioImages: ImageCategory[] = {
     id: 'carpentry-31',
     url: '/images/portfolio/carpentry/carpentry-31.webp',
     title: 'Modern Railing Installation',
-    description: 'Sleek wood and black metal railing creates a clean, open feel in this hallway'
+    description: 'Sleek wood and black metal railing creates a clean, open feel in this living room'
   },
   {
     id: 'carpentry-32',
     url: '/images/portfolio/carpentry/carpentry-32.webp',
     title: 'Corner Shelving System',
-    description: 'Functional, wraparound shelving adds storage and character to this custom built wall'
+    description: 'Functional, wrap-around shelving adds storage and character to this custom built wall'
   },
   {
     id: 'carpentry-33',
@@ -501,7 +501,7 @@ export const portfolioImages: ImageCategory[] = {
   {
     id: 'carpentry-34',
     url: '/images/portfolio/carpentry/carpentry-34.webp',
-    title: 'Entryway',
+    title: 'Bonus Room',
     description: 'Freshly trimmed space'
   },
   {
@@ -552,7 +552,7 @@ export const portfolioImages: ImageCategory[] = {
     id: 'exteriors-2',
     url: '/images/portfolio/exteriors/exteriors-2.webp',
     title: 'Board and Batton Accent Siding',
-    description: 'Cript white board and batten detailing enhances this modern farmhouse exterior'
+    description: 'Crisp white board and batten detailing enhances this modern farmhouse exterior'
   },
   {
     id: 'exteriors-3',
@@ -575,7 +575,7 @@ export const portfolioImages: ImageCategory[] = {
   {
     id: 'exteriors-6',
     url: '/images/portfolio/exteriors/exteriors-6.webp',
-    title: 'Tonge-and-Groove Porch Ceiling',
+    title: 'Tongue-and-Groove Porch Ceiling',
     description: 'Painted tongue-and-groove ceiling with recessed lighting adds a polished touch to this front porch'
   },
   {
@@ -605,62 +605,62 @@ export const portfolioImages: ImageCategory[] = {
   {
     id: 'exteriors-11',
     url: '/images/portfolio/exteriors/exteriors-11.webp',
-    title: 'Raised Backyard Deck',
-    description: 'Elevated composite deck with black metal railings for a clean, modern finish'
+    title: 'Outdoor Porch Ceiling',
+    description: 'Clean and modern tongue-and-groove ceiling with recessed lighting adds a polished finish to this covered porch'
   },
   {
     id: 'exteriors-12',
     url: '/images/portfolio/exteriors/exteriors-12.webp',
-    title: 'Back Porch and Covered Entry',
-    description: 'Covered porch with recessed lighting and clean white posts for everyday comfort'
+    title: 'Composite Staircase with Mountain Views',
+    description: 'Durable composite stairs leading to a modern exterior entry'
   },
   {
     id: 'exteriors-13',
     url: '/images/portfolio/exteriors/exteriors-13.webp',
-    title: 'Rear Exterior',
-    description: 'Board and batten siding paired with black-framed windows for a bold contrast'
+    title: 'Modern Composite Decking',
+    description: 'Clean, low-maintenance composite deck installation, perfect for outdoor lounging'
   },
   {
     id: 'exteriors-14',
     url: '/images/portfolio/exteriors/exteriors-14.webp',
-    title: 'Stone and Siding Combo',
-    description: 'Neutral stone accents blend with vertical siding for a timeless look'
+    title: 'Staircase with Matte Black Railings',
+    description: 'Sleek staircase upgrade featuring composite treads and contemporary black railings for both style and safety'
   },
   {
     id: 'exteriors-15',
     url: '/images/portfolio/exteriors/exteriors-15.webp',
-    title: 'Composite Steps with Landing',
-    description: 'Durable steps and platform provide a low-maintenance, high-traffic solution'
+    title: 'Expansive Upper Deck',
+    description: 'Spacious outdoor deck area surrounded by black railings and a stunning view'
   },
   {
     id: 'exteriors-16',
     url: '/images/portfolio/exteriors/exteriors-16.webp',
-    title: 'Deck Fascia Detail',
-    description: 'Wrapped composite decking with crisp fascia trim for a polished finish'
+    title: 'Backyard Lounge Pergola',
+    description: 'Custom pergola with curtains, creating a shaded and stylish patio space for relaxing and entertaining'
   },
   {
     id: 'exteriors-17',
     url: '/images/portfolio/exteriors/exteriors-17.webp',
-    title: 'Deck Rail and Gate Addition',
-    description: 'Custom railing with matching safety gate enhances both form and function'
+    title: 'Shaded Seating Area with Pergola',
+    description: 'Close-up of modern pergola structure, offering a cozy outdoor gathering space with flexible sun protection'
   },
   {
     id: 'exteriors-18',
     url: '/images/portfolio/exteriors/exteriors-18.webp',
-    title: 'Side Utility Wall',
-    description: 'Descreet utility access finished to match the home with clean exterior lines'
+    title: 'Dark Stained Ceiling with Recessed Lighting',
+    description: 'Bold tongue-and-groove ceiling stained dark with integrated lighting, adding warmth and contrast to an exterior overhand'
   },
   {
     id: 'exteriors-19',
     url: '/images/portfolio/exteriors/exteriors-19.webp',
-    title: 'Backyard Access Steps',
-    description: 'Simple and sturdy rear steps built for daily durabiliyt'
+    title: 'Covered Porch with Vinyl Railings',
+    description: 'Inviting front porch with cream vinyl railings and brick columns, complementing the classic style of the home'
   },
   {
     id: 'exteriors-20',
     url: '/images/portfolio/exteriors/exteriors-20.webp',
-    title: 'L-Shaped Corner Enclosure',
-    description: 'Custom corner utility enclosure blends with siding for a seamless look'
+    title: 'Vinyl Stair Rail Detail',
+    description: 'Close-up of a clean and durable vinyl stair rail system, perfect for long-lasting safety and curb appeal'
   },
   {
     id: 'exteriors-21',
