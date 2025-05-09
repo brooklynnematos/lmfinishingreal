@@ -5,540 +5,540 @@ export const portfolioImages: ImageCategory[] = {
     {
       id: 'basement-1',
       url: '/images/portfolio/basement/basement-1.webp',
-      title: 'Modern Entertainment Space with Custom Built-ins',
-      description: 'Luxurious basement entertainment area featuring custom-built shelving, recessed lighting, and a modern fireplace design'
+      title: 'Basement Great Room',
+      description: 'Fresh flooring and clean trim, ready for move-in'
     },
     {
       id: 'basement-2',
       url: '/images/portfolio/basement/basement-2.webp',
-      title: 'Professional Home Theater Installation',
-      description: 'Custom home theater with tiered seating, acoustic panels, and state-of-the-art audio-visual equipment'
+      title: 'Kitchenette with Hidden Slat Door',
+      description: 'Modern and moody with bold black accents'
     },
     {
       id: 'basement-3',
       url: '/images/portfolio/basement/basement-3.webp',
-      title: 'Contemporary Basement Bar Design',
-      description: 'Modern wet bar featuring granite countertops, under-cabinet lighting, and custom cabinetry with wine storage'
+      title: 'Staircase with Trim Detail',
+      description: 'Sleek railing meets custom wall trim'
     },
     {
       id: 'basement-4',
       url: '/images/portfolio/basement/basement-4.webp',
-      title: 'Modern Entertainment Space with Custom Built-ins',
-      description: 'Luxurious basement entertainment area featuring custom-built shelving, recessed lighting, and a modern fireplace design'
+      title: 'Staircase with LVP',
+      description: 'A smooth transition with durable, stylish LVP'
     },
     {
       id: 'basement-5',
       url: '/images/portfolio/basement/basement-5.webp',
-      title: 'Professional Home Theater Installation',
-      description: 'Custom home theater with tiered seating, acoustic panels, and state-of-the-art audio-visual equipment'
+      title: 'Open Basement Layout',
+      description: 'Wide-plank floors and open space'
     },
     {
       id: 'basement-6',
       url: '/images/portfolio/basement/basement-6.webp',
-      title: 'Contemporary Basement Bar Design',
-      description: 'Modern wet bar featuring granite countertops, under-cabinet lighting, and custom cabinetry with wine storage'
+      title: 'Open Basement Layout',
+      description: 'Wide-plank floors and open space'
     },
     {
       id: 'basement-7',
       url: '/images/portfolio/basement/basement-7.webp',
-      title: 'Modern Entertainment Space with Custom Built-ins',
-      description: 'Luxurious basement entertainment area featuring custom-built shelving, recessed lighting, and a modern fireplace design'
+      title: 'Basement with Laundry Hookups',
+      description: 'Multi-purpose space with modern flooring'
     },
     {
       id: 'basement-8',
       url: '/images/portfolio/basement/basement-8.webp',
-      title: 'Professional Home Theater Installation',
-      description: 'Custom home theater with tiered seating, acoustic panels, and state-of-the-art audio-visual equipment'
+      title: 'Stair Feature Wall',
+      description: 'Statement stairs with wood treads and a metal rail'
     },
     {
       id: 'basement-9',
       url: '/images/portfolio/basement/basement-9.webp',
-      title: 'Contemporary Basement Bar Design',
-      description: 'Modern wet bar featuring granite countertops, under-cabinet lighting, and custom cabinetry with wine storage'
+      title: 'Stair Feature Wall',
+      description: 'Statement stairs'
     }
   ],
 'Home renovations': [
   {
     id: 'renovations-1',
     url: '/images/portfolio/renovations/renovations-1.webp',
-    title: 'Gourmet Kitchen Transformation 1',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Sauna Build',
+    description: 'Custom cedar sauna bench'
   },
   {
     id: 'renovations-2',
     url: '/images/portfolio/renovations/renovations-2.webp',
-    title: 'Spa-Like Master Bathroom 1',
-    description: 'Luxury bathroom renovation featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Loft Space',
+    description: 'Vaulted ceilings, built-in lighting, and plenty of room to play'
   },
   {
     id: 'renovations-3',
     url: '/images/portfolio/renovations/renovations-3.webp',
-    title: 'Open Concept Living Room Design 1',
-    description: 'Modern living room renovation with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Kitchen',
+    description: 'Full wall of custom cabinetry for seamless storage'
   },
   {
     id: 'renovations-4',
     url: '/images/portfolio/renovations/renovations-4.webp',
-    title: 'Gourmet Kitchen Transformation 2',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Built-in Desk',
+    description: 'Shiplap backing and butcher block tops complete this home office nook'
   },
   {
     id: 'renovations-5',
     url: '/images/portfolio/renovations/renovations-5.webp',
-    title: 'Spa-Like Master Bathroom 2',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Two-Tone Kitchen',
+    description: 'Bold contrast with black lower, white uppers, and marble-look counters'
   },
   {
     id: 'renovations-6',
     url: '/images/portfolio/renovations/renovations-6.webp',
-    title: 'Open Concept Living Room Design 2',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Wood and Iron Stair Railing',
+    description: 'Updated railings for safety and modern style in this open layout'
   },
   {
     id: 'renovations-7',
     url: '/images/portfolio/renovations/renovations-7.webp',
-    title: 'Gourmet Kitchen Transformation 3',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Open Staircase and Living Room',
+    description: 'Clean lines and natural wood create a welcoming transition'
   },
   {
     id: 'renovations-8',
     url: '/images/portfolio/renovations/renovations-8.webp',
-    title: 'Spa-Like Master Bathroom 3',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Sauna Interior',
+    description: 'Custom cedar sauna with multi-level bench seating'
   },
   {
     id: 'renovations-9',
     url: '/images/portfolio/renovations/renovations-9.webp',
-    title: 'Open Concept Living Room Design 3',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Grid Accent Wall',
+    description: 'A modern statement wall with crisp grid detail and angled pitch'
   },
   {
     id: 'renovations-10',
     url: '/images/portfolio/renovations/renovations-10.webp',
-    title: 'Gourmet Kitchen Transformation 4',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Sauna Wall Detail',
+    description: 'Seamless cedar paneling and clean corner construction'
   },
   {
     id: 'renovations-11',
     url: '/images/portfolio/renovations/renovations-11.webp',
-    title: 'Spa-Like Master Bathroom 4',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Cedar Sauna Build',
+    description: 'Custom slat seating and seamless trim in warm cedar'
   },
   {
     id: 'renovations-12',
     url: '/images/portfolio/renovations/renovations-12.webp',
-    title: 'Open Concept Living Room Design 4',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Sliding Barn Door',
+    description: 'Smooth glide with a modern matte black rail'
   },
   {
     id: 'renovations-13',
     url: '/images/portfolio/renovations/renovations-13.webp',
-    title: 'Gourmet Kitchen Transformation 5',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Interior Door Set',
+    description: 'Matching wood grain doors for a sleek, uniform look'
   },
   {
     id: 'renovations-14',
     url: '/images/portfolio/renovations/renovations-14.webp',
-    title: 'Spa-Like Master Bathroom 5',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Glass Divider Wall',
+    description: 'Framed glass for natural light and privacy'
   },
   {
     id: 'renovations-15',
     url: '/images/portfolio/renovations/renovations-15.webp',
-    title: 'Open Concept Living Room Design 5',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Wood Accent Entryway',
+    description: 'Vaulted detail and warm wood tones'
   },
   {
     id: 'renovations-16',
     url: '/images/portfolio/renovations/renovations-16.webp',
-    title: 'Gourmet Kitchen Transformation 6',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Panel Wood Hallway',
+    description: 'Clean, modern wall paneling with hidden storage'
   },
   {
     id: 'renovations-17',
     url: '/images/portfolio/renovations/renovations-17.webp',
-    title: 'Spa-Like Master Bathroom 6',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Panel Wood Hallway',
+    description: 'Clean, modern wall paneling with hidden storage'
   },
   {
     id: 'renovations-18',
     url: '/images/portfolio/renovations/renovations-18.webp',
-    title: 'Open Concept Living Room Design 6',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Wine Display Wall',
+    description: 'Floor to ceiling storage with built-in racks'
   },
   {
     id: 'renovations-19',
     url: '/images/portfolio/renovations/renovations-19.webp',
-    title: 'Gourmet Kitchen Transformation 7',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Custom Sauna Room',
+    description: 'Knotty Pine warmth and classic tile floor'
   },
   {
     id: 'renovations-20',
     url: '/images/portfolio/renovations/renovations-20.webp',
-    title: 'Spa-Like Master Bathroom 7',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Updated Kitchen',
+    description: 'Fresh white cabinets and floating walnut shelves'
   },
   {
     id: 'renovations-21',
     url: '/images/portfolio/renovations/renovations-21.webp',
-    title: 'Open Concept Living Room Design 7',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Modern Fireplace Feature',
+    description: 'Sleek black title surrounds this double-sided fireplace for a bold focal point'
   },
   {
     id: 'renovations-22',
     url: '/images/portfolio/renovations/renovations-22.webp',
-    title: 'Gourmet Kitchen Transformation 8',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Open Kitchen and Dining',
+    description: 'Bright and spacious with natural wood tones and large windows'
   },
   {
     id: 'renovations-23',
     url: '/images/portfolio/renovations/renovations-23.webp',
-    title: 'Spa-Like Master Bathroom 8',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Cozy Living Room Update',
+    description: 'High ceilings and new floors bring warmth and light to this inviting space'
   },
   {
     id: 'renovations-24',
     url: '/images/portfolio/renovations/renovations-24.webp',
-    title: 'Open Concept Living Room Design 8',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Backsplash and Counter Refresh',
+    description: 'Crisp marble tile and smooth countertops elevate this kitchen corner'
   },
   {
     id: 'renovations-25',
     url: '/images/portfolio/renovations/renovations-25.webp',
-    title: 'Gourmet Kitchen Transformation 9',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Upper Hallway Flooring',
+    description: 'New flooring adds a fresh, clean look to this upstairs hallway'
   },
   {
     id: 'renovations-26',
     url: '/images/portfolio/renovations/renovations-26.webp',
-    title: 'Spa-Like Master Bathroom 9',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Second-Floor Landing',
+    description: 'Updated floors and paint bring a polished finish to this transitional space'
   },
   {
     id: 'renovations-27',
     url: '/images/portfolio/renovations/renovations-27.webp',
-    title: 'Open Concept Living Room Design 9',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Custom Bathroom Vanity',
+    description: 'Modern lighting pairs with black stone and wood tones for a stunning bath design'
   },
   {
     id: 'renovations-28',
     url: '/images/portfolio/renovations/renovations-28.webp',
-    title: 'Gourmet Kitchen Transformation 10',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Window-Lined Lounge',
+    description: 'Expansive windows and soft carpeting create a perfect place to unwinde'
   },
   {
     id: 'renovations-29',
     url: '/images/portfolio/renovations/renovations-29.webp',
-    title: 'Spa-Like Master Bathroom 10',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Mountain View Lounge',
+    description: 'A cozy seating area with large windows overlooking a snowy backdrop'
   },
   {
     id: 'renovations-30',
     url: '/images/portfolio/renovations/renovations-30.webp',
-    title: 'Open Concept Living Room Design 10',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Bedroom Flooring Install',
+    description: 'Simple, modern flooring refreshes this quiet bedroom retreat'
   },
   {
     id: 'renovations-31',
     url: '/images/portfolio/renovations/renovations-31.webp',
-    title: 'Gourmet Kitchen Transformation 11',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Upstairs Landing',
+    description: 'Durable, low-maintenance flooring brings warmth and flow to this bright upstairs hallway'
   },
   {
     id: 'renovations-32',
     url: '/images/portfolio/renovations/renovations-32.webp',
-    title: 'Spa-Like Master Bathroom 11',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Modern Fireplace Feature Wall',
+    description: 'This sleek black shiplap fireplace adds contrast and character to a lean, open-concept space'
   },
   {
     id: 'renovations-33',
     url: '/images/portfolio/renovations/renovations-33.webp',
-    title: 'Open Concept Living Room Design 11',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Modern Fireplace',
+    description: 'A sleek fireplace anchors the open layout'
   },
   {
     id: 'renovations-34',
     url: '/images/portfolio/renovations/renovations-34.webp',
-    title: 'Gourmet Kitchen Transformation 12',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Grand Stone Statement',
+    description: 'This vaulted fireplace wall makes a rustic impact'
   },
   {
     id: 'renovations-35',
     url: '/images/portfolio/renovations/renovations-35.webp',
-    title: 'Spa-Like Master Bathroom 12',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Loft-Level Focal Point',
+    description: 'The stone finish adds texture upstairs too'
   },
   {
     id: 'renovations-36',
     url: '/images/portfolio/renovations/renovations-36.webp',
-    title: 'Open Concept Living Room Design 12',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Dual-Sided Warmth',
+    description: 'A see-through fireplace connects both rooms'
   },
   {
     id: 'renovations-37',
     url: '/images/portfolio/renovations/renovations-37.webp',
-    title: 'Gourmet Kitchen Transformation 13',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Bright, Minimal Bedroom',
+    description: 'New hardwood and fresh paint brighten the space'
   },
   {
     id: 'renovations-38',
     url: '/images/portfolio/renovations/renovations-38.webp',
-    title: 'Spa-Like Master Bathroom 13',
-    description: 'Luxury bathroom renovations featuring a freestanding tub, double vanity, and custom tile shower with glass enclosure'
+    title: 'Built-in Beauty',
+    description: 'Symmetry and storage meet around the fireplace'
   },
   {
     id: 'renovations-39',
     url: '/images/portfolio/renovations/renovations-39.webp',
-    title: 'Open Concept Living Room Design 13',
-    description: 'Modern living room renovations with vaulted ceilings, hardwood flooring, and a floor-to-ceiling stone fireplace'
+    title: 'Natural Light',
+    description: 'Two-story windows and wide-plank floors shine'
   },
   {
     id: 'renovations-40',
     url: '/images/portfolio/renovations/renovations-40.webp',
-    title: 'Gourmet Kitchen Transformation 14',
-    description: 'Complete kitchen remodel with quartz countertops, custom white shaker cabinets, and stainless steel appliances'
+    title: 'Custom Home Office',
+    description: 'A modern double desk setup with clean lines'
   },
 ],
 'Custom Carpentry': [
   {
     id: 'carpentry-1',
     url: '/images/portfolio/carpentry/carpentry-1.webp',
-    title: 'Built-in Entertainment Center with Storage 1',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Modern Shiplap Fireplace',
+    description: 'Sleek lines and a bold black mantel elevate this cozy living room centerpiece'
   },
   {
     id: 'carpentry-2',
     url: '/images/portfolio/carpentry/carpentry-2.webp',
-    title: 'Floor-to-Ceiling Library Shelving 1',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Compact Built-in Desk',
+    description: 'A smart nook design with built-in shelving maximizes functionality in tight spaces'
   },
   {
     id: 'carpentry-3',
     url: '/images/portfolio/carpentry/carpentry-3.webp',
-    title: 'Detailed Crown Molding Installation 1',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Vertical Accent Wall',
+    description: 'Clean vertical trim adds texture and interest to this feature wall'
   },
   {
     id: 'carpentry-4',
     url: '/images/portfolio/carpentry/carpentry-4.webp',
-    title: 'Built-in Entertainment Center with Storage 2',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Mudroom Storage Lockers',
+    description: 'Custom cubbies with hooks and baskets keep this entry space organized'
   },
   {
     id: 'carpentry-5',
     url: '/images/portfolio/carpentry/carpentry-5.webp',
-    title: 'Floor-to-Ceiling Library Shelving 2',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Butcher Block Pantry',
+    description: 'A warm butcher block counter and open shelves bring charm and utility to this pantry'
   },
   {
     id: 'carpentry-6',
     url: '/images/portfolio/carpentry/carpentry-6.webp',
-    title: 'Detailed Crown Molding Installation 2',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Stairway with Wood Treads',
+    description: 'Natural-toned wood steps with sleek black railings create a modern, open look'
   },
   {
     id: 'carpentry-7',
     url: '/images/portfolio/carpentry/carpentry-7.webp',
-    title: 'Built-in Entertainment Center with Storage 3',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Simple Bedroom Refresh',
+    description: 'Fresh paint and new flooring give this small bedroom a clean, updated feel'
   },
   {
     id: 'carpentry-8',
     url: '/images/portfolio/carpentry/carpentry-8.webp',
-    title: 'Floor-to-Ceiling Library Shelving 3',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Green Grid Accent Wall',
+    description: 'A bold grid layout and rich green tone turn this wall into a dramatic feature'
   },
   {
     id: 'carpentry-9',
     url: '/images/portfolio/carpentry/carpentry-9.webp',
-    title: 'Detailed Crown Molding Installation 3',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Walnut Panel Accent',
+    description: 'Warm walnut panels against a dark wall bring a modern elegance to this room'
   },
   {
     id: 'carpentry-10',
     url: '/images/portfolio/carpentry/carpentry-10.webp',
-    title: 'Built-in Entertainment Center with Storage 4',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Slatted Statement Wall',
+    description: 'Vertical wood slats pop against dark paint, framed by pendant lights for a polished finish'
   },
   {
     id: 'carpentry-11',
     url: '/images/portfolio/carpentry/carpentry-11.webp',
-    title: 'Floor-to-Ceiling Library Shelving 4',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Window and Trim Update',
+    description: 'Crisp white trim and fresh flooring give this small room a polished look'
   },
   {
     id: 'carpentry-12',
     url: '/images/portfolio/carpentry/carpentry-12.webp',
-    title: 'Detailed Crown Molding Installation 4',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Stair Railing Upgrade',
+    description: 'New wood railing and black spindles add modern contrast and safety'
   },
   {
     id: 'carpentry-13',
     url: '/images/portfolio/carpentry/carpentry-13.webp',
-    title: 'Built-in Entertainment Center with Storage 5',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Geometric Accent Wall',
+    description: 'Custom trim layout brings a bold, artistic feel to the wall'
   },
   {
     id: 'carpentry-14',
     url: '/images/portfolio/carpentry/carpentry-14.webp',
-    title: 'Floor-to-Ceiling Library Shelving 5',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Closet Door Trim',
+    description: 'Clean and classic trim work frames out this double-door closet'
   },
   {
     id: 'carpentry-15',
     url: '/images/portfolio/carpentry/carpentry-15.webp',
-    title: 'Detailed Crown Molding Installation 5',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Vertical Panel Feature Wall',
+    description: 'Tall board-and-batten wall detail adds structure to a sloped space'
   },
   {
     id: 'carpentry-16',
     url: '/images/portfolio/carpentry/carpentry-16.webp',
-    title: 'Built-in Entertainment Center with Storage 6',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Corner Wood Accent Wall',
+    description: 'Warm wood paneling turns an unused corner into a design moment'
   },
   {
     id: 'carpentry-17',
     url: '/images/portfolio/carpentry/carpentry-17.webp',
-    title: 'Floor-to-Ceiling Library Shelving 6',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Iron and Wood Stair Rail',
+    description: 'Rustic rail install combines black iron balusters with stained wood'
   },
   {
     id: 'carpentry-18',
     url: '/images/portfolio/carpentry/carpentry-18.webp',
-    title: 'Detailed Crown Molding Installation 6',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Safety Gate Integration',
+    description: 'Custom gate built to match railing'
   },
   {
     id: 'carpentry-19',
     url: '/images/portfolio/carpentry/carpentry-19.webp',
-    title: 'Built-in Entertainment Center with Storage 7',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Grid Accent Wall',
+    description: 'Elegant grid molding adds texture and balance to the bedroom'
   },
   {
     id: 'carpentry-20',
     url: '/images/portfolio/carpentry/carpentry-20.webp',
-    title: 'Floor-to-Ceiling Library Shelving 7',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Built-in Bookshelf',
+    description: 'Custom built-ins create a cozy reading and storage nook'
   },
   {
     id: 'carpentry-21',
     url: '/images/portfolio/carpentry/carpentry-21.webp',
-    title: 'Detailed Crown Molding Installation 7',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Modern Entry Stair Railing',
+    description: 'Clean-lined wood and black metal railing update this home entryway with a fresh, modern feel'
   },
   {
     id: 'carpentry-22',
     url: '/images/portfolio/carpentry/carpentry-22.webp',
-    title: 'Built-in Entertainment Center with Storage 8',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Open Railing with Natural Light',
+    description: 'New railing install highlights the open layout and bright natural light of this staircase landing'
   },
   {
     id: 'carpentry-23',
     url: '/images/portfolio/carpentry/carpentry-23.webp',
-    title: 'Floor-to-Ceiling Library Shelving 8',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Slat Accent Wall',
+    description: 'Beginning stages of a modern slat wall install to add texture and contrast this room'
   },
   {
     id: 'carpentry-24',
     url: '/images/portfolio/carpentry/carpentry-24.webp',
-    title: 'Detailed Crown Molding Installation 8',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Finished Slat Feature Wall',
+    description: 'A modern slat wall brings warmth and architectural interest to the space'
   },
   {
     id: 'carpentry-25',
     url: '/images/portfolio/carpentry/carpentry-25.webp',
-    title: 'Built-in Entertainment Center with Storage 9',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Natural Wood Panel Accent Wall',
+    description: 'This custom wood panel wall brings character and warmth to a professional space'
   },
   {
     id: 'carpentry-26',
     url: '/images/portfolio/carpentry/carpentry-26.webp',
-    title: 'Floor-to-Ceiling Library Shelving 9',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Barn Door Install',
+    description: 'Fresh barn door installation adds style and function to this bedroom entry'
   },
   {
     id: 'carpentry-27',
     url: '/images/portfolio/carpentry/carpentry-27.webp',
-    title: 'Detailed Crown Molding Installation 9',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Entry Bench with Shelf',
+    description: 'Clean and functional bench with top shelf'
   },
   {
     id: 'carpentry-28',
     url: '/images/portfolio/carpentry/carpentry-28.webp',
-    title: 'Built-in Entertainment Center with Storage 10',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    title: 'Custom Pantry Selving',
+    description: 'Custom wraparound pantry shelves maximize storage while keeping the look clean and bright'
   },
   {
     id: 'carpentry-29',
     url: '/images/portfolio/carpentry/carpentry-29.webp',
-    title: 'Floor-to-Ceiling Library Shelving 10',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    title: 'Mudroom Cubby System',
+    description: 'A practical and stylish mudroom cubby system with hooks, shelves, and basket storage'
   },
   {
     id: 'carpentry-30',
     url: '/images/portfolio/carpentry/carpentry-30.webp',
-    title: 'Detailed Crown Molding Installation 10',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    title: 'Barn Door Built-in Closet',
+    description: 'Custom sliding barn door reveal a fully built-in storage shelving unit inside'
   },
   {
     id: 'carpentry-31',
     url: '/images/portfolio/carpentry/carpentry-31.webp',
     title: 'Built-in Entertainment Center with Storage 11',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    description: ' '
   },
   {
     id: 'carpentry-32',
     url: '/images/portfolio/carpentry/carpentry-32.webp',
     title: 'Floor-to-Ceiling Library Shelving 11',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    description: ' '
   },
   {
     id: 'carpentry-33',
     url: '/images/portfolio/carpentry/carpentry-33.webp',
     title: 'Detailed Crown Molding Installation 11',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    description: ' '
   },
   {
     id: 'carpentry-34',
     url: '/images/portfolio/carpentry/carpentry-34.webp',
     title: 'Built-in Entertainment Center with Storage 12',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    description: ' '
   },
   {
     id: 'carpentry-35',
     url: '/images/portfolio/carpentry/carpentry-35.webp',
     title: 'Floor-to-Ceiling Library Shelving 12',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    description: ' '
   },
   {
     id: 'carpentry-36',
     url: '/images/portfolio/carpentry/carpentry-36.webp',
     title: 'Detailed Crown Molding Installation 12',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    description: ' '
   },
   {
     id: 'carpentry-37',
     url: '/images/portfolio/carpentry/carpentry-37.webp',
     title: 'Built-in Entertainment Center with Storage 13',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    description: ' '
   },
   {
     id: 'carpentry-38',
     url: '/images/portfolio/carpentry/carpentry-38.webp',
     title: 'Floor-to-Ceiling Library Shelving 13',
-    description: 'Built-in library shelving with ladder rail system, crown molding, and adjustable shelves in rich mahogany finish'
+    description: ' '
   },
   {
     id: 'carpentry-39',
     url: '/images/portfolio/carpentry/carpentry-39.webp',
     title: 'Detailed Crown Molding Installation 13',
-    description: 'Intricate crown molding work featuring multi-piece design with perfect mitered corners and seamless transitions'
+    description: ' '
   },
   {
     id: 'carpentry-40',
     url: '/images/portfolio/carpentry/carpentry-40.webp',
     title: 'Built-in Entertainment Center with Storage 14',
-    description: 'Custom-built entertainment unit featuring adjustable shelving, media storage, and integrated LED lighting'
+    description: ' '
   }
 ],
   'exteriors': [
@@ -684,7 +684,7 @@ export const portfolioImages: ImageCategory[] = {
     id: 'exteriors-24',
     url: '/images/portfolio/exteriors/exteriors-24.webp',
     title: 'Custom exteriors Trim Work 8',
-    description: 'Detailed exteriors trim featuring PVC materials, decorative corbels, and coordinated color scheme'
+    description: 'Detailed exterior trim featuring PVC materials, decorative corbels, and coordinated color scheme'
   }
 ]
 };
