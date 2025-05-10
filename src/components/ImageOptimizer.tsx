@@ -14,8 +14,8 @@ interface ImageOptimizerProps {
 const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
   src,
   alt,
-  width,
-  height,
+  width = 800,
+  height = 600,
   className = '',
   priority = false,
   onLoad
@@ -48,19 +48,17 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
     const baseUrl = url.split('?')[0];
     
     // Add optimization parameters
-    return `${baseUrl}?auto=compress&q=80&fit=crop&w=${width || 800}&h=${height || 600}`;
+    return `${baseUrl}?auto=format,compress&q=80&fit=crop&w=${width}&h=${height}`;
   };
 
   // Generate responsive srcset
   const generateSrcSet = () => {
     if (!src.includes('unsplash.com')) return undefined;
     
-    const sizes = [400, 800, 1200];
-    const optimizedSrc = optimizeUnsplashImage(src);
-    
+    const sizes = [400, 800, 1200, 1600];
     return sizes
       .map(size => {
-        const sizeUrl = optimizedSrc.replace(/w=\d+/, `w=${size}`);
+        const sizeUrl = optimizeUnsplashImage(src).replace(/w=\d+/, `w=${size}`);
         return `${sizeUrl} ${size}w`;
       })
       .join(', ');
@@ -99,7 +97,7 @@ const ImageOptimizer: React.FC<ImageOptimizerProps> = ({
         loading={priority ? "eager" : "lazy"}
         decoding={priority ? "sync" : "async"}
         srcSet={generateSrcSet()}
-        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+        sizes={`(max-width: 640px) 100vw, (max-width: 1024px) 50vw, ${width}px`}
         style={{ objectFit: 'cover' }}
       />
     </div>

@@ -5,13 +5,7 @@ import viteImagemin from 'vite-plugin-imagemin';
 
 export default defineConfig({
   plugins: [
-    react({
-      babel: {
-        plugins: [
-          ['@babel/plugin-transform-react-jsx', { runtime: 'automatic' }]
-        ]
-      }
-    }),
+    react(),
     viteCompression({
       algorithm: 'gzip',
       ext: '.gz'
@@ -47,56 +41,8 @@ export default defineConfig({
       }
     })
   ],
-  build: {
-    rollupOptions: {
-      output: {
-        manualChunks: (id) => {
-          if (id.includes('node_modules')) {
-            if (id.includes('react')) return 'react-vendor';
-            if (id.includes('framer-motion')) return 'framer';
-            if (id.includes('@emailjs')) return 'email';
-            if (id.includes('lucide-react')) return 'icons';
-            if (id.includes('react-helmet-async')) return 'seo';
-            return 'vendor';
-          }
-        }
-      }
-    },
-    chunkSizeWarningLimit: 1000,
-    cssCodeSplit: true,
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn']
-      },
-      mangle: {
-        safari10: true,
-        keep_fnames: false,
-        toplevel: true,
-        module: true
-      },
-      format: {
-        comments: false,
-        ascii_only: true
-      }
-    },
-    sourcemap: false,
-    target: ['es2020', 'edge88', 'firefox78', 'chrome87', 'safari14'],
-    reportCompressedSize: false,
-    assetsInlineLimit: 4096,
-    modulePreload: {
-      polyfill: true
-    }
-  },
-  optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', '@emailjs/browser', 'lucide-react', 'react-helmet-async'],
-    exclude: ['@googlemaps/js-api-loader', '@react-google-maps/api']
-  },
   server: {
-    headers: {
-      'Cache-Control': 'public, max-age=31536000'
-    }
+    port: 5173,
+    host: true
   }
 });
