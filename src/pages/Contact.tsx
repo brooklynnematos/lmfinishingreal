@@ -288,7 +288,7 @@ const Contact = () => {
                         className="text-[#4A90E2] hover:underline font-medium"
                         aria-label="Email us at leomatos.construction@gmail.com"
                       >
-                        leomatos.construction@gmail.com
+                        office@lmfinishing.com
                       </a>
                     </div>
                   </div>
