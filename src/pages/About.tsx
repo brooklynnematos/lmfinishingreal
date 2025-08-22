@@ -186,6 +186,116 @@ const About = () => {
           </div>
         </div>
       </section>
+
+      {/* Local Expertise Section */}
+      <section className="py-20 bg-gray-50" aria-labelledby="local-expertise-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 id="local-expertise-heading" className="text-3xl font-bold text-[#213555] mb-4">
+              Deep Utah Market Knowledge
+            </h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Our extensive experience in Utah's unique construction environment sets us apart from out-of-state contractors.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Utah Climate Expertise",
+                description: "Understanding how Utah's dry climate affects wood movement, expansion, and contraction in custom carpentry projects.",
+                icon: "🏔️"
+              },
+              {
+                title: "Local Building Codes",
+                description: "Extensive knowledge of Utah County, Salt Lake County, Davis County, Wasatch County, and Summit County building requirements.",
+                icon: "📋"
+              },
+              {
+                title: "Soil Conditions",
+                description: "Experience with Utah's unique alkaline soil conditions and their impact on basement finishing and foundation work.",
+                icon: "🏗️"
+              },
+              {
+                title: "Seasonal Considerations",
+                description: "Planning projects around Utah's weather patterns and optimal construction seasons for best results.",
+                icon: "🌤️"
+              },
+              {
+                title: "Local Suppliers",
+                description: "Established relationships with Utah lumber yards and suppliers for competitive pricing and quality materials.",
+                icon: "🚛"
+              },
+              {
+                title: "Community Connections",
+                description: "Deep roots in Utah County and Salt Lake County communities with local references and ongoing relationships.",
+                icon: "🤝"
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-lg text-center"
+              >
+                <div className="text-4xl mb-4" aria-hidden="true">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-[#213555] mb-3">{item.title}</h3>
+                <p className="text-gray-700">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local Testimonials */}
+      <section className="py-20" aria-labelledby="local-testimonials-heading">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 id="local-testimonials-heading" className="text-3xl font-bold text-[#213555] mb-4">
+              What Utah Homeowners Say
+            </h2>
+            <p className="text-lg text-gray-700">
+              Hear from satisfied customers across Utah County, Salt Lake County, and surrounding areas.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Sarah M.",
+                location: "Lehi, Utah County",
+                text: "Leonardo and his team did an amazing job finishing our basement in Lehi. They understood the unique challenges of Utah basements and handled everything from permits to final inspection. The quality is outstanding!"
+              },
+              {
+                name: "Mike R.",
+                location: "Sandy, Salt Lake County",
+                text: "We hired LM Finishing for custom trim work throughout our Sandy home. Leonardo's attention to detail and knowledge of Utah building codes made the difference. Highly recommend for any Utah homeowner!"
+              },
+              {
+                name: "Jennifer K.",
+                location: "American Fork, Utah County",
+                text: "Our kitchen renovation in American Fork exceeded expectations. Leonardo coordinated with local suppliers and handled all Utah County permits. Professional, reliable, and excellent craftsmanship."
+              },
+              {
+                name: "David L.",
+                location: "Draper, Salt Lake County",
+                text: "LM Finishing built custom built-ins for our Draper home. Leonardo's expertise with Utah's dry climate ensured the wood work will last for years. Outstanding quality and service!"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-50 p-6 rounded-lg"
+              >
+                <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
+                <div className="font-semibold text-[#213555]">{testimonial.name}</div>
+                <div className="text-sm text-gray-600">{testimonial.location}</div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

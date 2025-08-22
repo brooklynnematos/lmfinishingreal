@@ -1,105 +1,55 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { services } from '../data/content';
-import { ArrowRight, CheckCircle, Image, DollarSign } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Award, Clock, ThumbsUp, Users } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
-const Services = () => {
-  const navigate = useNavigate();
-
-  const handlePortfolioClick = (category: string) => {
-    navigate(`/portfolio?category=${category}`);
-  };
-
-  const getCategoryFromTitle = (title: string) => {
-    switch (title) {
-      case "Basement Finishing":
-        return "Basement Finishing";
-      case "Home Renovations":
-        return "Home Renovations";
-      case "Custom Carpentry":
-        return "Custom Carpentry";
-      case "Exterior Services":
-        return "Exterior";
-      default:
-        return "All";
-    }
-  };
-
-  // Pricing information for each service
-  const servicePricing = {
-    "Basement Finishing": {
-      range: "$25,000 - $75,000",
-      details: "Complete basement finishing including framing, electrical, plumbing, flooring, and finishes",
-      factors: ["Square footage", "Bathroom additions", "Kitchen/bar areas", "Flooring type", "Ceiling height"]
-    },
-    "Home Renovations": {
-      range: "$15,000 - $150,000+",
-      details: "Kitchen remodels, bathroom upgrades, and complete home makeovers",
-      factors: ["Room size", "Material quality", "Appliance upgrades", "Structural changes", "Permit requirements"]
-    },
-    "Custom Carpentry": {
-      range: "$8 - $25 per linear foot",
-      details: "Custom trim work, built-ins, and finish carpentry services",
-      factors: ["Wood species", "Design complexity", "Installation difficulty", "Project size", "Custom features"]
-    },
-    "Exterior Services": {
-      range: "$5,000 - $35,000",
-      details: "Deck construction, patio installation, and exterior improvements",
-      factors: ["Deck size", "Material type", "Site conditions", "Railing style", "Additional features"]
-    }
-  };
-
-  // Schema markup for services
-  const servicesSchema = {
+const About = () => {
+  // Schema markup for About page
+  const aboutSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
-    "provider": {
+    "@type": "Person",
+    "name": "Leonardo Matos",
+    "jobTitle": "Owner & Master Craftsman",
+    "worksFor": {
       "@type": "LocalBusiness",
       "name": "LM Finishing & Construction",
-      "url": "https://lmfinishingandconstruction.com"
+      "description": "Utah-based residential contractor specializing in custom woodwork, finish carpentry, and remodels"
     },
-    "serviceType": "Construction Services",
-    "areaServed": [
-      "Utah County, UT",
-      "Salt Lake County, UT", 
-      "Davis County, UT",
-      "Wasatch County, UT",
-      "Summit County, UT"
+    "knowsAbout": [
+      "Finish Carpentry",
+      "Custom Trim Work", 
+      "Basement Finishing",
+      "Home Renovations",
+      "Construction Management"
     ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Utah Construction Services",
-      "itemListElement": services.map(service => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": `Utah ${service.title}`,
-          "description": service.description
-        }
-      }))
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Finish Carpenter",
+      "occupationLocation": {
+        "@type": "State",
+        "name": "Utah"
+      }
     }
   };
 
   return (
     <div className="w-full">
       <SEOHead
-        title="Utah Custom Carpentry & Remodeling Services - Finish Carpenter"
-        description="Expert Utah finish carpenter and custom remodeling contractor. Specializing in basement finishing, custom carpentry, home renovations, and exterior services. Serving Utah County, Salt Lake County, and surrounding areas."
-        canonicalUrl="https://lmfinishingandconstruction.com/services"
+        title="About Utah's Premier Finish Carpenter - Leonardo Matos"
+        description="Learn about Leonardo Matos, owner of LM Finishing and Construction, Utah's trusted expert finish carpenter with over 8 years of experience in custom carpentry, basement finishing, and home renovations serving Utah County, Salt Lake County, and surrounding areas."
+        canonicalUrl="https://lmfinishingandconstruction.com/about"
       />
       
       {/* Schema Markup */}
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aboutSchema) }}
       />
       
       {/* Hero Section */}
       <section 
-        className="relative py-24 bg-[#213555]"
-        aria-label="Utah Custom Carpentry and Remodeling Services"
+        className="relative py-24 bg-[#213555]" 
+        aria-label="About LM Finishing and Construction - Utah's Premier Finish Carpenter"
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">
           <div className="absolute inset-0 bg-[#213555] bg-opacity-85"></div>
@@ -112,7 +62,7 @@ const Services = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold text-white mb-8"
             >
-              Utah Custom Carpentry & Remodeling Services
+              About Utah's Premier Finish Carpenter
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -120,202 +70,227 @@ const Services = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl text-white max-w-3xl mx-auto"
             >
-              Professional finish carpenter and custom remodeling contractor serving Utah County, Salt Lake County, and surrounding communities with expert craftsmanship and attention to detail.
+              Building dreams and transforming Utah homes with expert finish carpentry, custom woodwork, and unmatched craftsmanship since 2016.
             </motion.p>
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20" aria-label="Detailed Utah Construction Services">
+      {/* Mission Statement Section */}
+      <section className="py-16 bg-white" aria-labelledby="mission-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-16">
-            {services.map((service, index) => {
-              const pricing = servicePricing[service.title as keyof typeof servicePricing];
-              
-              return (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                  className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start"
-                >
-                  {/* Service Image */}
-                  <div className={`order-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-3'}`}>
-                    <img
-                      src={service.imageUrl}
-                      alt={`Utah ${service.title.toLowerCase()} contractor showcasing professional craftsmanship in ${service.title.toLowerCase()} projects throughout Utah County and Salt Lake County`}
-                      className="w-full h-[500px] object-cover rounded-lg shadow-lg"
-                    />
-                  </div>
-
-                  {/* Service Details */}
-                  <div className="order-2 lg:col-span-1">
-                    <h2 className="text-3xl font-bold text-[#213555] mb-6">Utah {service.title}</h2>
-                    <p className="text-lg text-gray-700 mb-6">{service.description}</p>
-
-                    <ul className="space-y-3 mb-8" aria-label={`Features of Utah ${service.title}`}>
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start text-gray-700">
-                          <CheckCircle className="h-5 w-5 text-[#213555] mr-3 mt-0.5 flex-shrink-0" aria-hidden="true" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <div className="flex flex-col sm:flex-row gap-3">
-                      <Link
-                        to="/contact"
-                        aria-label={`Get started with Utah ${service.title}`}
-                        className="inline-flex items-center justify-center bg-[#213555] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#182943] transition-colors"
-                      >
-                        Get Free Estimate
-                        <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
-                      </Link>
-                      <button
-                        onClick={() => handlePortfolioClick(getCategoryFromTitle(service.title))}
-                        aria-label={`View Utah ${service.title} portfolio`}
-                        className="inline-flex items-center justify-center border-2 border-[#213555] text-[#213555] px-6 py-3 rounded-md text-lg font-medium hover:bg-[#213555] hover:text-white transition-colors"
-                      >
-                        View Portfolio
-                        <Image className="ml-2 h-5 w-5" aria-hidden="true" />
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Pricing Information */}
-                  <div className={`order-3 ${index % 2 === 0 ? 'lg:order-3' : 'lg:order-1'}`}>
-                    <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
-                      <div className="flex items-center mb-4">
-                        <DollarSign className="h-6 w-6 text-[#213555] mr-2" aria-hidden="true" />
-                        <h3 className="text-xl font-semibold text-[#213555]">General Pricing</h3>
-                      </div>
-                      
-                      <div className="mb-4">
-                        <div className="text-2xl font-bold text-[#213555] mb-2">{pricing.range}</div>
-                        <p className="text-sm text-gray-600">{pricing.details}</p>
-                      </div>
-
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 mb-2">Pricing factors include:</h4>
-                        <ul className="space-y-1">
-                          {pricing.factors.map((factor, factorIndex) => (
-                            <li key={factorIndex} className="flex items-center text-sm text-gray-600">
-                              <span className="w-1.5 h-1.5 bg-[#213555] rounded-full mr-2 flex-shrink-0" aria-hidden="true"></span>
-                              {factor}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="bg-blue-50 p-3 rounded border-l-4 border-[#213555]">
-                        <p className="text-sm text-gray-700">
-                          <strong>Note:</strong> Prices vary based on project scope, materials, and site conditions. 
-                          Contact us for a detailed estimate tailored to your specific Utah project.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
-          </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <h2 id="mission-heading" className="text-3xl font-bold text-[#213555] mb-6">Our Mission</h2>
+            <p className="text-xl text-gray-800 leading-relaxed mb-6">
+              LM Finishing and Construction is a Utah-based residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and complete home remodels. Our mission is to elevate the art of home improvement through exceptional craftsmanship, innovative design, and unwavering commitment to customer satisfaction.
+            </p>
+            <p className="text-lg text-gray-700">
+              We serve homeowners and general contractors across Utah County, Salt Lake County, Davis County, Wasatch County, and Summit County, transforming every space into a masterpiece that reflects our clients' vision.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-gray-50" aria-labelledby="why-choose-heading">
+      {/* Values Section */}
+      <section className="py-20 bg-gray-50" aria-labelledby="values-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="why-choose-heading" className="text-3xl font-bold text-[#213555] mb-4">
-              Why Choose Our Utah Finish Carpentry Team
-            </h2>
+            <h2 id="values-heading" className="text-3xl font-bold text-[#213555] mb-4">Why Utah Homeowners Choose Our Finish Carpentry Team</h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              The advantages of hiring experienced Utah finish carpenters versus general handymen for your custom remodeling project.
+              The principles that guide our Utah finish carpentry work and relationships with clients throughout Northern Utah.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                title: "Specialized Utah Finish Carpentry Skills",
-                description: "Our Utah finish carpenters have years of specialized training in precision joinery, custom trim installation, and detailed woodwork that general handymen cannot match."
+                title: "Expert Utah Craftsmanship",
+                description: "We never compromise on the quality of our Utah finish carpentry work, using only the finest materials and proven techniques."
               },
               {
-                title: "Licensed Utah Contractors",
-                description: "Fully licensed and insured residential contractors in Utah County and Salt Lake County, ensuring your project meets all local building codes and regulations."
+                title: "Honest Utah Contractors",
+                description: "Honesty and transparency are at the core of everything we do as Utah contractors, from accurate pricing to clear project timelines."
               },
               {
-                title: "Quality Materials & Craftsmanship",
-                description: "We use premium materials and proven techniques to ensure your Utah remodeling project stands the test of time and adds lasting value to your home."
+                title: "Innovative Utah Solutions",
+                description: "We stay ahead of Utah construction trends and bring creative solutions to every renovation challenge."
               }
-            ].map((benefit, index) => (
+            ].map((value, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white p-8 rounded-lg shadow-lg"
+                className="bg-white p-8 rounded-lg shadow-lg text-center"
+                role="article"
+                aria-labelledby={`value-${index}`}
               >
-                <h3 className="text-xl font-semibold text-[#213555] mb-4">{benefit.title}</h3>
-                <p className="text-gray-700">{benefit.description}</p>
+                <h3 id={`value-${index}`} className="text-xl font-semibold text-[#213555] mb-4">{value.title}</h3>
+                <p className="text-gray-700">{value.description}</p>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Process Section */}
-      <section className="py-20" aria-labelledby="process-heading">
+      {/* Founder Section */}
+      <section className="py-20" aria-labelledby="founder-heading">
+        <div className="max-w-6xl mx-auto px-6 sm:px-8 lg:px-10">
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
+            {/* Image Section */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="flex-shrink-0"
+            >
+              <img
+                src="/images/about/IMG_9924.JPG"
+                alt="Leonardo Matos, Owner and Master Finish Carpenter at LM Finishing and Construction, Utah's premier custom carpentry contractor"
+                className="rounded-lg shadow-xl w-[250px] h-[250px] object-cover mx-auto md:mx-0"
+              />
+            </motion.div>
+
+            {/* Text Section */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="max-w-2xl text-center md:text-left space-y-6"
+            >
+              <h2 id="founder-heading" className="text-3xl font-bold text-[#213555]">Meet Leonardo Matos</h2>
+              <h3 className="text-xl text-gray-700">Owner & Master Utah Finish Carpenter</h3>
+              <p className="text-lg text-gray-800">
+                I am the owner and founder of LM Finishing and Construction, a Utah-based residential contractor established in 2021. With over eight years of experience as a Utah finish carpenter, I specialize in custom woodwork, finish carpentry, basement finishing, and complete home remodels throughout Utah County, Salt Lake County, and surrounding areas.
+              </p>
+              <p className="text-lg text-gray-800">
+                Known for my keen attention to detail and dedication to quality Utah craftsmanship, I take pride in delivering exceptional finish carpentry work that exceeds client expectations. Whether you're looking for top-tier finish carpentry services or a skilled Utah contractor to bring your remodeling vision to life, my team and I are ready to deliver outstanding results.
+              </p>
+
+              {/* Experience & Projects Stats */}
+              <div className="grid grid-cols-2 gap-6 pt-6">
+                <div className="bg-gray-50 p-6 rounded-lg text-center" role="status">
+                  <div className="text-2xl font-bold text-[#213555] mb-2" aria-label="Years of Utah Finish Carpentry Experience">8+</div>
+                  <div className="text-gray-700">Years Utah Experience</div>
+                </div>
+                <div className="bg-gray-50 p-6 rounded-lg text-center" role="status">
+                  <div className="text-2xl font-bold text-[#213555] mb-2" aria-label="Utah Projects Completed">500+</div>
+                  <div className="text-gray-700">Utah Projects Completed</div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local Expertise Section */}
+      <section className="py-20 bg-gray-50" aria-labelledby="local-expertise-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="process-heading" className="text-3xl font-bold text-[#213555] mb-4">Our Utah Remodeling Process</h2>
+            <h2 id="local-expertise-heading" className="text-3xl font-bold text-[#213555] mb-4">
+              Deep Utah Market Knowledge
+            </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              We follow a systematic approach to ensure your Utah construction project is completed to the highest standards on time and within budget.
+              Our extensive experience in Utah's unique construction environment sets us apart from out-of-state contractors.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                step: "1",
-                title: "Free Utah Consultation",
-                description: "We meet at your Utah property to discuss your vision, requirements, timeline, and budget for your remodeling project."
+                title: "Utah Climate Expertise",
+                description: "Understanding how Utah's dry climate affects wood movement, expansion, and contraction in custom carpentry projects.",
+                icon: "🏔️"
               },
               {
-                step: "2",
-                title: "Custom Design & Planning",
-                description: "Our Utah design team creates detailed plans and material specifications tailored to your specific needs and local building requirements."
+                title: "Local Building Codes",
+                description: "Extensive knowledge of Utah County, Salt Lake County, Davis County, Wasatch County, and Summit County building requirements.",
+                icon: "📋"
               },
               {
-                step: "3",
-                title: "Expert Construction",
-                description: "Our skilled Utah craftsmen bring your vision to life using quality materials and proven construction techniques."
+                title: "Soil Conditions",
+                description: "Experience with Utah's unique alkaline soil conditions and their impact on basement finishing and foundation work.",
+                icon: "🏗️"
               },
               {
-                step: "4",
-                title: "Final Inspection & Completion",
-                description: "Thorough quality inspection and final walkthrough to ensure your Utah remodeling project exceeds expectations."
+                title: "Seasonal Considerations",
+                description: "Planning projects around Utah's weather patterns and optimal construction seasons for best results.",
+                icon: "🌤️"
+              },
+              {
+                title: "Local Suppliers",
+                description: "Established relationships with Utah lumber yards and suppliers for competitive pricing and quality materials.",
+                icon: "🚛"
+              },
+              {
+                title: "Community Connections",
+                description: "Deep roots in Utah County and Salt Lake County communities with local references and ongoing relationships.",
+                icon: "🤝"
               }
-            ].map((step, index) => (
+            ].map((item, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white p-8 rounded-lg shadow-lg text-center relative"
-                role="article"
-                aria-labelledby={`step-${index}`}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-lg text-center"
               >
-                <div 
-                  className="w-12 h-12 bg-[#213555] text-white rounded-full flex items-center justify-center text-xl font-bold mb-6 mx-auto"
-                  aria-hidden="true"
-                >
-                  {step.step}
-                </div>
-                <h3 id={`step-${index}`} className="text-xl font-semibold text-[#213555] mb-4">
-                  {step.title}
-                </h3>
-                <p className="text-gray-700">{step.description}</p>
+                <div className="text-4xl mb-4" aria-hidden="true">{item.icon}</div>
+                <h3 className="text-xl font-semibold text-[#213555] mb-3">{item.title}</h3>
+                <p className="text-gray-700">{item.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local Testimonials */}
+      <section className="py-20" aria-labelledby="local-testimonials-heading">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 id="local-testimonials-heading" className="text-3xl font-bold text-[#213555] mb-4">
+              What Utah Homeowners Say
+            </h2>
+            <p className="text-lg text-gray-700">
+              Hear from satisfied customers across Utah County, Salt Lake County, and surrounding areas.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                name: "Sarah M.",
+                location: "Lehi, Utah County",
+                text: "Leonardo and his team did an amazing job finishing our basement in Lehi. They understood the unique challenges of Utah basements and handled everything from permits to final inspection. The quality is outstanding!"
+              },
+              {
+                name: "Mike R.",
+                location: "Sandy, Salt Lake County",
+                text: "We hired LM Finishing for custom trim work throughout our Sandy home. Leonardo's attention to detail and knowledge of Utah building codes made the difference. Highly recommend for any Utah homeowner!"
+              },
+              {
+                name: "Jennifer K.",
+                location: "American Fork, Utah County",
+                text: "Our kitchen renovation in American Fork exceeded expectations. Leonardo coordinated with local suppliers and handled all Utah County permits. Professional, reliable, and excellent craftsmanship."
+              },
+              {
+                name: "David L.",
+                location: "Draper, Salt Lake County",
+                text: "LM Finishing built custom built-ins for our Draper home. Leonardo's expertise with Utah's dry climate ensured the wood work will last for years. Outstanding quality and service!"
+              }
+            ].map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-gray-50 p-6 rounded-lg"
+              >
+                <p className="text-gray-700 italic mb-4">"{testimonial.text}"</p>
+                <div className="font-semibold text-[#213555]">{testimonial.name}</div>
+                <div className="text-sm text-gray-600">{testimonial.location}</div>
               </motion.div>
             ))}
           </div>
@@ -325,4 +300,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default About;

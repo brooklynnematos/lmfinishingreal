@@ -365,6 +365,129 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Emergency Services & Response Times */}
+      <section className="py-20" aria-labelledby="response-times-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 id="response-times-heading" className="text-3xl font-bold text-[#213555] mb-4">
+              Fast Response Across Utah
+            </h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Quick response times and emergency services for Utah homeowners and contractors.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                area: "Utah County",
+                cities: "Provo, Orem, Lehi, American Fork",
+                response: "Same Day Response",
+                icon: "⚡"
+              },
+              {
+                area: "Salt Lake County", 
+                cities: "Salt Lake City, Sandy, Draper, West Valley",
+                response: "24-Hour Response",
+                icon: "🚀"
+              },
+              {
+                area: "Davis County",
+                cities: "Layton, Bountiful, Farmington, Kaysville", 
+                response: "24-Hour Response",
+                icon: "⏰"
+              },
+              {
+                area: "Wasatch & Summit",
+                cities: "Heber City, Park City, Midway, Coalville",
+                response: "48-Hour Response", 
+                icon: "🏔️"
+              }
+            ].map((area, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-lg text-center"
+              >
+                <div className="text-4xl mb-4" aria-hidden="true">{area.icon}</div>
+                <h3 className="text-xl font-semibold text-[#213555] mb-2">{area.area}</h3>
+                <p className="text-sm text-gray-600 mb-3">{area.cities}</p>
+                <div className="bg-[#213555] text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {area.response}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Methods by Project Type */}
+      <section className="py-20 bg-gray-50" aria-labelledby="contact-methods-heading">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 id="contact-methods-heading" className="text-3xl font-bold text-[#213555] mb-4">
+              Best Ways to Reach Us by Project Type
+            </h2>
+            <p className="text-lg text-gray-700">
+              Choose the best contact method based on your Utah construction project needs.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Emergency Repairs & Urgent Projects",
+                description: "Water damage, structural issues, or time-sensitive repairs",
+                method: "Call Immediately",
+                contact: "(385) 500-8437",
+                icon: "🚨"
+              },
+              {
+                title: "Basement Finishing Consultations", 
+                description: "Free estimates for Utah basement finishing projects",
+                method: "Schedule Online or Call",
+                contact: "Form submission or phone",
+                icon: "🏠"
+              },
+              {
+                title: "Custom Carpentry Quotes",
+                description: "Built-ins, trim work, and custom millwork projects",
+                method: "Email with Photos",
+                contact: "office@lmfinishing.com",
+                icon: "🔨"
+              },
+              {
+                title: "General Contractor Partnerships",
+                description: "Subcontracting opportunities and bulk projects",
+                method: "Direct Phone Contact",
+                contact: "(385) 500-8437",
+                icon: "🤝"
+              }
+            ].map((method, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white p-6 rounded-lg shadow-lg"
+              >
+                <div className="flex items-start mb-4">
+                  <div className="text-3xl mr-4" aria-hidden="true">{method.icon}</div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-[#213555] mb-2">{method.title}</h3>
+                    <p className="text-gray-600 text-sm mb-3">{method.description}</p>
+                  </div>
+                </div>
+                <div className="bg-gray-50 p-4 rounded">
+                  <div className="font-semibold text-[#213555] mb-1">{method.method}</div>
+                  <div className="text-gray-700">{method.contact}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

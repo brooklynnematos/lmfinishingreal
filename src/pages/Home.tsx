@@ -296,10 +296,10 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
+              Frequently Asked Questions About Utah Custom Carpentry & Remodeling
             </h2>
             <p className="text-lg text-gray-700">
-              Common questions about custom carpentry and home renovations in Utah.
+              Get answers to the most common questions Utah homeowners ask about finish carpentry, basement finishing, and home renovations.
             </p>
           </div>
           <div className="space-y-8">
@@ -315,6 +315,34 @@ const Home = () => {
               {
                 question: "Why hire a Utah finish carpenter instead of a general handyman?",
                 answer: "Utah finish carpenters specialize in detailed woodwork, custom trim installation, and precision joinery that requires years of training. Unlike general handymen, finish carpenters have the expertise to create seamless mitered corners, install complex crown molding, and build custom cabinetry."
+              },
+              {
+                question: "Do you serve all of Utah County and Salt Lake County?",
+                answer: "Yes! We proudly serve all cities in Utah County including Provo, Orem, American Fork, Lehi, Saratoga Springs, and Pleasant Grove. We also serve Salt Lake County including Salt Lake City, Sandy, Draper, West Valley City, and South Jordan. We extend our services to Davis County, Wasatch County, and Summit County as well."
+              },
+              {
+                question: "How long does a typical Utah basement finishing project take?",
+                answer: "Most Utah basement finishing projects take 4-8 weeks depending on size and complexity. Factors include square footage, bathroom additions, electrical/plumbing work, and permit approval times. We provide detailed timelines during our free consultation."
+              },
+              {
+                question: "Do you handle permits for Utah construction projects?",
+                answer: "Absolutely! We handle all permit applications and inspections required by Utah County, Salt Lake County, and other local jurisdictions. Our team is familiar with all local building codes and ensures your project meets Utah construction standards."
+              },
+              {
+                question: "What's the difference between a Utah contractor and a handyman?",
+                answer: "Licensed Utah contractors have specialized training, proper insurance, and expertise in specific trades like finish carpentry. They handle complex projects, obtain permits, and provide warranties. Handymen are better for simple repairs and maintenance tasks."
+              },
+              {
+                question: "How much value does basement finishing add to Utah homes?",
+                answer: "Professional basement finishing typically adds 60-80% of the project cost to your Utah home's value. In Utah's competitive real estate market, finished basements help homes sell faster and for higher prices, especially in Utah County and Salt Lake County."
+              },
+              {
+                question: "What makes Utah basement finishing different from other states?",
+                answer: "Utah's dry climate and unique soil conditions require special moisture control techniques. Our Utah basement contractors understand local building codes, proper insulation for Utah's temperature variations, and how to handle the alkaline soil common in Northern Utah."
+              },
+              {
+                question: "Do you offer free estimates for Utah remodeling projects?",
+                answer: "Yes! We provide free, detailed estimates for all Utah custom carpentry and remodeling projects. Our estimates include materials, labor, timeline, and all costs upfront. We serve Utah County, Salt Lake County, and surrounding areas with no-obligation consultations."
               }
             ].map((faq, index) => (
               <motion.div
