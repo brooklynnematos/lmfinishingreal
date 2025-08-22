@@ -146,7 +146,7 @@ const Services = () => {
                     <img
                       src={service.imageUrl}
                       alt={`Utah ${service.title.toLowerCase()} contractor showcasing professional craftsmanship in ${service.title.toLowerCase()} projects throughout Utah County and Salt Lake County`}
-                      className="w-full h-96 object-cover rounded-lg shadow-lg"
+                      className="w-full h-[500px] object-cover rounded-lg shadow-lg"
                     />
                   </div>
 

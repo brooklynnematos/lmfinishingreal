@@ -250,7 +250,7 @@ const Home = () => {
                 <ImageOptimizer
                   src={service.imageUrl}
                   alt={`Utah ${service.title.toLowerCase()} contractor showcasing professional craftsmanship and quality workmanship`}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-96 object-cover"
                   width={800}
                   height={400}
                   priority={index < 2}
