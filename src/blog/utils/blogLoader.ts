@@ -22,13 +22,24 @@ export async function loadBlogPosts(): Promise<BlogPost[]> {
     // Generate slug from the filename
     const slug = path.split('/').pop()?.replace('.html', '') || '';
     
+    // Determine image URL based on content
+    let imageUrl = 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d'; // default
+    
+    if (slug.includes('trim') || slug.includes('carpenter') || slug.includes('questions-ask')) {
+      imageUrl = 'https://images.unsplash.com/photo-1600566752547-c06598f4a0d5';
+    } else if (slug.includes('basement')) {
+      imageUrl = 'https://utahhomeremodel.net/wp-content/uploads/2024/02/Utah-basement-remodel-with-bar-2-1080x675.jpg';
+    } else if (slug.includes('flooring') || slug.includes('diy')) {
+      imageUrl = 'https://images.unsplash.com/photo-1581858726788-75bc0f6a952d';
+    }
+    
     posts.push({
       title,
       slug,
       excerpt: description,
       content: articleContent,
       date,
-      imageUrl: `https://images.unsplash.com/photo-${Date.now()}` // You can customize this
+      imageUrl
     });
   }
   

@@ -5,7 +5,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 import LazyComponent from './components/LazyComponent';
-import CookieConsent from './components/CookieConsent';
 
 // Lazy load page components
 const Home = lazy(() => import('./pages/Home'));
@@ -37,7 +36,6 @@ function App() {
             </Routes>
           </main>
           <Footer />
-          <CookieConsent />
         </div>
       </Router>
     </HelmetProvider>

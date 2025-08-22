@@ -65,7 +65,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center text-gray-400">
                 <Mail className="h-5 w-5 mr-2" />
-                leomatos.construction@gmail.com
+                office@lmfinishing.com
               </li>
               <li className="text-gray-400">
                 <p className="font-semibold mb-1">Business Hours:</p>

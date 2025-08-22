@@ -86,18 +86,50 @@ const Contact = () => {
     }
   };
 
+  // Schema markup for contact page
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "LocalBusiness",
+      "name": "LM Finishing & Construction",
+      "telephone": "+1-385-500-8437",
+      "email": "office@lmfinishing.com",
+      "url": "https://lmfinishingandconstruction.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Utah",
+        "addressCountry": "US"
+      },
+      "openingHours": "Mo-Fr 08:00-17:00",
+      "serviceArea": [
+        "Utah County, UT",
+        "Salt Lake County, UT",
+        "Davis County, UT", 
+        "Wasatch County, UT",
+        "Summit County, UT"
+      ]
+    }
+  };
+
   return (
     <div className="w-full">
       <SEOHead
-        title="Contact Us"
-        description="Get in touch with Utah's premier home renovation experts. Free estimates for basement finishing, custom carpentry, and home renovations in Utah County, Salt Lake County, and surrounding areas."
+        title="Contact Utah's Premier Finish Carpenter - Free Estimates"
+        description="Contact LM Finishing & Construction for your free estimate. Utah's trusted finish carpenter and custom remodeling contractor serving Utah County, Salt Lake County, and surrounding areas. Call (385) 500-8437 for basement finishing, custom carpentry, and home renovations."
         canonicalUrl="https://lmfinishingandconstruction.com/contact"
+      />
+      
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}
       />
       
       {/* Hero Section */}
       <section 
         className="relative py-24 bg-[#213555]"
-        aria-label="Contact Information"
+        aria-label="Contact Utah's Premier Finish Carpenter"
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">
           <div className="absolute inset-0 bg-[#213555] bg-opacity-85"></div>
@@ -110,7 +142,7 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold text-white mb-8"
             >
-              Contact Us
+              Contact Utah's Premier Finish Carpenter
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -118,7 +150,7 @@ const Contact = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl text-white max-w-3xl mx-auto"
             >
-              Get in touch with us to start your renovation journey.
+              Get your free estimate for custom carpentry, basement finishing, and home renovations throughout Utah County, Salt Lake County, and surrounding areas.
             </motion.p>
           </div>
         </div>
@@ -135,12 +167,12 @@ const Contact = () => {
               transition={{ duration: 0.8 }}
               className="bg-white p-8 rounded-lg shadow-lg"
             >
-              <h2 className="text-2xl font-bold text-[#213555] mb-6">Get Your Free Estimate</h2>
+              <h2 className="text-2xl font-bold text-[#213555] mb-6">Get Your Free Utah Remodeling Estimate</h2>
               <form 
                 ref={formRef} 
                 onSubmit={handleSubmit} 
                 className="space-y-6"
-                aria-label="Contact form"
+                aria-label="Utah contractor contact form"
               >
                 {/* Honeypot field - hidden from users but visible to bots */}
                 <div className="hidden">
@@ -206,8 +238,8 @@ const Contact = () => {
                   >
                     <option value="">Select a service</option>
                     <option value="Basement Finishing">Basement Finishing</option>
-                    <option value="Home Renovations">Home Renovations</option>
                     <option value="Custom Carpentry">Custom Carpentry</option>
+                    <option value="Home Renovations">Home Renovations</option>
                     <option value="Exterior Services">Exterior Services</option>
                     <option value="Other">Other</option>
                   </select>
@@ -220,6 +252,7 @@ const Contact = () => {
                     id="details"
                     name="details"
                     rows={4}
+                    placeholder="Please describe your Utah remodeling project, including location, timeline, and any specific requirements..."
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
                     aria-required="true"
@@ -251,7 +284,7 @@ const Contact = () => {
                   }`}
                   aria-disabled={isSubmitting}
                 >
-                  {isSubmitting ? 'Submitting...' : 'Submit Request'}
+                  {isSubmitting ? 'Submitting...' : 'Get Free Utah Estimate'}
                 </button>
               </form>
             </motion.div>
@@ -264,38 +297,40 @@ const Contact = () => {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-[#213555] mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold text-[#213555] mb-6">Utah Contractor Contact Information</h2>
                 <div className="space-y-6">
                   <div className="flex items-start">
                     <Phone className="h-6 w-6 text-[#4A90E2] mt-1" aria-hidden="true" />
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-[#213555]">Phone</h3>
+                      <h3 className="text-lg font-medium text-[#213555]">Call Our Utah Office</h3>
                       <a 
                         href="tel:+13855008437" 
                         className="text-[#4A90E2] hover:underline font-medium"
-                        aria-label="Call us at (385) 500-8437"
+                        aria-label="Call Utah finish carpenter at (385) 500-8437"
                       >
                         (385) 500-8437
                       </a>
+                      <p className="text-sm text-gray-600 mt-1">Utah County & Salt Lake County</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Mail className="h-6 w-6 text-[#4A90E2] mt-1" aria-hidden="true" />
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-[#213555]">Email</h3>
+                      <h3 className="text-lg font-medium text-[#213555]">Email Our Utah Team</h3>
                       <a 
-                        href="mailto:leomatos.construction@gmail.com"
+                        href="mailto:office@lmfinishing.com"
                         className="text-[#4A90E2] hover:underline font-medium"
-                        aria-label="Email us at leomatos.construction@gmail.com"
+                        aria-label="Email Utah finish carpenter at office@lmfinishing.com"
                       >
                         office@lmfinishing.com
                       </a>
+                      <p className="text-sm text-gray-600 mt-1">Fast response for Utah projects</p>
                     </div>
                   </div>
                   <div className="flex items-start">
                     <Clock className="h-6 w-6 text-[#4A90E2] mt-1" aria-hidden="true" />
                     <div className="ml-4">
-                      <h3 className="text-lg font-medium text-[#213555]">Business Hours</h3>
+                      <h3 className="text-lg font-medium text-[#213555]">Utah Business Hours</h3>
                       <p className="text-gray-700">
                         <time>Monday - Friday: 8:00 AM - 5:00 PM</time><br />
                         <time>Saturday - Sunday: Closed</time>
@@ -307,21 +342,21 @@ const Contact = () => {
 
               {/* Service Area Summary */}
               <div className="bg-white p-8 rounded-lg shadow-lg">
-                <h3 className="text-xl font-bold text-[#213555] mb-4">Service Areas</h3>
+                <h3 className="text-xl font-bold text-[#213555] mb-4">Utah Service Areas</h3>
                 <p className="text-gray-700 mb-4">
-                  We proudly serve the following counties in Utah:
+                  Our Utah finish carpentry team proudly serves homeowners and general contractors throughout Northern Utah:
                 </p>
                 <ul className="space-y-2 text-gray-700" role="list">
                   {[
-                    'Utah County',
-                    'Salt Lake County',
-                    'Davis County',
-                    'Wasatch County',
-                    'Summit County'
-                  ].map((county, index) => (
-                    <li key={index} className="flex items-center" role="listitem">
-                      <span className="w-2 h-2 bg-[#213555] rounded-full mr-2" aria-hidden="true"></span>
-                      {county}
+                    'Utah County (Provo, Orem, Lehi, American Fork, Saratoga Springs)',
+                    'Salt Lake County (Salt Lake City, Sandy, Draper, West Valley City)',
+                    'Davis County (Layton, Bountiful, Farmington)',
+                    'Wasatch County (Heber City, Midway)',
+                    'Summit County (Park City, Coalville)'
+                  ].map((area, index) => (
+                    <li key={index} className="flex items-start" role="listitem">
+                      <span className="w-2 h-2 bg-[#213555] rounded-full mr-3 mt-2 flex-shrink-0" aria-hidden="true"></span>
+                      <span>{area}</span>
                     </li>
                   ))}
                 </ul>
