@@ -150,7 +150,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Essential questions to ask Utah contractors before hiring. Protect your investment with our comprehensive guide to vetting contractors for your home renovation project.",
     content: "Hiring the right contractor for your Utah home renovation project is one of the most important decisions you'll make...",
     date: "2023-11-14",
-    imageUrl: "https://unsplash.com/photos/a-man-working-on-a-piece-of-wood-o8C5SxNCGaw"
+    imageUrl: "/images/blog/guy.webp"
   }
 ];
 
