@@ -12,7 +12,7 @@ export const services: Service[] = [
   {
     title: "Basement Finishing",
     description: "Transform your unfinished Utah basement into a beautiful, functional living space that adds significant value to your home. Our Utah basement finishing contractors handle all aspects from moisture control to final finishes.",
-    imageUrl: '/images/portfolio/basement/basement-3.webp', // 👈 LOCAL BASEMENT FINISHING PHOTO
+    imageUrl: "/images/portfolio/basement/basement-3.webp", // 👈 VERTICAL BASEMENT FINISHING PHOTO
     features: [
       "Custom design and planning for Utah basements",
       "Full electrical and plumbing work",
@@ -25,7 +25,7 @@ export const services: Service[] = [
   {
     title: "Home Renovations",
     description: "Comprehensive Utah home renovation services including kitchen remodels, bathroom upgrades, and complete home makeovers. We work with homeowners and general contractors throughout Northern Utah.",
-    imageUrl: "/images/portfolio/renovations/renovations-2.webp", // 👈 CHANGE THIS URL FOR HOME RENOVATIONS PHOTO
+    imageUrl: "/images/portfolio/renovations/renovations-2.webp", // 👈 VERTICAL HOME RENOVATIONS PHOTO
     features: [
       "Utah kitchen remodeling",
       "Bathroom renovations and upgrades",
@@ -38,7 +38,7 @@ export const services: Service[] = [
   {
     title: "Custom Carpentry",
     description: "Expert Utah finish carpentry and custom woodworking services. Our skilled craftsmen create beautiful built-ins, custom trim work, and detailed millwork that enhances your home's character.",
-    imageUrl: "/images/portfolio/carpentry/carpentry-38.webp", // 👈 CHANGE THIS URL FOR CUSTOM CARPENTRY PHOTO
+    imageUrl: "/images/portfolio/carpentry/carpentry-38.webp", // 👈 VERTICAL CUSTOM CARPENTRY PHOTO
     features: [
       "Built-in entertainment centers",
       "Custom cabinets and shelving",
@@ -51,7 +51,7 @@ export const services: Service[] = [
   {
     title: "Exterior Services",
     description: "Enhance your Utah home's curb appeal and outdoor living spaces with our expert exterior construction services. We build custom decks, patios, and outdoor features designed for Utah's climate.",
-    imageUrl: "/images/portfolio/exteriors/exteriors-19.webp", // 👈 CHANGE THIS URL FOR EXTERIOR SERVICES PHOTO
+    imageUrl: "/images/portfolio/exteriors/exteriors-19.webp", // 👈 VERTICAL EXTERIOR SERVICES PHOTO
     features: [
       "Custom deck construction",
       "Patio installations",
