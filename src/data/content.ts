@@ -101,7 +101,7 @@ export const blogPosts: BlogPost[] = [
     slug: "open-floor-plans",
     excerpt: "Explore how open floor plans are evolving to meet the changing needs of modern Utah families and lifestyles.",
     content: "Open floor plans have dominated Utah home design for decades, but how are they evolving...",
-    date: "2025-01-08",
+    date: "2025-07-08",
     imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
   },
   {
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     slug: "utah-custom-trim-costs",
     excerpt: "Complete guide to Utah custom trim costs including materials, labor, and factors affecting pricing. Get accurate estimates for your Utah finish carpentry project.",
     content: "Custom trim work can dramatically enhance your Utah home's appearance and value, but understanding the costs involved is crucial for budget planning...",
-    date: "2024-12-15",
+    date: "2025-5-15",
     imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
   },
   {
@@ -117,7 +117,7 @@ export const blogPosts: BlogPost[] = [
     slug: "choosing-right-flooring",
     excerpt: "A comprehensive guide to selecting the perfect flooring for different rooms in your Utah home, considering climate and lifestyle factors.",
     content: "Selecting the right flooring for your Utah home is crucial for both aesthetics and functionality...",
-    date: "2024-11-22",
+    date: "2025-2-22",
     imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d"
   },
   {
@@ -125,7 +125,7 @@ export const blogPosts: BlogPost[] = [
     slug: "basement-renovation-tips",
     excerpt: "Essential tips to consider before starting your Utah basement renovation project, including moisture control, permits, and design considerations.",
     content: "Planning a basement renovation in Utah can be an exciting yet challenging endeavor...",
-    date: "2024-09-10",
+    date: "2024-11-10",
     imageUrl: "https://utahhomeremodel.net/wp-content/uploads/2024/02/Utah-basement-remodel-with-bar-2-1080x675.jpg"
   },
   {
