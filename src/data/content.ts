@@ -1,10 +1,18 @@
 import { Service, TeamMember, Testimonial, Project, BlogPost, Location } from '../types';
 
+// ========================================
+// SERVICE IMAGES - UPDATE THESE URLs TO CHANGE SERVICE PHOTOS
+// ========================================
+// These images appear on both the Home page services section and Services page
+// Simply replace the URLs below with your new image URLs
+// Recommended size: 800x600 pixels or larger
+// ========================================
+
 export const services: Service[] = [
   {
     title: "Basement Finishing",
     description: "Transform your unfinished Utah basement into a beautiful, functional living space that adds significant value to your home. Our Utah basement finishing contractors handle all aspects from moisture control to final finishes.",
-    imageUrl: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d",
+    imageUrl: "/images/basement-3.webp", // 👈 LOCAL BASEMENT FINISHING PHOTO
     features: [
       "Custom design and planning for Utah basements",
       "Full electrical and plumbing work",
@@ -17,7 +25,7 @@ export const services: Service[] = [
   {
     title: "Home Renovations",
     description: "Comprehensive Utah home renovation services including kitchen remodels, bathroom upgrades, and complete home makeovers. We work with homeowners and general contractors throughout Northern Utah.",
-    imageUrl: "https://images.unsplash.com/photo-1484154218962-a197022b5858",
+    imageUrl: "/images/renovations-2.webp", // 👈 CHANGE THIS URL FOR HOME RENOVATIONS PHOTO
     features: [
       "Utah kitchen remodeling",
       "Bathroom renovations and upgrades",
@@ -30,7 +38,7 @@ export const services: Service[] = [
   {
     title: "Custom Carpentry",
     description: "Expert Utah finish carpentry and custom woodworking services. Our skilled craftsmen create beautiful built-ins, custom trim work, and detailed millwork that enhances your home's character.",
-    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    imageUrl: "/images/carpentry-38.webp", // 👈 CHANGE THIS URL FOR CUSTOM CARPENTRY PHOTO
     features: [
       "Built-in entertainment centers",
       "Custom cabinets and shelving",
@@ -43,7 +51,7 @@ export const services: Service[] = [
   {
     title: "Exterior Services",
     description: "Enhance your Utah home's curb appeal and outdoor living spaces with our expert exterior construction services. We build custom decks, patios, and outdoor features designed for Utah's climate.",
-    imageUrl: "https://images.unsplash.com/photo-1600585152220-90363fe7e115",
+    imageUrl: "/images/exteriors-19.webp", // 👈 CHANGE THIS URL FOR EXTERIOR SERVICES PHOTO
     features: [
       "Custom deck construction",
       "Patio installations",
