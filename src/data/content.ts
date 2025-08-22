@@ -102,7 +102,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Essential questions to ask Utah contractors before hiring. Protect your investment with our comprehensive guide to vetting contractors for your home renovation project.",
     content: "Hiring the right contractor for your Utah home renovation project is one of the most important decisions you'll make...",
     date: "2025-01-05",
-    imageUrl: "https://images.unsplash.com/photo-1600566752547-c06598f4a0d5"
+    imageUrl: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43"
   },
   {
     title: "The Hidden Costs of DIY Renovations (and How to Avoid Them)",
@@ -118,7 +118,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Learn the key differences between Utah finish carpenters and general handymen, and why specialized skills matter for your custom carpentry project.",
     content: "When planning a custom carpentry project in Utah, you might wonder whether to hire a specialized finish carpenter or a general handyman...",
     date: "2025-01-20",
-    imageUrl: "https://images.unsplash.com/photo-1600566752547-c06598f4a0d5"
+    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd"
   },
   {
     title: "How Much Does Custom Trim Cost in Utah? 2025 Pricing Guide",
