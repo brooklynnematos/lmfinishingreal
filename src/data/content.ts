@@ -38,7 +38,7 @@ export const services: Service[] = [
   {
     title: "Custom Carpentry",
     description: "Expert Utah finish carpentry and custom woodworking services. Our skilled craftsmen create beautiful built-ins, custom trim work, and detailed millwork that enhances your home's character.",
-    imageUrl: "/images/portfolio/carpentry/carpentry-38", // 👈 CHANGE THIS URL FOR CUSTOM CARPENTRY PHOTO
+    imageUrl: "/images/portfolio/carpentry/carpentry-38.webp", // 👈 CHANGE THIS URL FOR CUSTOM CARPENTRY PHOTO
     features: [
       "Built-in entertainment centers",
       "Custom cabinets and shelving",
@@ -51,7 +51,7 @@ export const services: Service[] = [
   {
     title: "Exterior Services",
     description: "Enhance your Utah home's curb appeal and outdoor living spaces with our expert exterior construction services. We build custom decks, patios, and outdoor features designed for Utah's climate.",
-    imageUrl: "/images/portfolio/exteriors/exteriors-19", // 👈 CHANGE THIS URL FOR EXTERIOR SERVICES PHOTO
+    imageUrl: "/images/portfolio/exteriors/exteriors-19.webp", // 👈 CHANGE THIS URL FOR EXTERIOR SERVICES PHOTO
     features: [
       "Custom deck construction",
       "Patio installations",
