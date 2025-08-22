@@ -97,60 +97,60 @@ export const projects: Project[] = [
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "Questions to Ask Before Hiring a Utah Contractor",
-    slug: "questions-ask-utah-contractor",
-    excerpt: "Essential questions to ask Utah contractors before hiring. Protect your investment with our comprehensive guide to vetting contractors for your home renovation project.",
-    content: "Hiring the right contractor for your Utah home renovation project is one of the most important decisions you'll make...",
-    date: "2025-01-05",
-    imageUrl: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43"
-  },
-  {
-    title: "The Hidden Costs of DIY Renovations (and How to Avoid Them)",
-    slug: "hidden-costs-diy-renovations",
-    excerpt: "Discover the hidden costs of DIY renovations that can blow your budget. Learn when to hire a Utah contractor vs DIY to save money and avoid costly mistakes.",
-    content: "DIY renovations seem like a great way to save money, but many Utah homeowners discover that the hidden costs can quickly exceed the price of hiring a professional contractor...",
-    date: "2025-01-10",
-    imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d"
-  },
-  {
-    title: "Why Hire a Utah Finish Carpenter Instead of a General Handyman?",
-    slug: "finish-carpenter-vs-handyman",
-    excerpt: "Learn the key differences between Utah finish carpenters and general handymen, and why specialized skills matter for your custom carpentry project.",
-    content: "When planning a custom carpentry project in Utah, you might wonder whether to hire a specialized finish carpenter or a general handyman...",
-    date: "2025-01-20",
-    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+    title: "The Future of Open Floor Plans: Adapting to Modern Utah Living",
+    slug: "open-floor-plans",
+    excerpt: "Explore how open floor plans are evolving to meet the changing needs of modern Utah families and lifestyles.",
+    content: "Open floor plans have dominated Utah home design for decades, but how are they evolving...",
+    date: "2025-01-08",
+    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
   },
   {
     title: "How Much Does Custom Trim Cost in Utah? 2025 Pricing Guide",
     slug: "utah-custom-trim-costs",
     excerpt: "Complete guide to Utah custom trim costs including materials, labor, and factors affecting pricing. Get accurate estimates for your Utah finish carpentry project.",
     content: "Custom trim work can dramatically enhance your Utah home's appearance and value, but understanding the costs involved is crucial for budget planning...",
-    date: "2025-01-25",
+    date: "2024-12-15",
     imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-  },
-  {
-    title: "5 Tips for Planning Your Utah Basement Renovation",
-    slug: "basement-renovation-tips",
-    excerpt: "Essential tips to consider before starting your Utah basement renovation project, including moisture control, permits, and design considerations.",
-    content: "Planning a basement renovation in Utah can be an exciting yet challenging endeavor...",
-    date: "2025-02-15",
-    imageUrl: "https://utahhomeremodel.net/wp-content/uploads/2024/02/Utah-basement-remodel-with-bar-2-1080x675.jpg"
   },
   {
     title: "How to Choose the Right Flooring for Your Utah Home",
     slug: "choosing-right-flooring",
     excerpt: "A comprehensive guide to selecting the perfect flooring for different rooms in your Utah home, considering climate and lifestyle factors.",
     content: "Selecting the right flooring for your Utah home is crucial for both aesthetics and functionality...",
-    date: "2025-03-06",
+    date: "2024-11-22",
     imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d"
   },
   {
-    title: "The Future of Open Floor Plans: Adapting to Modern Utah Living",
-    slug: "open-floor-plans",
-    excerpt: "Explore how open floor plans are evolving to meet the changing needs of modern Utah families and lifestyles.",
-    content: "Open floor plans have dominated Utah home design for decades, but how are they evolving...",
-    date: "2025-03-15",
-    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+    title: "5 Tips for Planning Your Utah Basement Renovation",
+    slug: "basement-renovation-tips",
+    excerpt: "Essential tips to consider before starting your Utah basement renovation project, including moisture control, permits, and design considerations.",
+    content: "Planning a basement renovation in Utah can be an exciting yet challenging endeavor...",
+    date: "2024-09-10",
+    imageUrl: "https://utahhomeremodel.net/wp-content/uploads/2024/02/Utah-basement-remodel-with-bar-2-1080x675.jpg"
+  },
+  {
+    title: "Why Hire a Utah Finish Carpenter Instead of a General Handyman?",
+    slug: "finish-carpenter-vs-handyman",
+    excerpt: "Learn the key differences between Utah finish carpenters and general handymen, and why specialized skills matter for your custom carpentry project.",
+    content: "When planning a custom carpentry project in Utah, you might wonder whether to hire a specialized finish carpenter or a general handyman...",
+    date: "2024-07-18",
+    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+  },
+  {
+    title: "The Hidden Costs of DIY Renovations (and How to Avoid Them)",
+    slug: "hidden-costs-diy-renovations",
+    excerpt: "Discover the hidden costs of DIY renovations that can blow your budget. Learn when to hire a Utah contractor vs DIY to save money and avoid costly mistakes.",
+    content: "DIY renovations seem like a great way to save money, but many Utah homeowners discover that the hidden costs can quickly exceed the price of hiring a professional contractor...",
+    date: "2024-04-25",
+    imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d"
+  },
+  {
+    title: "Questions to Ask Before Hiring a Utah Contractor",
+    slug: "questions-ask-utah-contractor",
+    excerpt: "Essential questions to ask Utah contractors before hiring. Protect your investment with our comprehensive guide to vetting contractors for your home renovation project.",
+    content: "Hiring the right contractor for your Utah home renovation project is one of the most important decisions you'll make...",
+    date: "2023-11-14",
+    imageUrl: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43"
   }
 ];
 
