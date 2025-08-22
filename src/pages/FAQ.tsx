@@ -28,7 +28,7 @@ const FAQ = () => {
         },
         {
           question: "What's your response time for different Utah areas?",
-          answer: "Utah County: Same-day response. Salt Lake County: 24-hour response. Davis County: 24-hour response. Wasatch & Summit Counties: 48-hour response. Emergency repairs receive priority scheduling across all areas."
+          answer: "24-hour response"
         }
       ]
     },
@@ -42,10 +42,6 @@ const FAQ = () => {
         {
           question: "How long does basement finishing take in Utah?",
           answer: "Most Utah basement finishing projects take 4-8 weeks. Timeline depends on square footage, complexity, permit approval, and weather. We handle all Utah County, Salt Lake County, and other local permits to keep your project on schedule."
-        },
-        {
-          question: "What makes Utah basement finishing different?",
-          answer: "Utah's unique dry climate and alkaline soil require specialized moisture control techniques. Our Utah basement contractors understand local building codes, proper insulation for temperature variations, and how to handle the soil conditions common in Northern Utah."
         },
         {
           question: "Do you handle Utah basement permits and inspections?",
@@ -110,14 +106,6 @@ const FAQ = () => {
           question: "How accurate are your Utah project estimates?",
           answer: "Our estimates are typically within 5-10% of final costs. We provide detailed breakdowns and only adjust for client-requested changes or unforeseen conditions. Our Utah experience helps us anticipate potential issues and price accordingly."
         },
-        {
-          question: "Do you offer financing for Utah home projects?",
-          answer: "We work with several Utah-based financing partners and can help connect you with options. Many Utah homeowners use home equity loans, personal loans, or contractor financing programs for larger renovation projects."
-        },
-        {
-          question: "What payment schedule do you use for Utah projects?",
-          answer: "We follow Utah law requiring no more than 10% down payment or $1,000, whichever is less. Payments are tied to project milestones, not calendar dates. Final payment is due upon completion and your satisfaction."
-        }
       ]
     },
     {
