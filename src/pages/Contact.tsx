@@ -188,7 +188,7 @@ const Contact = () => {
 
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Full Name
+                    Full Name *
                   </label>
                   <input
                     type="text"
@@ -201,7 +201,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email Address
+                    Email Address *
                   </label>
                   <input
                     type="email"
@@ -214,7 +214,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Phone Number
+                    Phone Number *
                   </label>
                   <input
                     type="tel"
@@ -227,7 +227,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                    Service Interested In
+                    Service Interested In *
                   </label>
                   <select
                     id="service"
@@ -246,7 +246,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <label htmlFor="details" className="block text-sm font-medium text-gray-700 mb-2">
-                    Project Details
+                    Project Details *
                   </label>
                   <textarea
                     id="details"
@@ -263,6 +263,7 @@ const Contact = () => {
                     ref={recaptchaRef}
                     sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
                     theme="light"
+                    size="normal"
                   />
                 </div>
                 {submitStatus.type && (
