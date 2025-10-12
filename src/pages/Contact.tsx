@@ -220,6 +220,9 @@ const Contact = () => {
                     type="tel"
                     id="phone"
                     name="phone"
+                   pattern="^(\+?1[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$"
+                   title="Please enter a valid 10-digit US phone number (e.g., (555) 123-4567 or 555-123-4567)"
+                   placeholder="(555) 123-4567"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
                     aria-required="true"
@@ -233,6 +236,9 @@ const Contact = () => {
                     id="service"
                     name="service"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
+                   pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+                   title="Please enter a valid email address (e.g., name@example.com)"
+                   placeholder="your.email@example.com"
                     required
                     aria-required="true"
                   >
@@ -262,8 +268,20 @@ const Contact = () => {
                   <ReCAPTCHA
                     ref={recaptchaRef}
                     sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
-                    theme="light"
+                    theme="light" 
                     size="normal"
+                    callback={(token) => {
+                      // Optional: Handle successful completion
+                      console.log('reCAPTCHA completed');
+                    }}
+                    onExpired={() => {
+                      // Reset when expired
+                      recaptchaRef.current?.reset();
+                    }}
+                    onError={() => {
+                      // Handle errors
+                      console.log('reCAPTCHA error');
+                    }}
                   />
                 </div>
                 {submitStatus.type && (
