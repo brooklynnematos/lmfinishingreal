@@ -220,8 +220,8 @@ const Contact = () => {
                     type="tel"
                     id="phone"
                     name="phone"
-                   pattern="^(\+?1[-.\s]?)?\(?([0-9]{3})\)?[-.\s]?([0-9]{3})[-.\s]?([0-9]{4})$"
-                   title="Please enter a valid 10-digit US phone number (e.g., (555) 123-4567 or 555-123-4567)"
+                   pattern="^(\+?1[-.\s]?)?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$"
+                   title="Please enter a valid 10-digit US phone number. Examples: (555) 123-4567, 555-123-4567, or 5551234567"
                    placeholder="(555) 123-4567"
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
