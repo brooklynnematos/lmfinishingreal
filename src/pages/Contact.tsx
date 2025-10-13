@@ -18,6 +18,39 @@ const Contact = () => {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Validate phone number
+    const phoneInput = formRef.current.querySelector('input[name="phone"]') as HTMLInputElement;
+    const phoneValue = phoneInput?.value || '';
+    
+    // Remove all non-digit characters except +
+    const digitsOnly = phoneValue.replace(/[^\d+]/g, '');
+    
+    // Check if it's a valid 10-digit US number (with or without +1)
+    const isValidPhone = /^(\+?1)?[0-9]{10}$/.test(digitsOnly);
+    
+    if (!isValidPhone) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please enter a valid 10-digit US phone number. Examples: (555) 123-4567, 555-123-4567, or 5551234567'
+      });
+      phoneInput?.focus();
+      return;
+    }
+
+    // Validate email format
+    const emailInput = formRef.current.querySelector('input[name="email"]') as HTMLInputElement;
+    const emailValue = emailInput?.value || '';
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    
+    if (!emailRegex.test(emailValue)) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please enter a valid email address. Example: your.email@example.com'
+      });
+      emailInput?.focus();
+      return;
+    }
+
     // Check honeypot field
     const honeypotField = formRef.current.querySelector('input[name="website"]') as HTMLInputElement;
     if (honeypotField && honeypotField.value) {
