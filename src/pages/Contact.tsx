@@ -2,12 +2,12 @@ import React, { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, Clock } from 'lucide-react';
 import emailjs from '@emailjs/browser';
-import ReCAPTCHA from 'react-google-recaptcha';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import SEOHead from '../components/SEOHead';
 
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
-  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const hcaptchaRef = useRef<HCaptcha>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null;
@@ -63,11 +63,11 @@ const Contact = () => {
       return;
     }
 
-    const recaptchaValue = recaptchaRef.current?.getValue();
-    if (!recaptchaValue) {
+    const hcaptchaToken = hcaptchaRef.current?.getResponse();
+    if (!hcaptchaToken) {
       setSubmitStatus({
         type: 'error',
-        message: 'Please complete the reCAPTCHA verification.'
+        message: 'Please complete the hCaptcha verification.'
       });
       return;
     }
@@ -76,20 +76,20 @@ const Contact = () => {
     setSubmitStatus({ type: null, message: '' });
 
     try {
-      // Verify reCAPTCHA first
-      const verifyResponse = await fetch('/.netlify/functions/verify-recaptcha', {
+      // Verify hCaptcha first
+      const verifyResponse = await fetch('/.netlify/functions/verify-hcaptcha', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ token: recaptchaValue }),
+        body: JSON.stringify({ token: hcaptchaToken }),
       });
 
       const verifyData = await verifyResponse.json();
       console.log('Verification response:', verifyData);
 
       if (!verifyResponse.ok || !verifyData.success) {
-        throw new Error('reCAPTCHA verification failed');
+        throw new Error('hCaptcha verification failed');
       }
 
       // If verification successful, send email
@@ -105,13 +105,13 @@ const Contact = () => {
         message: 'Thank you! We will get back to you soon.'
       });
       formRef.current.reset();
-      recaptchaRef.current?.reset();
+      hcaptchaRef.current?.resetCaptcha();
     } catch (error) {
       console.error('Form submission error:', error);
       setSubmitStatus({
         type: 'error',
-        message: error instanceof Error && error.message === 'reCAPTCHA verification failed'
-          ? 'reCAPTCHA verification failed. Please try again.'
+        message: error instanceof Error && error.message === 'hCaptcha verification failed'
+          ? 'hCaptcha verification failed. Please try again.'
           : 'Sorry, something went wrong. Please try again later.'
       });
     } finally {
@@ -298,22 +298,19 @@ const Contact = () => {
                   ></textarea>
                 </div>
                 <div className="flex justify-center mb-4">
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                  <HCaptcha
+                    ref={hcaptchaRef}
+                    sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY}
                     theme="light" 
                     size="normal"
-                    callback={(token) => {
-                      // Optional: Handle successful completion
-                      console.log('reCAPTCHA completed');
+                    onVerify={(token) => {
+                      console.log('hCaptcha completed');
                     }}
-                    onExpired={() => {
-                      // Reset when expired
-                      recaptchaRef.current?.reset();
+                    onExpire={() => {
+                      hcaptchaRef.current?.resetCaptcha();
                     }}
-                    onError={() => {
-                      // Handle errors
-                      console.log('reCAPTCHA error');
+                    onError={(err) => {
+                      console.log('hCaptcha error:', err);
                     }}
                   />
                 </div>

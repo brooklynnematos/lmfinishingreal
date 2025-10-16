@@ -46,12 +46,12 @@ export const handler: Handler = async (event) => {
       };
     }
 
-    const verifyUrl = 'https://www.google.com/recaptcha/api/siteverify';
-    const secretKey = process.env.RECAPTCHA_SECRET_KEY;
+    const verifyUrl = 'https://hcaptcha.com/siteverify';
+    const secretKey = process.env.HCAPTCHA_SECRET_KEY;
 
     if (!secretKey) {
-      console.error('reCAPTCHA secret key not configured');
-      throw new Error('reCAPTCHA configuration error');
+      console.error('hCaptcha secret key not configured');
+      throw new Error('hCaptcha configuration error');
     }
 
     const response = await fetch(verifyUrl, {
@@ -63,11 +63,11 @@ export const handler: Handler = async (event) => {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to verify reCAPTCHA');
+      throw new Error('Failed to verify hCaptcha');
     }
 
     const data = await response.json();
-    console.log('reCAPTCHA verification response:', data);
+    console.log('hCaptcha verification response:', data);
 
     return {
       statusCode: 200,
@@ -77,12 +77,12 @@ export const handler: Handler = async (event) => {
       },
       body: JSON.stringify({
         success: data.success,
-        score: data.score,
-        action: data.action
+        challenge_ts: data.challenge_ts,
+        hostname: data.hostname
       }),
     };
   } catch (error) {
-    console.error('reCAPTCHA verification error:', error);
+    console.error('hCaptcha verification error:', error);
     
     return {
       statusCode: 500,
