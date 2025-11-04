@@ -5,10 +5,36 @@ import emailjs from '@emailjs/browser';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import SEOHead from '../components/SEOHead';
 
+// Add mobile-specific styles for hCaptcha
+const mobileHCaptchaStyles = `
+  .h-captcha {
+    transform: scale(0.85);
+    transform-origin: 0 0;
+    width: 100% !important;
+    max-width: 304px;
+    margin: 0 auto;
+  }
+  
+  @media (max-width: 480px) {
+    .h-captcha {
+      transform: scale(0.75);
+      max-width: 256px;
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .h-captcha {
+      transform: scale(0.65);
+      max-width: 220px;
+    }
+  }
+`;
+
 const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null);
   const hcaptchaRef = useRef<HCaptcha>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [captchaLoaded, setCaptchaLoaded] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null;
     message: string;
@@ -103,7 +129,9 @@ const Contact = () => {
     if (!hcaptchaToken) {
       setSubmitStatus({
         type: 'error',
-        message: 'Please complete the hCaptcha verification.'
+        message: captchaLoaded 
+          ? 'Please complete the captcha verification.' 
+          : 'Captcha is still loading. Please wait a moment and try again.'
       });
       return;
     }
@@ -183,6 +211,9 @@ const Contact = () => {
 
   return (
     <div className="w-full">
+      {/* Add mobile hCaptcha styles */}
+      <style dangerouslySetInnerHTML={{ __html: mobileHCaptchaStyles }} />
+      
       <SEOHead
         title="Contact Utah's Premier Finish Carpenter - Free Estimates"
         description="Contact LM Finishing & Construction for your free estimate. Utah's trusted finish carpenter and custom remodeling contractor serving Utah County, Salt Lake County, and surrounding areas. Call (385) 500-8437 for basement finishing, custom carpentry, and home renovations."
@@ -333,22 +364,42 @@ const Contact = () => {
                     aria-required="true"
                   ></textarea>
                 </div>
-                <div className="flex justify-center mb-4">
+                <div className="flex justify-center mb-4 w-full overflow-hidden">
+                  {!captchaLoaded && (
+                    <div className="text-center text-gray-600 mb-4">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-[#213555] mx-auto mb-2"></div>
+                      Loading security verification...
+                    </div>
+                  )}
                   <HCaptcha
                     ref={hcaptchaRef}
                     sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY}
                     theme="light"
-                    size="normal"
-                    challengeContainer="hcaptcha-challenge"
-                    reCaptchaCompat={false}
+                    size="compact"
+                    tabindex="0"
+                    onLoad={() => {
+                      console.log('hCaptcha loaded');
+                      setCaptchaLoaded(true);
+                    }}
                     onVerify={(token) => {
                       console.log('hCaptcha completed');
                     }}
                     onExpire={() => {
+                      console.log('hCaptcha expired');
                       hcaptchaRef.current?.resetCaptcha();
                     }}
                     onError={(err) => {
                       console.log('hCaptcha error:', err);
+                      setSubmitStatus({
+                        type: 'error',
+                        message: 'Captcha failed to load. Please refresh the page and try again.'
+                      });
+                    }}
+                    onOpen={() => {
+                      console.log('hCaptcha challenge opened');
+                    }}
+                    onClose={() => {
+                      console.log('hCaptcha challenge closed');
                     }}
                   />
                 </div>
