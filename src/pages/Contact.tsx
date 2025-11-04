@@ -18,6 +18,42 @@ const Contact = () => {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Additional spam detection
+    const formData = new FormData(formRef.current);
+    const name = formData.get('name') as string;
+    const email = formData.get('email') as string;
+    const details = formData.get('details') as string;
+    
+    // Check for common spam patterns
+    const spamPatterns = [
+      /viagra|cialis|pharmacy/i,
+      /loan|credit|debt|mortgage/i,
+      /seo|marketing|website|traffic/i,
+      /bitcoin|crypto|investment/i,
+      /dating|singles|hookup/i
+    ];
+    
+    const hasSpamContent = spamPatterns.some(pattern => 
+      pattern.test(name) || pattern.test(email) || pattern.test(details)
+    );
+    
+    if (hasSpamContent) {
+      // Silently reject spam
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you! We will get back to you soon.'
+      });
+      return;
+    }
+    
+    // Check for minimum content length
+    if (details.length < 20) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please provide more details about your project (minimum 20 characters).'
+      });
+      return;
+    }
     // Validate phone number
     const phoneInput = formRef.current.querySelector('input[name="phone"]') as HTMLInputElement;
     const phoneValue = phoneInput?.value || '';
@@ -301,8 +337,10 @@ const Contact = () => {
                   <HCaptcha
                     ref={hcaptchaRef}
                     sitekey={import.meta.env.VITE_HCAPTCHA_SITE_KEY}
-                    theme="light" 
+                    theme="light"
                     size="normal"
+                    challengeContainer="hcaptcha-challenge"
+                    reCaptchaCompat={false}
                     onVerify={(token) => {
                       console.log('hCaptcha completed');
                     }}
