@@ -3,13 +3,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Facebook, Instagram } from 'lucide-react';
 
-/**
- * Using /public assets: reference them with an absolute path (e.g. "/flavicon.png").
- * Why: Vite serves /public at the site root in dev and build.
- */
+// Why: use /public asset at the site root; case-sensitive in production.
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [logoSrc, setLogoSrc] = useState('/flavicon.png'); // from public/
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -29,15 +25,11 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src={logoSrc}
+                src="/Logo.png"                 // from public/Logo.png
                 alt="LM Finishing and Construction Logo"
                 className="h-14 w-auto"
                 loading="eager"
                 fetchPriority="high"
-                onError={() => {
-                  // Why: graceful fallback if the file name/case is off in production.
-                  setLogoSrc('/favicon.png'); // try common alt name in /public
-                }}
               />
               <span className="ml-2 text-lg font-bold text-black">
                 LM Finishing & Construction
