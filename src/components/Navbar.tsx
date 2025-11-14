@@ -1,9 +1,15 @@
+// file: src/components/Navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Facebook, Instagram } from 'lucide-react';
 
+/**
+ * Using /public assets: reference them with an absolute path (e.g. "/flavicon.png").
+ * Why: Vite serves /public at the site root in dev and build.
+ */
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [logoSrc, setLogoSrc] = useState('/flavicon.png'); // from public/
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -22,10 +28,16 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img 
-                src="https://i.postimg.cc/jdrRcPtd/Logo.png" 
-                alt="LM Finishing and Construction Logo" 
+              <img
+                src={logoSrc}
+                alt="LM Finishing and Construction Logo"
                 className="h-14 w-auto"
+                loading="eager"
+                fetchPriority="high"
+                onError={() => {
+                  // Why: graceful fallback if the file name/case is off in production.
+                  setLogoSrc('/favicon.png'); // try common alt name in /public
+                }}
               />
               <span className="ml-2 text-lg font-bold text-black">
                 LM Finishing & Construction
@@ -52,10 +64,20 @@ const Navbar = () => {
                 Free Estimate
               </Link>
               <div className="flex space-x-2 ml-2">
-                <a href="https://www.facebook.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
+                <a
+                  href="https://www.facebook.com/lm.fconstruction/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary-600"
+                >
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a href="https://www.instagram.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
+                <a
+                  href="https://www.instagram.com/lm.fconstruction/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-primary-600"
+                >
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
@@ -96,10 +118,20 @@ const Navbar = () => {
               Get a Free Estimate
             </Link>
             <div className="flex space-x-4 px-3 py-2">
-              <a href="https://www.facebook.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
+              <a
+                href="https://www.facebook.com/lm.fconstruction/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary-600"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://www.instagram.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
+              <a
+                href="https://www.instagram.com/lm.fconstruction/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary-600"
+              >
                 <Instagram className="h-5 w-5" />
               </a>
             </div>
