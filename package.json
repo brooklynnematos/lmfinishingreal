@@ -13,6 +13,7 @@
     "@emailjs/browser": "^4.3.3",
     "@googlemaps/js-api-loader": "^1.16.6",
     "@hcaptcha/react-hcaptcha": "^1.12.1",
+    "@netlify/blobs": "^6.5.0",
     "@netlify/functions": "^2.6.0",
     "@react-google-maps/api": "^2.19.3",
     "framer-motion": "^11.0.8",
