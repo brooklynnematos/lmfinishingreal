@@ -3,10 +3,23 @@ import { getStore } from "@netlify/blobs";
 
 const DISPOSABLE = new Set([
   "mailinator.com","guerrillamail.com","tempmail.com","yopmail.com","10minutemail.com",
-  "getnada.com","trashmail.com","sharklasers.com","fakeinbox.com","mintemail.com"
+  "getnada.com","trashmail.com","sharklasers.com","fakeinbox.com","mintemail.com",
+  "throwaway.email","maildrop.cc","mohmal.com","emailondeck.com","temp-mail.org",
+  "dispostable.com","spamgourmet.com","mytrashmail.com","mailcatch.com","emailfake.com"
 ]);
 
-const KEYWORDS = [/viagra/i, /seo\s*services?/i, /guest\s*post/i, /crypto/i, /loan/i, /porn/i];
+const KEYWORDS = [
+  /viagra/i, /cialis/i, /pharmacy/i,
+  /seo\s*services?/i, /guest\s*post/i, /backlinks?/i,
+  /crypto/i, /bitcoin/i, /investment/i,
+  /loan/i, /credit/i, /debt/i, /mortgage/i,
+  /porn/i, /dating/i, /singles/i,
+  /casino/i, /gambling/i, /poker/i,
+  /weight\s*loss/i, /diet\s*pills/i,
+  /make\s*money/i, /earn\s*\$/i, /get\s*rich/i,
+  /click\s*here/i, /visit\s*our/i,
+  /free\s*trial/i, /limited\s*time/i
+];
 
 export const handler = async (event) => {
   try {
@@ -15,14 +28,42 @@ export const handler = async (event) => {
     const { id: submissionId, created_at } = payload;
     const data = payload.data || {};
 
-    if (truthy(data.trap)) return markSpam(submissionId, "honeypot");
-    if (data.formStart && isFast(created_at, data.formStart)) return markSpam(submissionId, "too-fast");
+    // Check multiple honeypot fields
+    const honeypotFields = ['trap', 'website', 'company', 'backup_email', 'fax'];
+    for (const field of honeypotFields) {
+      if (truthy(data[field])) return markSpam(submissionId, `honeypot-${field}`);
+    }
+    
+    // Check form timing
+    if (data.form_start_time && isFast(created_at, data.form_start_time)) {
+      return markSpam(submissionId, "too-fast");
+    }
+    
+    // Check user agent
+    if (!data.user_agent || isSuspiciousUserAgent(data.user_agent)) {
+      return markSpam(submissionId, "suspicious-user-agent");
+    }
+    
     if (!isValidEmail(data.email)) return markSpam(submissionId, "invalid-email");
     if (isDisposable(data.email)) return markSpam(submissionId, "disposable-email");
 
-    const blob = [data.name, data.message, data.company].filter(Boolean).join(" ");
+    // Enhanced content analysis
+    const blob = [data.name, data.details, data.email, data.phone].filter(Boolean).join(" ");
     if (linkCount(blob) > 1) return markSpam(submissionId, "too-many-links");
     if (KEYWORDS.some(rx => rx.test(blob))) return markSpam(submissionId, "keyword");
+    
+    // Check for repeated characters (spam pattern)
+    if (/(.)\1{4,}/.test(blob)) return markSpam(submissionId, "repeated-chars");
+    
+    // Check message length (too short or too long)
+    if (data.details && (data.details.length < 10 || data.details.length > 2000)) {
+      return markSpam(submissionId, "invalid-message-length");
+    }
+    
+    // Check for valid name pattern
+    if (data.name && !/^[a-zA-Z\s\-'\.]{2,50}$/.test(data.name)) {
+      return markSpam(submissionId, "invalid-name-format");
+    }
 
     if (await isDuplicate(payload)) return markSpam(submissionId, "duplicate-24h");
 
@@ -49,11 +90,20 @@ function truthy(v){ return v !== undefined && v !== null && String(v).trim() !==
 function isValidEmail(e){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e || ""); }
 function isDisposable(e){ return DISPOSABLE.has(String(e).split("@").pop().toLowerCase()); }
 function linkCount(t){ const s = String(t||""); return (s.match(/https?:\/\//gi)||[]).length + (s.match(/\bwww\./gi)||[]).length; }
-function isFast(createdISO, startMs){
+function isFast(createdISO, startMs) {
   const submitted = Date.parse(createdISO);
   const started = Number(startMs);
   if (Number.isNaN(submitted) || Number.isNaN(started)) return false;
-  return (submitted - started) < 4000;
+  return (submitted - started) < 5000; // Increased to 5 seconds
+}
+function isSuspiciousUserAgent(ua) {
+  const suspicious = [
+    /bot/i, /crawler/i, /spider/i, /scraper/i,
+    /curl/i, /wget/i, /python/i, /java/i,
+    /^$/,  // Empty user agent
+    /mozilla\/4\.0.*compatible/i  // Old fake user agents
+  ];
+  return !ua || ua.length < 10 || suspicious.some(pattern => pattern.test(ua));
 }
 function ok(msg){ return { statusCode: 200, body: msg }; }
 

@@ -35,36 +35,122 @@ const Contact = () => {
   const hcaptchaRef = useRef<HCaptcha>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [captchaLoaded, setCaptchaLoaded] = useState(false);
+  const [formStartTime, setFormStartTime] = useState<number>(0);
   const [submitStatus, setSubmitStatus] = useState<{
     type: 'success' | 'error' | null;
     message: string;
   }>({ type: null, message: '' });
 
+  // Initialize form protection on component mount
+  useEffect(() => {
+    const startTime = Date.now();
+    setFormStartTime(startTime);
+    
+    // Set hidden form fields for bot detection
+    const formStartTimeField = document.getElementById('formStartTime') as HTMLInputElement;
+    const userAgentField = document.getElementById('userAgent') as HTMLInputElement;
+    const screenResolutionField = document.getElementById('screenResolution') as HTMLInputElement;
+    const timezoneField = document.getElementById('timezone') as HTMLInputElement;
+    
+    if (formStartTimeField) formStartTimeField.value = startTime.toString();
+    if (userAgentField) userAgentField.value = navigator.userAgent;
+    if (screenResolutionField) screenResolutionField.value = `${screen.width}x${screen.height}`;
+    if (timezoneField) timezoneField.value = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  }, []);
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formRef.current) return;
+
+    // Check minimum form interaction time (anti-bot measure)
+    const currentTime = Date.now();
+    const timeSpent = currentTime - formStartTime;
+    if (timeSpent < 5000) { // Less than 5 seconds
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please take a moment to review your information before submitting.'
+      });
+      return;
+    }
 
     // Additional spam detection
     const formData = new FormData(formRef.current);
     const name = formData.get('name') as string;
     const email = formData.get('email') as string;
     const details = formData.get('details') as string;
+    const phone = formData.get('phone') as string;
     
-    // Check for common spam patterns
+    // Check honeypot fields
+    const honeypotFields = ['website', 'company', 'backup_email', 'fax'];
+    for (const field of honeypotFields) {
+      const value = formData.get(field) as string;
+      if (value && value.trim()) {
+        // Silently reject bot submissions
+        setSubmitStatus({
+          type: 'success',
+          message: 'Thank you! We will get back to you soon.'
+        });
+        return;
+      }
+    }
+    
+    // Enhanced spam pattern detection
     const spamPatterns = [
       /viagra|cialis|pharmacy/i,
       /loan|credit|debt|mortgage/i,
       /seo|marketing|website|traffic/i,
       /bitcoin|crypto|investment/i,
-      /dating|singles|hookup/i
+      /dating|singles|hookup/i,
+      /casino|gambling|poker/i,
+      /weight\s*loss|diet\s*pills/i,
+      /make\s*money|earn\s*\$|get\s*rich/i,
+      /click\s*here|visit\s*our/i,
+      /free\s*trial|limited\s*time/i
     ];
     
     const hasSpamContent = spamPatterns.some(pattern => 
-      pattern.test(name) || pattern.test(email) || pattern.test(details)
+      pattern.test(name) || pattern.test(email) || pattern.test(details) || pattern.test(phone)
     );
     
     if (hasSpamContent) {
       // Silently reject spam
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you! We will get back to you soon.'
+      });
+      return;
+    }
+    
+    // Check for suspicious patterns
+    const allText = `${name} ${email} ${details}`.toLowerCase();
+    
+    // Too many links
+    const linkCount = (allText.match(/http|www\.|\.com|\.org|\.net/g) || []).length;
+    if (linkCount > 2) {
+      setSubmitStatus({
+        type: 'success',
+        message: 'Thank you! We will get back to you soon.'
+      });
+      return;
+    }
+    
+    // Suspicious email patterns
+    const suspiciousEmailPatterns = [
+      /@(tempmail|guerrillamail|mailinator|10minutemail|yopmail)/i,
+      /\+.*\+.*@/,  // Multiple + signs
+      /\d{8,}@/,    // Long number sequences
+    ];
+    
+    if (suspiciousEmailPatterns.some(pattern => pattern.test(email))) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please use a valid business or personal email address.'
+      });
+      return;
+    }
+    
+    // Check for repeated characters (common in spam)
+    const hasRepeatedChars = /(.)\1{4,}/.test(allText);
+    if (hasRepeatedChars) {
       setSubmitStatus({
         type: 'success',
         message: 'Thank you! We will get back to you soon.'
@@ -80,6 +166,16 @@ const Contact = () => {
       });
       return;
     }
+    
+    // Check for maximum content length (prevent spam walls of text)
+    if (details.length > 2000) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please keep your message under 2000 characters.'
+      });
+      return;
+    }
+    
     // Validate phone number
     const phoneInput = formRef.current.querySelector('input[name="phone"]') as HTMLInputElement;
     const phoneValue = phoneInput?.value || '';
@@ -113,14 +209,12 @@ const Contact = () => {
       return;
     }
 
-    // Check honeypot field
-    const honeypotField = formRef.current.querySelector('input[name="website"]') as HTMLInputElement;
-    if (honeypotField && honeypotField.value) {
-      // Silently reject bot submissions
-      console.log('Bot submission detected');
+    // Validate name field
+    const namePattern = /^[a-zA-Z\s\-'\.]{2,50}$/;
+    if (!namePattern.test(name)) {
       setSubmitStatus({
-        type: 'success',
-        message: 'Thank you! We will get back to you soon.'
+        type: 'error',
+        message: 'Please enter a valid name (letters, spaces, hyphens, and apostrophes only).'
       });
       return;
     }
@@ -286,6 +380,18 @@ const Contact = () => {
                   />
                 </div>
 
+                {/* Additional honeypot fields for extra protection */}
+                <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }} aria-hidden="true">
+                  <input type="text" name="company" tabIndex={-1} autoComplete="off" />
+                  <input type="email" name="backup_email" tabIndex={-1} autoComplete="off" />
+                  <input type="tel" name="fax" tabIndex={-1} autoComplete="off" />
+                </div>
+
+                {/* Form timing and user agent tracking */}
+                <input type="hidden" name="form_start_time" id="formStartTime" />
+                <input type="hidden" name="user_agent" id="userAgent" />
+                <input type="hidden" name="screen_resolution" id="screenResolution" />
+                <input type="hidden" name="timezone" id="timezone" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Full Name *
@@ -294,6 +400,10 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
+                    pattern="^[a-zA-Z\s\-'\.]{2,50}$"
+                    title="Please enter a valid name (2-50 characters, letters only)"
+                    minLength={2}
+                    maxLength={50}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
                     aria-required="true"
@@ -310,6 +420,8 @@ const Contact = () => {
                     pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                     title="Please enter a valid email address (e.g., name@example.com)"
                     placeholder="your.email@example.com"
+                    minLength={5}
+                    maxLength={100}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
                     aria-required="true"
@@ -326,6 +438,8 @@ const Contact = () => {
                    pattern="^(\+?1[-.\s]?)?\(?[0-9]{3}\)?[-.\s]?[0-9]{3}[-.\s]?[0-9]{4}$"
                    title="Please enter a valid 10-digit US phone number. Examples: (555) 123-4567, 555-123-4567, or 5551234567"
                    placeholder="(555) 123-4567"
+                   minLength={10}
+                   maxLength={20}
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required
                     aria-required="true"
@@ -358,6 +472,8 @@ const Contact = () => {
                     id="details"
                     name="details"
                     rows={4}
+                    minLength={20}
+                    maxLength={2000}
                     placeholder="Please describe your Utah remodeling project, including location, timeline, and any specific requirements..."
                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-[#213555] focus:border-[#213555]"
                     required

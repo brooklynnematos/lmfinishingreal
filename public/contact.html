@@ -9,17 +9,39 @@
     <p class="hp">
       <label>Don't fill this out: <input name="trap" type="text" autocomplete="off" /></label>
     </p>
+    
+    <!-- Additional honeypot fields -->
+    <div class="hp">
+      <input name="company" type="text" autocomplete="off" />
+      <input name="backup_email" type="email" autocomplete="off" />
+      <input name="fax" type="tel" autocomplete="off" />
+    </div>
 
     <label>Name <input name="name" required></label><br/>
     <label>Email <input name="email" type="email" required></label><br/>
-    <label>Message <textarea name="message" required></textarea></label>
+    <label>Phone <input name="phone" type="tel" required></label><br/>
+    <label>Service <select name="service" required>
+      <option value="">Select a service</option>
+      <option value="Basement Finishing">Basement Finishing</option>
+      <option value="Custom Carpentry">Custom Carpentry</option>
+      <option value="Home Renovations">Home Renovations</option>
+      <option value="Other">Other</option>
+    </select></label><br/>
+    <label>Project Details <textarea name="details" required></textarea></label>
 
-    <input type="hidden" name="formStart" id="formStart" />
+    <input type="hidden" name="form_start_time" id="formStartTime" />
+    <input type="hidden" name="user_agent" id="userAgent" />
+    <input type="hidden" name="screen_resolution" id="screenResolution" />
+    <input type="hidden" name="timezone" id="timezone" />
     <button type="submit">Send</button>
   </form>
   <script>
-    // Why: Bots submit instantly; humans don't.
-    document.getElementById('formStart').value = Date.now().toString();
+    // Enhanced bot detection
+    const startTime = Date.now();
+    document.getElementById('formStartTime').value = startTime.toString();
+    document.getElementById('userAgent').value = navigator.userAgent;
+    document.getElementById('screenResolution').value = screen.width + 'x' + screen.height;
+    document.getElementById('timezone').value = Intl.DateTimeFormat().resolvedOptions().timeZone;
   </script>
 </body>
 </html>
