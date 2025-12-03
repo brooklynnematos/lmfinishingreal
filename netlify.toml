@@ -1,32 +1,22 @@
-# file: netlify.toml
-
 [build]
-  command = "npm run build"   # why: runs Vite build
-  publish = "dist"            # why: Vite outputs to dist
+  command = "npm run build"
+  publish = "dist"
   functions = "netlify/functions"
 
 [functions]
-  node_bundler = "esbuild"    # why: modern ESM bundling for serverless
+  node_bundler = "esbuild"
 
-# Pretty API URLs → serverless functions (keep before SPA fallback)
 [[redirects]]
-  from = "/api/*"
+  from = "/.netlify/functions/*"
   to = "/.netlify/functions/:splat"
-  status = 200                # why: internal rewrite, not a 301/302
+  status = 200
 
-# SPA fallback (must be last)
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-# Caching: avoid stale HTML, cache hashed assets hard
-[[headers]]
-  for = "/index.html"
-  [headers.values]
-    Cache-Control = "no-cache, no-store, must-revalidate"  # why: always fetch latest HTML
-
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"  # why: Vite-hashed files are content-addressed
