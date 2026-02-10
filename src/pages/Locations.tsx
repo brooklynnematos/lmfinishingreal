@@ -93,8 +93,8 @@ const Locations = () => {
                         ))}
                       </div>
                     </div>
+                  )}
                 </div>
-                )}
               </motion.div>
             ))}
           </div>
