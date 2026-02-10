@@ -16,6 +16,7 @@ const Blog = lazy(() => import('./pages/Blog'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Locations = lazy(() => import('./pages/Locations'));
 const FAQ = lazy(() => import('./pages/FAQ'));
+const Careers = lazy(() => import('./pages/Careers'));
 
 // Service landing pages
 const BasementFinishing = lazy(() => import('./pages/BasementFinishing'));
@@ -41,7 +42,8 @@ function App() {
               <Route path="/blog/:slug" element={<LazyComponent><BlogPost /></LazyComponent>} />
               <Route path="/locations" element={<LazyComponent><Locations /></LazyComponent>} />
               <Route path="/faq" element={<LazyComponent><FAQ /></LazyComponent>} />
-              
+              <Route path="/careers" element={<LazyComponent><Careers /></LazyComponent>} />
+
               {/* Service Landing Pages */}
               <Route path="/basement-finishing" element={<LazyComponent><BasementFinishing /></LazyComponent>} />
               <Route path="/custom-carpentry" element={<LazyComponent><CustomCarpentry /></LazyComponent>} />
