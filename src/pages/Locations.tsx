@@ -1,26 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { serviceAreas } from '../data/content';
+import { dmvAreas } from '../data/content';
 import SEOHead from '../components/SEOHead';
 import { MapPin } from 'lucide-react';
-
-const dmvAreas = [
-  {
-    area: "Washington DC",
-    description: "Serving all districts and neighborhoods throughout the nation's capital with expert finish carpentry and custom remodeling services.",
-    cities: ["Northwest DC", "Northeast DC", "Southeast DC", "Southwest DC", "Capitol Hill", "Dupont Circle", "Georgetown", "Adams Morgan"]
-  },
-  {
-    area: "Northern Virginia",
-    description: "Complete coverage of Northern Virginia including Arlington, Fairfax, and Loudoun Counties with professional finish carpentry services.",
-    cities: ["Arlington", "Alexandria", "Fairfax", "McLean", "Tysons", "Reston", "Falls Church", "Vienna"]
-  },
-  {
-    area: "Maryland",
-    description: "Serving Maryland communities including Montgomery and Prince George's Counties with quality custom carpentry and home renovation services.",
-    cities: ["Bethesda", "Silver Spring", "Rockville", "Gaithersburg", "College Park", "Hyattsville", "Bowie", "Annapolis"]
-  }
-];
 
 const areaImages = {
   'Washington DC': 'https://images.unsplash.com/photo-1617581629397-a72507c3de9e',
@@ -74,7 +56,7 @@ const Locations = () => {
       <section className="py-20 bg-gray-50" aria-label="Service Locations">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12">
-            {serviceAreas.map((location, index) => (
+            {dmvAreas.map((location, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
