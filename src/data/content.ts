@@ -11,7 +11,7 @@ import { Service, TeamMember, Testimonial, Project, BlogPost, Location } from '.
 export const services: Service[] = [
   {
     title: "Basement Finishing",
-    description: "Transform your unfinished basement into a beautiful, functional living space that adds significant value to your home. Our experienced basement finishing team handles all aspects from moisture control to final finishes.",
+    description: "Transform your unfinished basement into a beautiful, functional living space that adds significant value to your home. Our experienced team handles all aspects from moisture control to final finishes.",
     imageUrl: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&h=800&fit=crop", // 👈 VERTICAL BASEMENT FINISHING PHOTO
     features: [
       "Custom design and planning",
@@ -24,7 +24,7 @@ export const services: Service[] = [
   },
   {
     title: "Home Renovations",
-    description: "Comprehensive home renovation services including kitchen remodels, bathroom upgrades, and complete home makeovers. We work with homeowners and general contractors throughout the DMV area.",
+    description: "Comprehensive home renovation services including kitchen remodels, bathroom upgrades, and complete home makeovers. We work with homeowners and general contractors to deliver exceptional results.",
     imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=800&fit=crop", // 👈 VERTICAL HOME RENOVATIONS PHOTO
     features: [
       "Kitchen remodeling",
@@ -37,7 +37,7 @@ export const services: Service[] = [
   },
   {
     title: "Custom Carpentry",
-    description: "Expert finish carpentry and custom woodworking services. Our skilled craftsmen create beautiful built-ins, custom trim work, and detailed millwork that enhances your home's character.",
+    description: "Expert finish carpentry and custom woodworking services. Our skilled craftsmen create beautiful built-ins, custom trim work, and detailed millwork that enhances your home's character and value.",
     imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&h=800&fit=crop", // 👈 VERTICAL CUSTOM CARPENTRY PHOTO
     features: [
       "Built-in entertainment centers",
@@ -50,7 +50,7 @@ export const services: Service[] = [
   },
   {
     title: "Exterior Services",
-    description: "Enhance your home's curb appeal and outdoor living spaces with our expert exterior construction services. We build custom decks, patios, and outdoor features designed for the local climate.",
+    description: "Enhance your home's curb appeal and outdoor living spaces with our expert exterior construction services. We build custom decks, patios, and outdoor features designed to last.",
     imageUrl: "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&h=800&fit=crop", // 👈 VERTICAL EXTERIOR SERVICES PHOTO
     features: [
       "Custom deck construction",
@@ -169,5 +169,20 @@ export const dmvAreas: Location[] = [
     county: "Maryland",
     description: "Serving Maryland communities including Montgomery and Prince George's Counties with quality custom carpentry and home renovation services.",
     cities: ["Bethesda", "Silver Spring", "Rockville", "Gaithersburg", "College Park", "Hyattsville", "Bowie", "Annapolis"]
+  },
+  {
+    area: "Salt Lake County",
+    description: "Serving Salt Lake County and surrounding areas with expert finish carpentry and custom remodeling services.",
+    cities: ["Salt Lake City", "Sandy", "West Valley City", "South Jordan", "Draper", "Millcreek", "Murray", "Cottonwood Heights"]
+  },
+  {
+    area: "Utah County", 
+    description: "Providing quality finish carpentry and home renovation services throughout Utah County communities.",
+    cities: ["Provo", "Orem", "American Fork", "Pleasant Grove", "Lehi", "Spanish Fork", "Saratoga Springs", "Eagle Mountain"]
+  },
+  {
+    area: "Summit County", 
+    description: "Serving Summit County with professional finish carpentry and custom remodeling services.",
+    cities: ["Park City", "Coalville", "Kamas", "Oakley", "Henefer", "Wanship", "Peoa", "Francis"]
   }
 ];

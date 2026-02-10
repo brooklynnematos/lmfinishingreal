@@ -27,7 +27,7 @@ const About = () => {
       "name": "Finish Carpenter",
       "occupationLocation": {
         "@type": "Place",
-        "name": "Washington DC Metro Area"
+        "name": "Multiple Markets"
       }
     }
   };
@@ -35,8 +35,8 @@ const About = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="About DMV's Premier Finish Carpenter - Leonardo Matos"
-        description="Learn about Leonardo Matos, owner of LM Finishing and Construction, DMV's trusted expert finish carpenter with over 8 years of experience in custom carpentry, basement finishing, and home renovations serving Washington DC, Maryland, and Virginia."
+        title="About Our Premier Finish Carpenter - Leonardo Matos"
+        description="Learn about Leonardo Matos, owner of LM Finishing and Construction, trusted expert finish carpenter with over 8 years of experience in custom carpentry, basement finishing, and home renovations with proven systems and quality craftsmanship."
         canonicalUrl="https://lmfinishingandconstruction.com/about"
       />
       
@@ -49,7 +49,7 @@ const About = () => {
       {/* Hero Section */}
       <section 
         className="relative py-24 bg-[#213555]" 
-        aria-label="About LM Finishing and Construction - DMV's Premier Finish Carpenter"
+        aria-label="About LM Finishing and Construction - Premier Finish Carpenter"
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">
           <div className="absolute inset-0 bg-[#213555] bg-opacity-85"></div>
@@ -62,7 +62,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold text-white mb-8"
             >
-              About DMV's Premier Finish Carpenter
+              About Our Premier Finish Carpenter
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -70,7 +70,7 @@ const About = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl text-white max-w-3xl mx-auto"
             >
-              Building dreams and transforming DMV homes with expert finish carpentry, custom woodwork, and proven systems developed through years of custom home experience.
+              Building dreams and transforming homes with expert finish carpentry, custom woodwork, and proven systems developed through years of custom home experience.
             </motion.p>
           </div>
         </div>
@@ -87,10 +87,10 @@ const About = () => {
           >
             <h2 id="mission-heading" className="text-3xl font-bold text-[#213555] mb-6">Our Mission</h2>
             <p className="text-xl text-gray-800 leading-relaxed mb-6">
-              LM Finishing and Construction is a residential contractor serving the DMV area, specializing in custom woodwork, finish carpentry, basement finishing, and complete home remodels. Our mission is to elevate the art of home improvement through exceptional craftsmanship, proven systems, and unwavering commitment to customer satisfaction.
+              LM Finishing and Construction is a residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and complete home remodels. Our mission is to elevate the art of home improvement through exceptional craftsmanship, proven systems, and unwavering commitment to customer satisfaction.
             </p>
             <p className="text-lg text-gray-700">
-              We serve homeowners and general contractors throughout Washington DC, Maryland, and Virginia, transforming every space into a masterpiece that reflects our clients' vision using systems and expertise developed through years of custom home experience.
+              We serve homeowners and general contractors, transforming every space into a masterpiece that reflects our clients' vision using systems and expertise developed through years of custom home experience.
             </p>
           </motion.div>
         </div>
@@ -100,9 +100,9 @@ const About = () => {
       <section className="py-20 bg-gray-50" aria-labelledby="values-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="values-heading" className="text-3xl font-bold text-[#213555] mb-4">Why DMV Homeowners Choose Our Finish Carpentry Team</h2>
+            <h2 id="values-heading" className="text-3xl font-bold text-[#213555] mb-4">Why Homeowners Choose Our Finish Carpentry Team</h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              The principles that guide our finish carpentry work and relationships with clients throughout the DMV area.
+              The principles that guide our finish carpentry work and relationships with clients.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -165,10 +165,10 @@ const About = () => {
               <h2 id="founder-heading" className="text-3xl font-bold text-[#213555]">Meet Leonardo Matos</h2>
               <h3 className="text-xl text-gray-700">Owner & Master Finish Carpenter</h3>
               <p className="text-lg text-gray-800">
-                I am the owner and founder of LM Finishing and Construction, a residential contractor now serving the DMV area. With over eight years of experience as a finish carpenter, I specialize in custom woodwork, finish carpentry, basement finishing, and complete home remodels. My expertise was developed through years of custom home construction, creating the proven systems we bring to every project.
+                I am the owner and founder of LM Finishing and Construction, a residential contractor with over eight years of experience as a finish carpenter. I specialize in custom woodwork, finish carpentry, basement finishing, and complete home remodels. My expertise was developed through years of custom home construction, creating the proven systems we bring to every project.
               </p>
               <p className="text-lg text-gray-800">
-                Known for my keen attention to detail and dedication to quality craftsmanship, I take pride in delivering exceptional finish carpentry work that exceeds client expectations. Whether you're looking for top-tier finish carpentry services or a skilled contractor to bring your remodeling vision to life, my team and I are ready to deliver outstanding results throughout the DMV area.
+                Known for my keen attention to detail and dedication to quality craftsmanship, I take pride in delivering exceptional finish carpentry work that exceeds client expectations. Whether you're looking for top-tier finish carpentry services or a skilled contractor to bring your remodeling vision to life, my team and I are ready to deliver outstanding results.
               </p>
 
               {/* Experience & Projects Stats */}

@@ -177,10 +177,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 id="service-area-heading" className="text-2xl font-bold text-gray-900 mb-4">
-              Serving the DMV Area
+              Professional Finish Carpentry & Remodeling Services
             </h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-              We serve homeowners and general contractors throughout Washington DC, Maryland, and Virginia, bringing proven systems and craftsmanship developed through years of custom home experience to the DMV area.
+              We serve homeowners and general contractors with proven systems and craftsmanship developed through years of custom home experience. Quality finish carpentry and remodeling services delivered with attention to detail and professional expertise.
             </p>
           </div>
         </div>

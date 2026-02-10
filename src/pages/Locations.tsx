@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { dmvAreas } from '../data/content';
+import { serviceAreas } from '../data/content';
 import SEOHead from '../components/SEOHead';
 import { MapPin } from 'lucide-react';
 
@@ -26,7 +26,9 @@ const areaImages = {
   'Washington DC': 'https://images.unsplash.com/photo-1617581629397-a72507c3de9e',
   'Northern Virginia': 'https://images.unsplash.com/photo-1582407947304-fd86f028f716',
   'Maryland': 'https://images.unsplash.com/photo-1590736969955-71cc94901144',
-  'Salt Lake City': 'https://images.unsplash.com/photo-1605538883669-825200433431'
+  'Salt Lake County': 'https://images.unsplash.com/photo-1605538883669-825200433431',
+  'Utah County': 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b',
+  'Summit County': 'https://images.unsplash.com/photo-1551524164-6cf2ac531fb4'
 };
 
 const Locations = () => {
@@ -34,7 +36,7 @@ const Locations = () => {
     <div className="w-full">
       <SEOHead
         title="Service Areas"
-        description="LM Finishing and Construction serves Washington DC, Maryland, Virginia, and Salt Lake City. Quality home renovation services throughout the DMV area and Utah."
+        description="LM Finishing and Construction serves multiple markets including Washington DC, Maryland, Virginia, and Utah. Quality home renovation services with proven systems and expert craftsmanship."
         canonicalUrl="https://lmfinishingandconstruction.com/locations"
       />
       
@@ -62,7 +64,7 @@ const Locations = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl text-white max-w-3xl mx-auto"
             >
-               Proudly serving communities across the DMV area and Salt Lake City
+              Proudly serving communities with proven systems and expert craftsmanship
             </motion.p>
           </div>
         </div>
@@ -72,7 +74,7 @@ const Locations = () => {
       <section className="py-20 bg-gray-50" aria-label="Service Locations">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-12">
-            {dmvAreas.map((location, index) => (
+            {serviceAreas.map((location, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -90,14 +92,14 @@ const Locations = () => {
                         id={`location-${index}`}
                         className="text-2xl font-bold text-[#213555] ml-3"
                       >
-                        {location.area}
+                        {location.area || location.county}
                       </h2>
                     </div>
                     <p className="text-gray-700 mb-6">{location.description}</p>
                     <div 
                       className="grid grid-cols-2 gap-4"
                       role="list"
-                      aria-label={`Cities served in ${location.area}`}
+                      aria-label={`Cities served in ${location.area || location.county}`}
                     >
                       {location.cities.map((city, cityIndex) => (
                         <div
@@ -113,8 +115,8 @@ const Locations = () => {
                   </div>
                   <div className="h-[400px] relative overflow-hidden bg-white flex items-center justify-center p-4">
                     <img 
-                      src={areaImages[location.area as keyof typeof areaImages]}
-                      alt={`${location.area} area`}
+                      src={areaImages[(location.area || location.county) as keyof typeof areaImages]}
+                      alt={`${location.area || location.county} area`}
                       className="max-w-full max-h-full object-contain rounded-lg shadow-md"
                     />
                   </div>
