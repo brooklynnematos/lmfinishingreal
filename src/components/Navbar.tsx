@@ -36,7 +36,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
-                src="/images/Logo.png"
+                src="/public/favicon.png"
                 alt="LM Finishing and Construction Logo"
                 className="h-14 w-auto"
               />
