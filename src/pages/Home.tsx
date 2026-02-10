@@ -28,19 +28,13 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "LM Finishing & Construction",
-    "description": "DMV-area residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving homeowners and general contractors across Washington DC, Maryland, and Virginia.",
+    "description": "Residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving homeowners and general contractors with proven systems and expert craftsmanship.",
     "url": "https://lmfinishingandconstruction.com",
     "telephone": "+1-385-500-8437",
     "email": "office@lmfinishing.com",
     "address": {
       "@type": "PostalAddress",
-      "addressRegion": "DC",
       "addressCountry": "US"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "38.9072",
-      "longitude": "-77.0369"
     },
     "openingHours": [
       "Mo-Fr 08:00-17:00"
@@ -49,6 +43,10 @@ const Home = () => {
       {
         "@type": "Place",
         "name": "Washington DC Metro Area"
+      },
+      {
+        "@type": "Place",
+        "name": "Utah"
       }
     ],
     "hasOfferCatalog": {
@@ -102,8 +100,8 @@ const Home = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="DMV Finish Carpenter & Custom Remodeling Contractor"
-        description="LM Finishing & Construction is a residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving the DMV area with proven systems and craftsmanship developed through years of custom home experience."
+        title="Finish Carpenter & Custom Remodeling Contractor"
+        description="LM Finishing & Construction is a residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving multiple markets with proven systems and craftsmanship developed through years of custom home experience."
         canonicalUrl="https://lmfinishingandconstruction.com"
       />
       
@@ -119,7 +117,7 @@ const Home = () => {
           <div className="w-full h-full overflow-hidden">
             <ImageOptimizer
               src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
-              alt="DMV finish carpenter custom basement renovation showcasing expert craftsmanship and attention to detail"
+              alt="Finish carpenter custom basement renovation showcasing expert craftsmanship and attention to detail"
               className="w-full h-[120%] object-cover object-top"
               priority={true}
               width={1920}
@@ -144,7 +142,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-white mb-8 max-w-2xl"
             >
-              LM Finishing & Construction is a residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and complete home remodels. Serving the DMV area with proven systems and expert craftsmanship developed through years of custom home experience.
+              LM Finishing & Construction is a residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and complete home remodels. Proven systems and expert craftsmanship developed through years of custom home experience.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -154,7 +152,7 @@ const Home = () => {
             >
               <Link
                 to="/contact"
-                aria-label="Get a free estimate for your DMV renovation project"
+                aria-label="Get a free estimate for your renovation project"
                 className="bg-[#2563EB] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#1D4ED8] transition-colors flex items-center justify-center"
               >
                 Get a Free Estimate
@@ -192,7 +190,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Finish Carpentry Team</h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              We bring expertise, quality craftsmanship, and proven systems to every custom remodeling project in the DMV area.
+              We bring expertise, quality craftsmanship, and proven systems to every custom remodeling project.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -205,7 +203,7 @@ const Home = () => {
               {
                 icon: <Users className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
                 title: "Licensed Contractors",
-                description: "Fully licensed and insured residential contractors serving the DMV area with proven systems and reliability."
+                description: "Fully licensed and insured residential contractors with proven systems and reliability."
               },
               {
                 icon: <Tool className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
@@ -235,7 +233,7 @@ const Home = () => {
           <div className="text-center mb-16">
             <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">Custom Remodeling Services</h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Comprehensive renovation solutions with proven systems and expert craftsmanship for the DMV area.
+              Comprehensive renovation solutions with proven systems and expert craftsmanship.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -296,53 +294,53 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions About DMV Custom Carpentry & Remodeling
+              Frequently Asked Questions About Custom Carpentry & Remodeling
             </h2>
             <p className="text-lg text-gray-700">
-              Get answers to the most common questions DMV homeowners ask about finish carpentry, basement finishing, and home renovations.
+              Get answers to the most common questions homeowners ask about finish carpentry, basement finishing, and home renovations.
             </p>
           </div>
           <div className="space-y-8">
             {[
               {
-                question: "How much does custom trim cost in the DMV area?",
-                answer: "Custom trim costs in the DMV area typically range from $12-35 per linear foot, depending on the complexity of the design, wood species, and installation requirements. Our finish carpenters provide detailed estimates based on your specific project needs."
+                question: "How much does custom trim cost?",
+                answer: "Custom trim costs typically range from $8-35 per linear foot, depending on the complexity of the design, wood species, and installation requirements. Our finish carpenters provide detailed estimates based on your specific project needs."
               },
               {
-                question: "What to expect when remodeling your basement in the DMV area?",
-                answer: "DMV area basement remodeling typically takes 4-8 weeks and includes moisture assessment, framing, electrical/plumbing rough-in, insulation, drywall, flooring, and finish work. We handle all permits and inspections required throughout Washington DC, Maryland, and Virginia."
+                question: "What to expect when remodeling your basement?",
+                answer: "Basement remodeling typically takes 4-8 weeks and includes moisture assessment, framing, electrical/plumbing rough-in, insulation, drywall, flooring, and finish work. We handle all permits and inspections required in your area."
               },
               {
                 question: "Why hire a finish carpenter instead of a general handyman?",
                 answer: "Finish carpenters specialize in detailed woodwork, custom trim installation, and precision joinery that requires years of training. Unlike general handymen, finish carpenters have the expertise to create seamless mitered corners, install complex crown molding, and build custom cabinetry."
               },
               {
-                question: "Do you serve all areas of the DMV?",
-                answer: "Yes! We serve Washington DC, Maryland, and Virginia, including all major metropolitan areas and surrounding communities throughout the DMV region."
+                question: "What areas do you serve?",
+                answer: "We serve multiple markets including Washington DC, Maryland, Virginia, and Utah. Contact us to confirm service availability in your specific area."
               },
               {
                 question: "How long does a typical basement finishing project take?",
                 answer: "Most basement finishing projects take 4-8 weeks depending on size and complexity. Factors include square footage, bathroom additions, electrical/plumbing work, and permit approval times. We provide detailed timelines during our free consultation."
               },
               {
-                question: "Do you handle permits for DMV area construction projects?",
-                answer: "Absolutely! We handle all permit applications and inspections required throughout Washington DC, Maryland, and Virginia. Our team is familiar with all local building codes and ensures your project meets regional construction standards."
+                question: "Do you handle permits for construction projects?",
+                answer: "Absolutely! We handle all permit applications and inspections required in your area. Our team is familiar with local building codes and ensures your project meets all construction standards."
               },
               {
                 question: "What's the difference between a contractor and a handyman?",
                 answer: "Licensed contractors have specialized training, proper insurance, and expertise in specific trades like finish carpentry. They handle complex projects, obtain permits, and provide warranties. Handymen are better for simple repairs and maintenance tasks."
               },
               {
-                question: "How much value does basement finishing add to DMV area homes?",
-                answer: "Professional basement finishing typically adds 60-80% of the project cost to your home's value. In the DMV's competitive real estate market, finished basements help homes sell faster and for higher prices."
+                question: "How much value does basement finishing add to homes?",
+                answer: "Professional basement finishing typically adds 60-80% of the project cost to your home's value. Finished basements help homes sell faster and for higher prices in most real estate markets."
               },
               {
                 question: "What sets your basement finishing apart?",
                 answer: "Our basement finishing expertise was developed through years of custom home construction. We understand proper moisture control techniques, local building codes, and insulation methods for lasting results."
               },
               {
-                question: "Do you offer free estimates for DMV area remodeling projects?",
-                answer: "Yes! We provide free, detailed estimates for all custom carpentry and remodeling projects. Our estimates include materials, labor, timeline, and all costs upfront. We serve the entire DMV area with no-obligation consultations."
+                question: "Do you offer free estimates for remodeling projects?",
+                answer: "Yes! We provide free, detailed estimates for all custom carpentry and remodeling projects. Our estimates include materials, labor, timeline, and all costs upfront with no-obligation consultations."
               }
             ].map((faq, index) => (
               <motion.div
@@ -367,14 +365,14 @@ const Home = () => {
       <section className="bg-[#2563EB] py-20" aria-labelledby="cta-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 id="cta-heading" className="text-3xl font-bold text-white mb-4">
-            Ready to Start Your DMV Remodeling Project?
+            Ready to Start Your Remodeling Project?
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Contact the DMV's premier finish carpentry and remodeling contractor for your free estimate.
+            Contact our premier finish carpentry and remodeling team for your free estimate.
           </p>
           <Link
             to="/contact"
-            aria-label="Get your free DMV remodeling project estimate"
+            aria-label="Get your free remodeling project estimate"
             className="inline-flex items-center bg-white text-[#2563EB] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
           >
             Get Your Free Estimate

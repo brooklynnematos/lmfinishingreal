@@ -67,8 +67,8 @@ const HomeRenovations = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="DMV Home Renovation Contractor - Kitchen, Bathroom & Whole House Remodeling"
-        description="Expert home renovation contractor serving the DMV area. Kitchen remodeling, bathroom renovations, and complete home makeovers. Licensed, insured, and proven systems."
+        title="Home Renovation Contractor - Kitchen, Bathroom & Whole House Remodeling"
+        description="Expert home renovation contractor with proven systems. Kitchen remodeling, bathroom renovations, and complete home makeovers. Licensed, insured, professional results."
         canonicalUrl="https://lmfinishingandconstruction.com/home-renovations"
       />
 
@@ -92,7 +92,7 @@ const HomeRenovations = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-green-100 mb-8"
               >
-                Complete home renovation services in the DMV area. From kitchen remodels to whole house makeovers, we bring your vision to life with proven systems and expert craftsmanship.
+                Complete home renovation services with proven systems and expert craftsmanship. From kitchen remodels to whole house makeovers, we bring your vision to life.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

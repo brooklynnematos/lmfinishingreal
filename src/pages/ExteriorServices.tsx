@@ -67,8 +67,8 @@ const ExteriorServices = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="DMV Exterior Construction Services - Decks, Patios & Outdoor Living"
-        description="Expert exterior construction services in the DMV area. Custom deck construction, patio installation, pergolas, and outdoor living spaces. Quality materials and craftsmanship."
+        title="Exterior Construction Services - Decks, Patios & Outdoor Living"
+        description="Expert exterior construction services. Custom deck construction, patio installation, pergolas, and outdoor living spaces. Quality materials and craftsmanship."
         canonicalUrl="https://lmfinishingandconstruction.com/exterior-services"
       />
 
@@ -92,7 +92,7 @@ const ExteriorServices = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-emerald-100 mb-8"
               >
-                Expert exterior construction services in the DMV area. Custom decks, patios, pergolas, and outdoor structures that enhance your home's value and your quality of life.
+                Expert exterior construction services for your home. Custom decks, patios, pergolas, and outdoor structures that enhance your home's value and your quality of life.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

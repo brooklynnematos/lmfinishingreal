@@ -69,8 +69,8 @@ const BasementFinishing = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="DMV Basement Finishing Contractor - Custom Basement Renovations"
-        description="Transform your unfinished basement into beautiful living space. Expert basement finishing contractor serving Washington DC, Maryland, and Virginia. Free estimates, proven systems, quality craftsmanship."
+        title="Basement Finishing Contractor - Custom Basement Renovations"
+        description="Transform your unfinished basement into beautiful living space. Expert basement finishing contractor with proven systems and quality craftsmanship. Free estimates available."
         canonicalUrl="https://lmfinishingandconstruction.com/basement-finishing"
       />
 
@@ -94,7 +94,7 @@ const BasementFinishing = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-blue-100 mb-8"
               >
-                Expert basement finishing contractor serving the DMV area. Add valuable living space to your home with our proven systems and quality craftsmanship.
+                Expert basement finishing contractor with proven systems and quality craftsmanship. Add valuable living space to your home with professional results.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}

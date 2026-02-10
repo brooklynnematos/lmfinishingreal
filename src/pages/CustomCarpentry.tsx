@@ -68,8 +68,8 @@ const CustomCarpentry = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="DMV Custom Carpentry & Finish Carpenter Services"
-        description="Expert custom carpentry and finish carpenter services in the DMV area. Custom trim work, built-ins, crown molding, and architectural millwork. Free estimates from skilled craftsmen."
+        title="Custom Carpentry & Finish Carpenter Services"
+        description="Expert custom carpentry and finish carpenter services. Custom trim work, built-ins, crown molding, and architectural millwork. Free estimates from skilled craftsmen."
         canonicalUrl="https://lmfinishingandconstruction.com/custom-carpentry"
       />
 
@@ -93,7 +93,7 @@ const CustomCarpentry = () => {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="text-xl text-amber-100 mb-8"
               >
-                Transform your home with custom trim work, built-ins, and architectural details. Skilled finish carpenters serving the DMV area with precision craftsmanship.
+                Transform your home with custom trim work, built-ins, and architectural details. Skilled finish carpenters delivering precision craftsmanship and professional results.
               </motion.p>
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
