@@ -1,143 +1,178 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { locations } from '../data/content';
-import { MapPin } from 'lucide-react';
-import SEOHead from '../components/SEOHead';
+import { Service, TeamMember, Testimonial, Project, BlogPost, Location } from '../types';
 
-const countyImages = {
-  'Utah County': 'https://lh5.googleusercontent.com/proxy/WeODBklMdcyQN_QEnv1VWfSq30yl9nOm0vJ7lNAe_BOGFTpvV0kpY7wY_xEp-nXXlxWTRS5fPOp-P44O6vXCGDgNxjVBSJE',
-  'Salt Lake County': 'https://lh4.googleusercontent.com/proxy/2Mx6SwczX6t-LblXx1eLFquYdl3bZis0M3HdffzHx78SU4A5dYAcD6PzHDhuZBVVmFe7x4VXJ2xbNKT2Aaf7QyETm3-t9sGUuEAllbQZXUtglQ',
-  'Davis County': 'https://lh5.googleusercontent.com/proxy/x1BT1KrErD6UBRtJnXJOCVD5U0xMoK1YbLkYt_Fxk0IkDsENvzhENm5AvN0ui-YqnAOMf-x4fbL1Rhj2226F-w',
-  'Wasatch County': 'https://lh4.googleusercontent.com/proxy/DT0OWOM90_25BcynV5SLF2rrstEjBDT_Q_b4OE0_LouwZjvwj9YDiLyg-nnOYfTWd6robgjrrz23IYJM7hc',
-  'Summit County': 'https://lh5.googleusercontent.com/proxy/S9Novg-7BjUln7kwpNtIkrLGJZcVSP8oLpYY902EbrNtXo4wW-xK6uzr5Xfv6mW73ct3X-pzHudQ'
-};
+// ========================================
+// SERVICE IMAGES - UPDATE THESE URLs TO CHANGE SERVICE PHOTOS
+// ========================================
+// These images appear on both the Home page services section and Services page
+// Simply replace the URLs below with your new image URLs
+// Recommended size: 800x600 pixels or larger
+// ========================================
 
-const Locations = () => {
-  return (
-    <div className="w-full">
-      <SEOHead
-        title="Service Areas"
-        description="LM Finishing and Construction serves Utah County, Salt Lake County, Davis County, Wasatch County, and Summit County. Quality home renovation services throughout Northern Utah."
-        canonicalUrl="https://lmfinishingandconstruction.com/locations"
-      />
-      
-      {/* Hero Section */}
-      <section 
-        className="relative py-24 bg-[#213555]"
-        aria-label="Service Areas Overview"
-      >
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">
-          <div className="absolute inset-0 bg-[#213555] bg-opacity-85"></div>
-        </div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-5xl md:text-6xl font-bold text-white mb-8"
-            >
-              Service Areas
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-2xl text-white max-w-3xl mx-auto"
-            >
-              Proudly serving communities across Northern Utah
-            </motion.p>
-          </div>
-        </div>
-      </section>
+export const services: Service[] = [
+  {
+    title: "Basement Finishing",
+    description: "Transform your unfinished basement into a beautiful, functional living space that adds significant value to your home. Our experienced basement finishing team handles all aspects from moisture control to final finishes.",
+    imageUrl: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&h=800&fit=crop", // 👈 VERTICAL BASEMENT FINISHING PHOTO
+    features: [
+      "Custom design and planning",
+      "Full electrical and plumbing work",
+      "Premium flooring installation",
+      "Entertainment rooms and home theaters",
+      "Bathroom and wet bar installations",
+      "Local building code compliance"
+    ]
+  },
+  {
+    title: "Home Renovations",
+    description: "Comprehensive home renovation services including kitchen remodels, bathroom upgrades, and complete home makeovers. We work with homeowners and general contractors throughout the DMV area.",
+    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=800&fit=crop", // 👈 VERTICAL HOME RENOVATIONS PHOTO
+    features: [
+      "Kitchen remodeling",
+      "Bathroom renovations and upgrades",
+      "Living room transformations",
+      "Room additions and expansions",
+      "Complete home makeovers",
+      "Energy-efficient upgrades"
+    ]
+  },
+  {
+    title: "Custom Carpentry",
+    description: "Expert finish carpentry and custom woodworking services. Our skilled craftsmen create beautiful built-ins, custom trim work, and detailed millwork that enhances your home's character.",
+    imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&h=800&fit=crop", // 👈 VERTICAL CUSTOM CARPENTRY PHOTO
+    features: [
+      "Built-in entertainment centers",
+      "Custom cabinets and shelving",
+      "Crown molding and trim work",
+      "Custom staircases and railings",
+      "Wainscoting and paneling",
+      "Fireplace mantels and surrounds"
+    ]
+  },
+  {
+    title: "Exterior Services",
+    description: "Enhance your home's curb appeal and outdoor living spaces with our expert exterior construction services. We build custom decks, patios, and outdoor features designed for the local climate.",
+    imageUrl: "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&h=800&fit=crop", // 👈 VERTICAL EXTERIOR SERVICES PHOTO
+    features: [
+      "Custom deck construction",
+      "Patio installations",
+      "Exterior trim work",
+      "Siding installation and repair",
+      "Outdoor living spaces",
+      "Pergolas and gazebos"
+    ]
+  }
+];
 
-      {/* Locations Grid */}
-      <section className="py-20 bg-gray-50" aria-label="Service Locations">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12">
-            {locations.map((location, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:shadow-xl transition-shadow duration-300"
-                role="region"
-                aria-labelledby={`location-${index}`}
-              >
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="p-8">
-                    <div className="flex items-start mb-6">
-                      <MapPin className="h-6 w-6 text-[#213555] mt-1" aria-hidden="true" />
-                      <h2 
-                        id={`location-${index}`}
-                        className="text-2xl font-bold text-[#213555] ml-3"
-                      >
-                        {location.county}
-                      </h2>
-                    </div>
-                    <p className="text-gray-700 mb-6">{location.description}</p>
-                    <div 
-                      className="grid grid-cols-2 gap-4"
-                      role="list"
-                      aria-label={`Cities served in ${location.county}`}
-                    >
-                      {location.cities.map((city, cityIndex) => (
-                        <div
-                          key={cityIndex}
-                          className="flex items-center text-gray-700"
-                          role="listitem"
-                        >
-                          <span className="w-2 h-2 bg-[#213555] rounded-full mr-2" aria-hidden="true"></span>
-                          {city}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="h-[400px] relative overflow-hidden bg-white flex items-center justify-center p-4">
-                    <img 
-                      src={countyImages[location.county as keyof typeof countyImages]}
-                      alt={`Map of ${location.county}`}
-                      className="max-w-full max-h-full object-contain rounded-lg shadow-md"
-                    />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+export const testimonials: Testimonial[] = [
+  {
+    name: "Katie G",
+    role: "Homeowner",
+    content: "We had a great experience with L&M Construction. Leo was great at communicating and always responded to messages and questions. Through every step of the framing process he made sure we were on the same page. We always felt in the loop and very happy with his work. We also had received several bids and felt he was reasonably priced. We wouldn't hesitant to hire him again. We definitely recommend using L&M construction.",
+    source: "Google Reviews"
+  },
+  {
+    name: "Mark C",
+    role: "Homeowner",
+    content: 'Leo and his team are wonderful. They did a great job for framing and dry wall in our bedroom. His price is very reasonable and he knows exactly what he is doing. Very organized and a really respectful person. I have already hired him for many other jobs and he will be my go-to carpenter for what we need done in our home. I would recommend Leo to anyone without hesitation.',
+    source: "Google Reviews"
+  }
+];
 
-      {/* CTA Section */}
-      <section className="py-16 bg-[#213555]" aria-labelledby="cta-heading">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 
-            id="cta-heading"
-            className="text-3xl font-bold text-white mb-6"
-          >
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Contact us today to schedule a free consultation in your area.
-          </p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <a
-              href="/contact"
-              className="inline-flex items-center bg-white text-[#213555] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
-              aria-label="Get a free estimate for your project"
-            >
-              Get Your Free Estimate
-              <MapPin className="ml-2 h-5 w-5" aria-hidden="true" />
-            </a>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  );
-};
+export const projects: Project[] = [
+  {
+    title: "Modern Basement Suite",
+    description: "Complete transformation of an unfinished basement into a modern living space with custom built-ins and entertainment area.",
+    beforeImage: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b",
+    afterImage: "https://images.unsplash.com/photo-1600573472591-ee6981cf35b6",
+    category: "Basement"
+  },
+  {
+    title: "Luxury Kitchen Renovation",
+    description: "Full kitchen remodel featuring custom cabinets, quartz countertops, and high-end appliances.",
+    beforeImage: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f",
+    afterImage: "https://images.unsplash.com/photo-1556909212-d5b604d0c90d",
+    category: "Kitchen"
+  }
+];
 
-export default Locations;
+export const blogPosts: BlogPost[] = [
+  {
+    title: "The Future of Open Floor Plans: Adapting to Modern Living",
+    slug: "open-floor-plans",
+    excerpt: "Explore how open floor plans are evolving to meet the changing needs of modern families and lifestyles.",
+    content: "Open floor plans have dominated home design for decades, but how are they evolving...",
+    date: "2025-03-15",
+    imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+  },
+  {
+    title: "How Much Does Custom Trim Cost in the DMV? 2025 Pricing Guide",
+    slug: "dmv-custom-trim-costs",
+    excerpt: "Complete guide to DMV custom trim costs including materials, labor, and factors affecting pricing. Get accurate estimates for your finish carpentry project.",
+    content: "Custom trim work can dramatically enhance your home's appearance and value, but understanding the costs involved is crucial for budget planning...",
+    date: "2025-01-25",
+    imageUrl: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+  },
+  {
+    title: "How to Choose the Right Flooring for Your Home",
+    slug: "choosing-right-flooring",
+    excerpt: "A comprehensive guide to selecting the perfect flooring for different rooms.",
+    content: "Selecting the right flooring for your home is crucial for both aesthetics and functionality...",
+    date: "2025-03-06",
+    imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d"
+  },
+  {
+    title: "5 Tips for Planning Your Basement Renovation",
+    slug: "basement-renovation-tips",
+    excerpt: "Essential tips to consider before starting your basement renovation project.",
+    content: "Planning a basement renovation can be an exciting yet challenging endeavor...",
+    date: "2025-02-15",
+    imageUrl: "https://utahhomeremodel.net/wp-content/uploads/2024/02/Utah-basement-remodel-with-bar-2-1080x675.jpg"
+  },
+  {
+    title: "Why Hire a Finish Carpenter Instead of a General Handyman?",
+    slug: "finish-carpenter-vs-handyman",
+    excerpt: "Learn the key differences between finish carpenters and general handymen, and why specialized skills matter for your custom carpentry project.",
+    content: "When planning a custom carpentry project, you might wonder whether to hire a specialized finish carpenter or a general handyman...",
+    date: "2025-01-20",
+    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd"
+  },
+  {
+    title: "The Hidden Costs of DIY Renovations (and How to Avoid Them)",
+    slug: "hidden-costs-diy-renovations",
+    excerpt: "Discover the hidden costs of DIY renovations that can blow your budget. Learn when to hire a contractor vs DIY to save money and avoid costly mistakes.",
+    content: "DIY renovations seem like a great way to save money, but many homeowners discover that the hidden costs can quickly exceed the price of hiring a professional contractor...",
+    date: "2025-01-10",
+    imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d"
+  },
+  {
+    title: "Questions to Ask Before Hiring a Contractor",
+    slug: "questions-ask-contractor",
+    excerpt: "Essential questions to ask contractors before hiring. Protect your investment with our comprehensive guide to vetting contractors for your home renovation project.",
+    content: "Hiring the right contractor for your home renovation project is one of the most important decisions you'll make...",
+    date: "2025-01-05",
+    imageUrl: "https://pixabay.com/photos/woman-construction-helmet-tool-2759503/"
+  }
+];
+
+export const dmvAreas: Location[] = [
+  {
+    county: "Washington DC",
+    description: "Serving all districts and neighborhoods throughout the nation's capital with expert finish carpentry and custom remodeling services.",
+    cities: ["Northwest DC", "Northeast DC", "Southeast DC", "Southwest DC", "Capitol Hill", "Dupont Circle", "Georgetown", "Adams Morgan"]
+  },
+  {
+    county: "Northern Virginia",
+    description: "Complete coverage of Northern Virginia including Arlington, Fairfax, and Loudoun Counties with professional finish carpentry services.",
+    cities: ["Arlington", "Alexandria", "Fairfax", "McLean", "Tysons", "Reston", "Falls Church", "Vienna"]
+  },
+  {
+    county: "Maryland",
+    description: "Serving Maryland communities including Montgomery and Prince George's Counties with quality custom carpentry and home renovation services.",
+    cities: ["Bethesda", "Silver Spring", "Rockville", "Gaithersburg", "College Park", "Hyattsville", "Bowie", "Annapolis"]
+  },
+  {
+    area: "Salt Lake City",
+    description: "Continuing to serve Salt Lake City and surrounding areas with expert finish carpentry and custom remodeling services.",
+    cities: ["Salt Lake City", "Sandy", "West Valley City", "South Jordan", "Draper", "Millcreek", "Murray", "Cottonwood Heights"]
+  }
+];

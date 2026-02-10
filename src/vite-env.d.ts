@@ -12,4 +12,5 @@ interface ImportMeta {
 interface Window {
   gtag: (...args: any[]) => void;
   dataLayer: any[];
+  hcaptcha?: any;
 }

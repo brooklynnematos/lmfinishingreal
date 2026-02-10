@@ -28,27 +28,27 @@ const Home = () => {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "LM Finishing & Construction",
-    "description": "Utah-based residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving homeowners and general contractors across Utah County, Salt Lake County, Davis County, Wasatch County, and Summit County.",
+    "description": "DMV-area residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving homeowners and general contractors across Washington DC, Maryland, and Virginia.",
     "url": "https://lmfinishingandconstruction.com",
     "telephone": "+1-385-500-8437",
     "email": "office@lmfinishing.com",
     "address": {
       "@type": "PostalAddress",
-      "addressRegion": "Utah",
+      "addressRegion": "DC",
       "addressCountry": "US"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "40.2338",
-      "longitude": "-111.6585"
+      "latitude": "38.9072",
+      "longitude": "-77.0369"
     },
     "openingHours": [
       "Mo-Fr 08:00-17:00"
     ],
     "serviceArea": [
       {
-        "@type": "State",
-        "name": "Utah"
+        "@type": "Place",
+        "name": "Washington DC Metro Area"
       }
     ],
     "hasOfferCatalog": {
@@ -102,8 +102,8 @@ const Home = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="Utah Finish Carpenter & Custom Remodeling Contractor"
-        description="LM Finishing & Construction is a Utah-based residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving Utah County, Salt Lake County, and surrounding areas including Saratoga Springs, Lehi, American Fork, and Draper."
+        title="DMV Finish Carpenter & Custom Remodeling Contractor"
+        description="LM Finishing & Construction is a residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and home remodels. Serving the DMV area with proven systems and craftsmanship developed through years of custom home experience."
         canonicalUrl="https://lmfinishingandconstruction.com"
       />
       
@@ -119,7 +119,7 @@ const Home = () => {
           <div className="w-full h-full overflow-hidden">
             <ImageOptimizer
               src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
-              alt="Utah finish carpenter custom basement renovation showcasing expert craftsmanship and attention to detail"
+              alt="DMV finish carpenter custom basement renovation showcasing expert craftsmanship and attention to detail"
               className="w-full h-[120%] object-cover object-top"
               priority={true}
               width={1920}
@@ -136,7 +136,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="text-4xl md:text-6xl font-bold text-white mb-6"
             >
-              Utah's Premier Finish Carpenter<br />& Custom Remodeling Contractor
+              Premier Finish Carpenter<br />& Custom Remodeling Contractor
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -144,7 +144,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-white mb-8 max-w-2xl"
             >
-              LM Finishing & Construction is a Utah-based residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and complete home remodels. Expert craftsmanship serving Utah County, Salt Lake County, and surrounding communities.
+              LM Finishing & Construction is a residential contractor specializing in custom woodwork, finish carpentry, basement finishing, and complete home remodels. Serving the DMV area with proven systems and expert craftsmanship developed through years of custom home experience.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -154,7 +154,7 @@ const Home = () => {
             >
               <Link
                 to="/contact"
-                aria-label="Get a free estimate for your Utah renovation project"
+                aria-label="Get a free estimate for your DMV renovation project"
                 className="bg-[#2563EB] text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-[#1D4ED8] transition-colors flex items-center justify-center"
               >
                 Get a Free Estimate
@@ -162,7 +162,7 @@ const Home = () => {
               </Link>
               <Link
                 to="/portfolio"
-                aria-label="View our Utah custom carpentry and remodeling portfolio"
+                aria-label="View our custom carpentry and remodeling portfolio"
                 className="bg-white text-[#2563EB] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
               >
                 View Our Work
@@ -177,10 +177,10 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 id="service-area-heading" className="text-2xl font-bold text-gray-900 mb-4">
-              Serving Utah & Salt Lake Counties
+              Serving the DMV Area
             </h2>
             <p className="text-lg text-gray-700 max-w-4xl mx-auto">
-              We serve homeowners and general contractors across Utah County, Salt Lake County, Davis County, Wasatch County, and Summit County, including Saratoga Springs, Lehi, American Fork, Draper, Provo, Orem, Sandy, West Valley City, and surrounding communities.
+              We serve homeowners and general contractors throughout Washington DC, Maryland, and Virginia, bringing proven systems and craftsmanship developed through years of custom home experience to the DMV area.
             </p>
           </div>
         </div>
@@ -190,9 +190,9 @@ const Home = () => {
       <section className="py-20 bg-gray-50" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Utah Finish Carpentry Team</h2>
+            <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Finish Carpentry Team</h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              We bring expertise, quality craftsmanship, and dedication to every custom remodeling project across Utah.
+              We bring expertise, quality craftsmanship, and proven systems to every custom remodeling project in the DMV area.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -200,17 +200,17 @@ const Home = () => {
               {
                 icon: <Star className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
                 title: "Expert Finish Carpentry",
-                description: "Skilled Utah finish carpenters with years of experience in custom trim work, built-ins, and detailed woodwork."
+                description: "Skilled finish carpenters with years of experience in custom trim work, built-ins, and detailed woodwork."
               },
               {
                 icon: <Users className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
-                title: "Licensed Utah Contractors",
-                description: "Fully licensed and insured residential contractors serving Utah County and Salt Lake County communities."
+                title: "Licensed Contractors",
+                description: "Fully licensed and insured residential contractors serving the DMV area with proven systems and reliability."
               },
               {
                 icon: <Tool className="h-8 w-8 text-[#2563EB]" aria-hidden="true" />,
                 title: "Complete Remodeling Solutions",
-                description: "From basement finishing to custom carpentry, we handle all aspects of your Utah home renovation project."
+                description: "From basement finishing to custom carpentry, we handle all aspects of your home renovation project with established systems and processes."
               }
             ].map((feature, index) => (
               <motion.div
@@ -233,9 +233,9 @@ const Home = () => {
       <section className="py-20" aria-labelledby="services-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">Utah Custom Remodeling Services</h2>
+            <h2 id="services-heading" className="text-3xl font-bold text-gray-900 mb-4">Custom Remodeling Services</h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Comprehensive renovation solutions from Utah's premier finish carpentry and remodeling contractor.
+              Comprehensive renovation solutions with proven systems and expert craftsmanship for the DMV area.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -249,16 +249,16 @@ const Home = () => {
               >
                 <ImageOptimizer
                   src={service.imageUrl}
-                  alt={`Utah ${service.title.toLowerCase()} contractor showcasing professional craftsmanship and quality workmanship`}
+                  alt={`${service.title.toLowerCase()} contractor showcasing professional craftsmanship and quality workmanship`}
                   className="w-full h-96 object-cover"
                   width={800}
                   height={400}
                   priority={index < 2}
                 />
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">Utah {service.title}</h3>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
                   <p className="text-gray-700 mb-4">{service.description}</p>
-                  <ul className="space-y-2 mb-6" aria-label={`Features of Utah ${service.title}`}>
+                  <ul className="space-y-2 mb-6" aria-label={`Features of ${service.title}`}>
                     {service.features.slice(0, 3).map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start text-gray-700">
                         <ArrowRight className="h-4 w-4 text-[#2563EB] mr-2 flex-shrink-0 mt-0.5" aria-hidden="true" />
@@ -269,7 +269,7 @@ const Home = () => {
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Link
                       to="/contact"
-                      aria-label={`Get started with Utah ${service.title}`}
+                      aria-label={`Get started with ${service.title}`}
                       className="flex items-center justify-center bg-[#2563EB] text-white px-4 py-2 rounded-md font-medium hover:bg-[#1D4ED8] transition-colors text-sm"
                     >
                       Get Started
@@ -277,7 +277,7 @@ const Home = () => {
                     </Link>
                     <Link
                       to={`/portfolio?category=${getCategoryFromTitle(service.title)}`}
-                      aria-label={`View Utah ${service.title} portfolio`}
+                      aria-label={`View ${service.title} portfolio`}
                       className="flex items-center justify-center border-2 border-[#2563EB] text-[#2563EB] px-4 py-2 rounded-md font-medium hover:bg-[#2563EB] hover:text-white transition-colors text-sm"
                     >
                       View Work
@@ -296,53 +296,53 @@ const Home = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions About Utah Custom Carpentry & Remodeling
+              Frequently Asked Questions About DMV Custom Carpentry & Remodeling
             </h2>
             <p className="text-lg text-gray-700">
-              Get answers to the most common questions Utah homeowners ask about finish carpentry, basement finishing, and home renovations.
+              Get answers to the most common questions DMV homeowners ask about finish carpentry, basement finishing, and home renovations.
             </p>
           </div>
           <div className="space-y-8">
             {[
               {
-                question: "How much does custom trim cost in Utah?",
-                answer: "Custom trim costs in Utah typically range from $8-25 per linear foot, depending on the complexity of the design, wood species, and installation requirements. Our Utah finish carpenters provide detailed estimates based on your specific project needs."
+                question: "How much does custom trim cost in the DMV area?",
+                answer: "Custom trim costs in the DMV area typically range from $12-35 per linear foot, depending on the complexity of the design, wood species, and installation requirements. Our finish carpenters provide detailed estimates based on your specific project needs."
               },
               {
-                question: "What to expect when remodeling your basement in Utah?",
-                answer: "Utah basement remodeling typically takes 3-6 weeks and includes moisture assessment, framing, electrical/plumbing rough-in, insulation, drywall, flooring, and finish work. We handle all permits and inspections required in Utah County and Salt Lake County."
+                question: "What to expect when remodeling your basement in the DMV area?",
+                answer: "DMV area basement remodeling typically takes 4-8 weeks and includes moisture assessment, framing, electrical/plumbing rough-in, insulation, drywall, flooring, and finish work. We handle all permits and inspections required throughout Washington DC, Maryland, and Virginia."
               },
               {
-                question: "Why hire a Utah finish carpenter instead of a general handyman?",
-                answer: "Utah finish carpenters specialize in detailed woodwork, custom trim installation, and precision joinery that requires years of training. Unlike general handymen, finish carpenters have the expertise to create seamless mitered corners, install complex crown molding, and build custom cabinetry."
+                question: "Why hire a finish carpenter instead of a general handyman?",
+                answer: "Finish carpenters specialize in detailed woodwork, custom trim installation, and precision joinery that requires years of training. Unlike general handymen, finish carpenters have the expertise to create seamless mitered corners, install complex crown molding, and build custom cabinetry."
               },
               {
-                question: "Do you serve all of Utah County and Salt Lake County?",
-                answer: "Yes! We proudly serve all cities in Utah County including Provo, Orem, American Fork, Lehi, Saratoga Springs, and Pleasant Grove. We also serve Salt Lake County including Salt Lake City, Sandy, Draper, West Valley City, and South Jordan. We extend our services to Davis County, Wasatch County, and Summit County as well."
+                question: "Do you serve all areas of the DMV?",
+                answer: "Yes! We serve Washington DC, Maryland, and Virginia, including all major metropolitan areas and surrounding communities throughout the DMV region."
               },
               {
-                question: "How long does a typical Utah basement finishing project take?",
-                answer: "Most Utah basement finishing projects take 4-8 weeks depending on size and complexity. Factors include square footage, bathroom additions, electrical/plumbing work, and permit approval times. We provide detailed timelines during our free consultation."
+                question: "How long does a typical basement finishing project take?",
+                answer: "Most basement finishing projects take 4-8 weeks depending on size and complexity. Factors include square footage, bathroom additions, electrical/plumbing work, and permit approval times. We provide detailed timelines during our free consultation."
               },
               {
-                question: "Do you handle permits for Utah construction projects?",
-                answer: "Absolutely! We handle all permit applications and inspections required by Utah County, Salt Lake County, and other local jurisdictions. Our team is familiar with all local building codes and ensures your project meets Utah construction standards."
+                question: "Do you handle permits for DMV area construction projects?",
+                answer: "Absolutely! We handle all permit applications and inspections required throughout Washington DC, Maryland, and Virginia. Our team is familiar with all local building codes and ensures your project meets regional construction standards."
               },
               {
-                question: "What's the difference between a Utah contractor and a handyman?",
-                answer: "Licensed Utah contractors have specialized training, proper insurance, and expertise in specific trades like finish carpentry. They handle complex projects, obtain permits, and provide warranties. Handymen are better for simple repairs and maintenance tasks."
+                question: "What's the difference between a contractor and a handyman?",
+                answer: "Licensed contractors have specialized training, proper insurance, and expertise in specific trades like finish carpentry. They handle complex projects, obtain permits, and provide warranties. Handymen are better for simple repairs and maintenance tasks."
               },
               {
-                question: "How much value does basement finishing add to Utah homes?",
-                answer: "Professional basement finishing typically adds 60-80% of the project cost to your Utah home's value. In Utah's competitive real estate market, finished basements help homes sell faster and for higher prices, especially in Utah County and Salt Lake County."
+                question: "How much value does basement finishing add to DMV area homes?",
+                answer: "Professional basement finishing typically adds 60-80% of the project cost to your home's value. In the DMV's competitive real estate market, finished basements help homes sell faster and for higher prices."
               },
               {
-                question: "What makes Utah basement finishing different from other states?",
-                answer: "Utah's dry climate and unique soil conditions require special moisture control techniques. Our Utah basement contractors understand local building codes, proper insulation for Utah's temperature variations, and how to handle the alkaline soil common in Northern Utah."
+                question: "What sets your basement finishing apart?",
+                answer: "Our basement finishing expertise was developed through years of custom home construction. We understand proper moisture control techniques, local building codes, and insulation methods for lasting results."
               },
               {
-                question: "Do you offer free estimates for Utah remodeling projects?",
-                answer: "Yes! We provide free, detailed estimates for all Utah custom carpentry and remodeling projects. Our estimates include materials, labor, timeline, and all costs upfront. We serve Utah County, Salt Lake County, and surrounding areas with no-obligation consultations."
+                question: "Do you offer free estimates for DMV area remodeling projects?",
+                answer: "Yes! We provide free, detailed estimates for all custom carpentry and remodeling projects. Our estimates include materials, labor, timeline, and all costs upfront. We serve the entire DMV area with no-obligation consultations."
               }
             ].map((faq, index) => (
               <motion.div
@@ -367,14 +367,14 @@ const Home = () => {
       <section className="bg-[#2563EB] py-20" aria-labelledby="cta-heading">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 id="cta-heading" className="text-3xl font-bold text-white mb-4">
-            Ready to Start Your Utah Remodeling Project?
+            Ready to Start Your DMV Remodeling Project?
           </h2>
           <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
-            Contact Utah's premier finish carpentry and remodeling contractor for your free estimate.
+            Contact the DMV's premier finish carpentry and remodeling contractor for your free estimate.
           </p>
           <Link
             to="/contact"
-            aria-label="Get your free Utah remodeling project estimate"
+            aria-label="Get your free DMV remodeling project estimate"
             className="inline-flex items-center bg-white text-[#2563EB] px-8 py-3 rounded-md text-lg font-medium hover:bg-gray-100 transition-colors"
           >
             Get Your Free Estimate

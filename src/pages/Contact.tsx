@@ -263,6 +263,19 @@ const Contact = () => {
         type: 'success',
         message: 'Thank you! We will get back to you soon.'
       });
+      
+      // Push conversion event to dataLayer for Google Tag Manager
+      if (typeof window !== 'undefined' && window.dataLayer) {
+        window.dataLayer.push({
+          event: 'contactFormSubmit',
+          formData: {
+            service: formData.get('service'),
+            userAgent: formData.get('user_agent'),
+            timestamp: new Date().toISOString()
+          }
+        });
+      }
+      
       formRef.current.reset();
       hcaptchaRef.current?.resetCaptcha();
     } catch (error) {
