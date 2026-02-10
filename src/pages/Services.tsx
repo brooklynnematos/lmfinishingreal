@@ -76,14 +76,9 @@ const Services = () => {
       "url": "https://lmfinishingandconstruction.com"
     },
     "serviceType": "Construction Services",
-    "areaServed": [
-      "Washington DC",
-      "Maryland", 
-      "Virginia"
-    ],
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
-      "name": "DMV Construction Services",
+      "name": "Construction Services",
       "itemListElement": services.map(service => ({
         "@type": "Offer",
         "itemOffered": {
@@ -98,8 +93,8 @@ const Services = () => {
   return (
     <div className="w-full">
       <SEOHead
-        title="DMV Custom Carpentry & Remodeling Services - Finish Carpenter"
-        description="Expert finish carpenter and custom remodeling contractor serving the DMV area. Specializing in basement finishing, custom carpentry, home renovations, and exterior services. Serving Washington DC, Maryland, and Virginia."
+        title="Custom Carpentry & Remodeling Services - Finish Carpenter"
+        description="Expert finish carpenter and custom remodeling contractor. Specializing in basement finishing, custom carpentry, home renovations, and exterior services with quality craftsmanship."
         canonicalUrl="https://lmfinishingandconstruction.com/services"
       />
       
@@ -110,9 +105,9 @@ const Services = () => {
       />
       
       {/* Hero Section */}
-      <section 
+      <section
         className="relative py-24 bg-[#213555]"
-        aria-label="DMV Custom Carpentry and Remodeling Services"
+        aria-label="Custom Carpentry and Remodeling Services"
       >
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1503387762-592deb58ef4e')] bg-cover bg-center">
           <div className="absolute inset-0 bg-[#213555] bg-opacity-85"></div>
@@ -125,7 +120,7 @@ const Services = () => {
               transition={{ duration: 0.8 }}
               className="text-5xl md:text-6xl font-bold text-white mb-8"
             >
-              DMV Custom Carpentry & Remodeling Services
+              Custom Carpentry & Remodeling Services
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -133,14 +128,14 @@ const Services = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-2xl text-white max-w-3xl mx-auto"
             >
-              Professional finish carpenter and custom remodeling contractor serving the DMV area with expert craftsmanship, proven systems, and attention to detail developed through years of custom home experience.
+              Professional finish carpenter and custom remodeling contractor with expert craftsmanship, proven systems, and attention to detail developed through years of custom home experience.
             </motion.p>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20" aria-label="Detailed Utah Construction Services">
+      <section className="py-20" aria-label="Detailed Construction Services">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-16">
             {services.map((service, index) => {
@@ -158,7 +153,7 @@ const Services = () => {
                   <div className={`order-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-3'}`}>
                     <img
                       src={service.imageUrl}
-                      alt={`DMV ${service.title.toLowerCase()} contractor showcasing professional craftsmanship in ${service.title.toLowerCase()} projects throughout Washington DC, Maryland, and Virginia`}
+                      alt={`${service.title} contractor showcasing professional craftsmanship in ${service.title.toLowerCase()} projects`}
                       className="w-full h-[500px] object-cover rounded-lg shadow-lg"
                     />
                   </div>
@@ -233,8 +228,8 @@ const Services = () => {
 
                       <div className="bg-blue-50 p-3 rounded border-l-4 border-[#213555]">
                         <p className="text-sm text-gray-700">
-                          <strong>Note:</strong> Prices vary based on project scope, materials, and site conditions. 
-                          Contact us for a detailed estimate tailored to your specific DMV area project.
+                          <strong>Note:</strong> Prices vary based on project scope, materials, and site conditions.
+                          Contact us for a detailed estimate tailored to your specific project.
                         </p>
                       </div>
                     </div>
@@ -265,7 +260,7 @@ const Services = () => {
               },
               {
                 title: "Licensed Contractors",
-                description: "Fully licensed and insured residential contractors, ensuring your project meets all local building codes and regulations throughout the DMV area."
+                description: "Fully licensed and insured residential contractors, ensuring your project meets all local building codes and regulations."
               },
               {
                 title: "Quality Materials & Craftsmanship",
@@ -301,7 +296,7 @@ const Services = () => {
               {
                 step: "1",
                 title: "Free Consultation",
-                description: "We meet at your DMV area property to discuss your vision, requirements, timeline, and budget for your remodeling project."
+                description: "We meet at your property to discuss your vision, requirements, timeline, and budget for your remodeling project."
               },
               {
                 step: "2",
@@ -344,42 +339,42 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Service Areas FAQ */}
-      <section className="py-20 bg-gray-50" aria-labelledby="service-areas-faq-heading">
+      {/* FAQ Section */}
+      <section className="py-20 bg-gray-50" aria-labelledby="faq-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 id="service-areas-faq-heading" className="text-3xl font-bold text-[#213555] mb-4">
-              DMV Service Areas & Common Questions
+            <h2 id="faq-heading" className="text-3xl font-bold text-[#213555] mb-4">
+              Common Questions
             </h2>
             <p className="text-lg text-gray-700">
-              Frequently asked questions about our DMV construction services and coverage areas.
+              Frequently asked questions about our construction services.
             </p>
           </div>
           <div className="space-y-8">
             {[
               {
-                question: "Do you serve all areas of the DMV?",
-                answer: "Yes! We serve Washington DC, Maryland, and Virginia, including all major metropolitan areas and surrounding communities throughout the DMV region."
-              },
-              {
                 question: "What types of projects do you specialize in?",
                 answer: "We specialize in basement finishing, custom carpentry, home renovations, and exterior services. Our expertise was developed through years of custom home construction experience."
               },
               {
-                question: "How much does basement finishing cost in the DMV area?",
-                answer: "DMV area basement finishing typically ranges from $30,000-$85,000 depending on size, features, and finishes. We provide free detailed estimates for all DMV area basement projects."
+                question: "How much does basement finishing typically cost?",
+                answer: "Basement finishing typically ranges from $30,000-$85,000 depending on size, features, and finishes. We provide free detailed estimates for all basement projects."
               },
               {
-                question: "Do you work with general contractors in the DMV?",
-                answer: "Absolutely! We partner with general contractors throughout the DMV area. We specialize in finish carpentry, custom trim work, and detailed millwork for residential projects."
+                question: "Do you work with general contractors?",
+                answer: "Absolutely! We partner with general contractors and specialize in finish carpentry, custom trim work, and detailed millwork for residential projects."
               },
               {
                 question: "What sets your basement finishing apart?",
                 answer: "Our basement finishing expertise was developed through years of custom home construction. We understand proper moisture control techniques, local building codes, and insulation methods for lasting results."
               },
               {
-                question: "Do you handle permits for DMV area projects?",
-                answer: "Yes! We handle all permit applications and inspections for projects throughout Washington DC, Maryland, and Virginia, ensuring compliance with all local building codes and regulations."
+                question: "Do you handle permits?",
+                answer: "Yes! We handle all permit applications and inspections, ensuring compliance with all local building codes and regulations."
+              },
+              {
+                question: "What is your service area?",
+                answer: "We proudly serve the local area. Contact us to confirm we service your specific location and to schedule your free consultation."
               }
             ].map((faq, index) => (
               <motion.div
