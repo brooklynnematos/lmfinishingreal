@@ -5,14 +5,12 @@ import { Menu, X, Facebook, Instagram, ChevronDown } from 'lucide-react';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isResourcesOpen, setIsResourcesOpen] = useState(false);
 
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Blog', path: '/blog' },
-    { name: 'Locations', path: '/locations' },
-    { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -22,6 +20,13 @@ const Navbar = () => {
     { name: 'Custom Carpentry', path: '/custom-carpentry' },
     { name: 'Home Renovations', path: '/home-renovations' },
     { name: 'Exterior Services', path: '/exterior-services' },
+  ];
+
+  const resourceItems = [
+    { name: 'Blog', path: '/blog' },
+    { name: 'FAQ', path: '/faq' },
+    { name: 'Locations', path: '/locations' },
+    { name: 'Careers', path: '/careers' },
   ];
 
   return (
@@ -54,7 +59,7 @@ const Navbar = () => {
             ))}
             
             {/* Services Dropdown */}
-            <div 
+            <div
               className="relative"
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
@@ -67,7 +72,7 @@ const Navbar = () => {
                 Services
                 <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
-              
+
               {isServicesOpen && (
                 <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
                   {serviceItems.map((service) => (
@@ -83,7 +88,38 @@ const Navbar = () => {
                 </div>
               )}
             </div>
-            
+
+            {/* Resources Dropdown */}
+            <div
+              className="relative"
+              onMouseEnter={() => setIsResourcesOpen(true)}
+              onMouseLeave={() => setIsResourcesOpen(false)}
+            >
+              <button
+                className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                aria-expanded={isResourcesOpen}
+                aria-haspopup="true"
+              >
+                Resources
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isResourcesOpen ? 'rotate-180' : ''}`} />
+              </button>
+
+              {isResourcesOpen && (
+                <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
+                  {resourceItems.map((resource) => (
+                    <Link
+                      key={resource.name}
+                      to={resource.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600"
+                      onClick={() => setIsResourcesOpen(false)}
+                    >
+                      {resource.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
             <div className="flex items-center ml-2">
               <Link
                 to="/contact"
@@ -145,7 +181,24 @@ const Navbar = () => {
                 </Link>
               ))}
             </div>
-            
+
+            {/* Mobile Resources Menu */}
+            <div className="border-t border-gray-200 pt-2 mt-2">
+              <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase tracking-wide">
+                Resources
+              </div>
+              {resourceItems.map((resource) => (
+                <Link
+                  key={resource.name}
+                  to={resource.path}
+                  className="text-gray-700 hover:text-primary-600 block px-6 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {resource.name}
+                </Link>
+              ))}
+            </div>
+
             <Link
               to="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium bg-[#4A90E2] text-white hover:bg-[#357ABD]"
