@@ -17,6 +17,12 @@ const BlogPost = lazy(() => import('./pages/BlogPost'));
 const Locations = lazy(() => import('./pages/Locations'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 
+// Service landing pages
+const BasementFinishing = lazy(() => import('./pages/BasementFinishing'));
+const CustomCarpentry = lazy(() => import('./pages/CustomCarpentry'));
+const HomeRenovations = lazy(() => import('./pages/HomeRenovations'));
+const ExteriorServices = lazy(() => import('./pages/ExteriorServices'));
+
 function App() {
   return (
     <HelmetProvider>
@@ -35,6 +41,12 @@ function App() {
               <Route path="/blog/:slug" element={<LazyComponent><BlogPost /></LazyComponent>} />
               <Route path="/locations" element={<LazyComponent><Locations /></LazyComponent>} />
               <Route path="/faq" element={<LazyComponent><FAQ /></LazyComponent>} />
+              
+              {/* Service Landing Pages */}
+              <Route path="/basement-finishing" element={<LazyComponent><BasementFinishing /></LazyComponent>} />
+              <Route path="/custom-carpentry" element={<LazyComponent><CustomCarpentry /></LazyComponent>} />
+              <Route path="/home-renovations" element={<LazyComponent><HomeRenovations /></LazyComponent>} />
+              <Route path="/exterior-services" element={<LazyComponent><ExteriorServices /></LazyComponent>} />
             </Routes>
           </main>
           <Footer />
