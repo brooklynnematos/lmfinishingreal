@@ -97,12 +97,28 @@ export const projects: Project[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    title: "Top 5 Home Remodeling Trends for 2025",
+    slug: "home-remodeling-trends-2025",
+    excerpt: "Discover the hottest home remodeling trends for 2025 and how to incorporate them into your renovation project.",
+    content: "As we move through 2025, home remodeling trends continue to evolve, reflecting changing lifestyles, technological advances, and design preferences...",
+    date: "2025-03-20",
+    imageUrl: "https://images.unsplash.com/photo-1600585154526-990dced4db0d"
+  },
+  {
     title: "The Future of Open Floor Plans: Adapting to Modern Living",
     slug: "open-floor-plans",
     excerpt: "Explore how open floor plans are evolving to meet the changing needs of modern families and lifestyles.",
     content: "Open floor plans have dominated home design for decades, but how are they evolving...",
     date: "2025-03-15",
     imageUrl: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+  },
+  {
+    title: "How to Maximize Your Home's Value with Strategic Renovations",
+    slug: "maximize-home-value-renovations",
+    excerpt: "Learn which home renovations provide the best return on investment and how to strategically increase your property value.",
+    content: "Not all home renovations are created equal when it comes to return on investment...",
+    date: "2025-03-10",
+    imageUrl: "https://images.unsplash.com/photo-1600607687644-c7171b42498f"
   },
   {
     title: "How Much Does Custom Trim Cost in the DMV? 2025 Pricing Guide",
