@@ -1,21 +1,27 @@
-// file: src/components/Navbar.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Facebook, Instagram } from 'lucide-react';
+import { Menu, X, Facebook, Instagram, ChevronDown } from 'lucide-react';
 
-// Why: use /public asset at the site root; case-sensitive in production.
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const navItems = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
     { name: 'Portfolio', path: '/portfolio' },
     { name: 'Blog', path: '/blog' },
     { name: 'Locations', path: '/locations' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
+  ];
+
+  const serviceItems = [
+    { name: 'All Services', path: '/services' },
+    { name: 'Basement Finishing', path: '/basement-finishing' },
+    { name: 'Custom Carpentry', path: '/custom-carpentry' },
+    { name: 'Home Renovations', path: '/home-renovations' },
+    { name: 'Exterior Services', path: '/exterior-services' },
   ];
 
   return (
@@ -24,12 +30,10 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img
-                src="/Logo.png"                 // from public/Logo.png
-                alt="LM Finishing and Construction Logo"
+              <img 
+                src="https://i.postimg.cc/jdrRcPtd/Logo.png" 
+                alt="LM Finishing and Construction Logo" 
                 className="h-14 w-auto"
-                loading="eager"
-                fetchPriority="high"
               />
               <span className="ml-2 text-lg font-bold text-black">
                 LM Finishing & Construction
@@ -48,6 +52,38 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Services Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsServicesOpen(true)}
+              onMouseLeave={() => setIsServicesOpen(false)}
+            >
+              <button
+                className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
+                aria-expanded={isServicesOpen}
+                aria-haspopup="true"
+              >
+                Services
+                <ChevronDown className={`ml-1 h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isServicesOpen && (
+                <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
+                  {serviceItems.map((service) => (
+                    <Link
+                      key={service.name}
+                      to={service.path}
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600"
+                      onClick={() => setIsServicesOpen(false)}
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+            
             <div className="flex items-center ml-2">
               <Link
                 to="/contact"
@@ -56,20 +92,10 @@ const Navbar = () => {
                 Free Estimate
               </Link>
               <div className="flex space-x-2 ml-2">
-                <a
-                  href="https://www.facebook.com/lm.fconstruction/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary-600"
-                >
+                <a href="https://www.facebook.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
                   <Facebook className="h-5 w-5" />
                 </a>
-                <a
-                  href="https://www.instagram.com/lm.fconstruction/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-primary-600"
-                >
+                <a href="https://www.instagram.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
                   <Instagram className="h-5 w-5" />
                 </a>
               </div>
@@ -102,6 +128,24 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            
+            {/* Mobile Services Menu */}
+            <div className="border-t border-gray-200 pt-2 mt-2">
+              <div className="px-3 py-2 text-sm font-medium text-gray-500 uppercase tracking-wide">
+                Services
+              </div>
+              {serviceItems.map((service) => (
+                <Link
+                  key={service.name}
+                  to={service.path}
+                  className="text-gray-700 hover:text-primary-600 block px-6 py-2 rounded-md text-base font-medium"
+                  onClick={() => setIsOpen(false)}
+                >
+                  {service.name}
+                </Link>
+              ))}
+            </div>
+            
             <Link
               to="/contact"
               className="block px-3 py-2 rounded-md text-base font-medium bg-[#4A90E2] text-white hover:bg-[#357ABD]"
@@ -110,20 +154,10 @@ const Navbar = () => {
               Get a Free Estimate
             </Link>
             <div className="flex space-x-4 px-3 py-2">
-              <a
-                href="https://www.facebook.com/lm.fconstruction/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600"
-              >
+              <a href="https://www.facebook.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a
-                href="https://www.instagram.com/lm.fconstruction/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-600 hover:text-primary-600"
-              >
+              <a href="https://www.instagram.com/lm.fconstruction/" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600">
                 <Instagram className="h-5 w-5" />
               </a>
             </div>

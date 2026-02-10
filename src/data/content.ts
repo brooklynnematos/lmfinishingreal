@@ -154,35 +154,23 @@ export const blogPosts: BlogPost[] = [
   }
 ];
 
-export const dmvAreas: Location[] = [
+export const serviceAreas: Location[] = [
   {
-    county: "Washington DC",
-    description: "Serving all districts and neighborhoods throughout the nation's capital with expert finish carpentry and custom remodeling services.",
-    cities: ["Northwest DC", "Northeast DC", "Southeast DC", "Southwest DC", "Capitol Hill", "Dupont Circle", "Georgetown", "Adams Morgan"]
+    area: "Utah",
+    description: "Serving Utah communities with expert finish carpentry, basement finishing, and custom remodeling services. Our proven systems and quality craftsmanship bring exceptional results to Utah homeowners.",
+    cities: [
+      "Salt Lake County",
+      "Utah County", 
+      "Summit County"
+    ]
   },
   {
-    county: "Northern Virginia",
-    description: "Complete coverage of Northern Virginia including Arlington, Fairfax, and Loudoun Counties with professional finish carpentry services.",
-    cities: ["Arlington", "Alexandria", "Fairfax", "McLean", "Tysons", "Reston", "Falls Church", "Vienna"]
-  },
-  {
-    county: "Maryland",
-    description: "Serving Maryland communities including Montgomery and Prince George's Counties with quality custom carpentry and home renovation services.",
-    cities: ["Bethesda", "Silver Spring", "Rockville", "Gaithersburg", "College Park", "Hyattsville", "Bowie", "Annapolis"]
-  },
-  {
-    area: "Salt Lake County",
-    description: "Serving Salt Lake County and surrounding areas with expert finish carpentry and custom remodeling services.",
-    cities: ["Salt Lake City", "Sandy", "West Valley City", "South Jordan", "Draper", "Millcreek", "Murray", "Cottonwood Heights"]
-  },
-  {
-    area: "Utah County", 
-    description: "Providing quality finish carpentry and home renovation services throughout Utah County communities.",
-    cities: ["Provo", "Orem", "American Fork", "Pleasant Grove", "Lehi", "Spanish Fork", "Saratoga Springs", "Eagle Mountain"]
-  },
-  {
-    area: "Summit County", 
-    description: "Serving Summit County with professional finish carpentry and custom remodeling services.",
-    cities: ["Park City", "Coalville", "Kamas", "Oakley", "Henefer", "Wanship", "Peoa", "Francis"]
+    area: "DMV Area",
+    description: "Professional finish carpentry and custom remodeling services throughout the DMV region. We bring the same proven systems and expert craftsmanship to homeowners and contractors across the greater Washington DC metropolitan area.",
+    cities: [
+      "Washington DC",
+      "Northern Virginia",
+      "Maryland"
+    ]
   }
 ];

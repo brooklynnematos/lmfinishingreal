@@ -1,16 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { dmvAreas } from '../data/content';
+import { serviceAreas } from '../data/content';
 import SEOHead from '../components/SEOHead';
 import { MapPin } from 'lucide-react';
 
 const areaImages = {
-  'Washington DC': 'https://images.unsplash.com/photo-1617581629397-a72507c3de9e',
-  'Northern Virginia': 'https://images.unsplash.com/photo-1582407947304-fd86f028f716',
-  'Maryland': 'https://images.unsplash.com/photo-1590736969955-71cc94901144',
-  'Salt Lake County': 'https://images.unsplash.com/photo-1605538883669-825200433431',
-  'Utah County': 'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b',
-  'Summit County': 'https://images.unsplash.com/photo-1551524164-6cf2ac531fb4'
+  'Utah': 'https://images.unsplash.com/photo-1605538883669-825200433431',
+  'DMV Area': 'https://images.unsplash.com/photo-1617581629397-a72507c3de9e'
 };
 
 const Locations = () => {
@@ -55,52 +51,49 @@ const Locations = () => {
       {/* Locations Grid */}
       <section className="py-20 bg-gray-50" aria-label="Service Locations">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-12">
-            {dmvAreas.map((location, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {serviceAreas.map((location, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden transform hover:shadow-xl transition-shadow duration-300"
+                className="bg-white rounded-lg shadow-lg overflow-hidden"
                 role="region"
                 aria-labelledby={`location-${index}`}
               >
-                <div className="grid grid-cols-1 md:grid-cols-2">
-                  <div className="p-8">
-                    <div className="flex items-start mb-6">
-                      <MapPin className="h-6 w-6 text-[#213555] mt-1" aria-hidden="true" />
-                      <h2 
-                        id={`location-${index}`}
-                        className="text-2xl font-bold text-[#213555] ml-3"
-                      >
-                        {location.area || location.county}
-                      </h2>
-                    </div>
-                    <p className="text-gray-700 mb-6">{location.description}</p>
-                    <div 
-                      className="grid grid-cols-2 gap-4"
-                      role="list"
-                      aria-label={`Cities served in ${location.area || location.county}`}
+                <div className="h-64 relative overflow-hidden">
+                  <img 
+                    src={areaImages[location.area as keyof typeof areaImages]}
+                    alt={`${location.area} service area`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="p-8">
+                  <div className="flex items-start mb-6">
+                    <MapPin className="h-6 w-6 text-[#213555] mt-1" aria-hidden="true" />
+                    <h2 
+                      id={`location-${index}`}
+                      className="text-2xl font-bold text-[#213555] ml-3"
                     >
-                      {location.cities.map((city, cityIndex) => (
-                        <div
-                          key={cityIndex}
-                          className="flex items-center text-gray-700"
-                          role="listitem"
-                        >
-                          <span className="w-2 h-2 bg-[#213555] rounded-full mr-2" aria-hidden="true"></span>
-                          {city}
-                        </div>
-                      ))}
-                    </div>
+                      {location.area}
+                    </h2>
                   </div>
-                  <div className="h-[400px] relative overflow-hidden bg-white flex items-center justify-center p-4">
-                    <img 
-                      src={areaImages[(location.area || location.county) as keyof typeof areaImages]}
-                      alt={`${location.area || location.county} area`}
-                      className="max-w-full max-h-full object-contain rounded-lg shadow-md"
-                    />
+                  <p className="text-gray-700 mb-6">{location.description}</p>
+                  
+                  {location.cities && location.cities.length > 0 && (
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#213555] mb-3">Areas Served:</h3>
+                      <div className="grid grid-cols-1 gap-2">
+                        {location.cities.map((city, cityIndex) => (
+                          <div key={cityIndex} className="flex items-center">
+                            <span className="w-2 h-2 bg-[#213555] rounded-full mr-3 flex-shrink-0" aria-hidden="true"></span>
+                            <span className="text-gray-700">{city}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                   </div>
                 </div>
               </motion.div>

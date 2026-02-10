@@ -52,10 +52,18 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
-              <li className="text-gray-400">Basement Finishing</li>
-              <li className="text-gray-400">Home Renovations</li>
-              <li className="text-gray-400">Custom Carpentry</li>
-              <li className="text-gray-400">Exterior Services</li>
+              <li>
+                <Link to="/basement-finishing" className="text-gray-400 hover:text-white">Basement Finishing</Link>
+              </li>
+              <li>
+                <Link to="/home-renovations" className="text-gray-400 hover:text-white">Home Renovations</Link>
+              </li>
+              <li>
+                <Link to="/custom-carpentry" className="text-gray-400 hover:text-white">Custom Carpentry</Link>
+              </li>
+              <li>
+                <Link to="/exterior-services" className="text-gray-400 hover:text-white">Exterior Services</Link>
+              </li>
             </ul>
           </div>
 
