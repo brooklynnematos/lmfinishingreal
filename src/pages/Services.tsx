@@ -27,6 +27,21 @@ const Services = () => {
     }
   };
 
+  const getServicePageUrl = (title: string) => {
+    switch (title) {
+      case "Basement Finishing":
+        return "/basement-finishing";
+      case "Home Renovations":
+        return "/home-renovations";
+      case "Custom Carpentry":
+        return "/custom-carpentry";
+      case "Exterior Services":
+        return "/exterior-services";
+      default:
+        return "/services";
+    }
+  };
+
   // Pricing information for each service
   const servicePricing = {
     "Basement Finishing": {
@@ -162,23 +177,32 @@ const Services = () => {
                       ))}
                     </ul>
 
-                    <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex flex-col gap-3">
                       <Link
-                        to="/contact"
-                        aria-label={`Get started with ${service.title}`}
+                        to={getServicePageUrl(service.title)}
+                        aria-label={`Learn more about ${service.title}`}
                         className="inline-flex items-center justify-center bg-[#213555] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#182943] transition-colors"
                       >
-                        Get Free Estimate
+                        Learn More
                         <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                       </Link>
-                      <button
-                        onClick={() => handlePortfolioClick(getCategoryFromTitle(service.title))}
-                        aria-label={`View ${service.title} portfolio`}
-                        className="inline-flex items-center justify-center border-2 border-[#213555] text-[#213555] px-6 py-3 rounded-md text-lg font-medium hover:bg-[#213555] hover:text-white transition-colors"
-                      >
-                        View Portfolio
-                        <Image className="ml-2 h-5 w-5" aria-hidden="true" />
-                      </button>
+                      <div className="flex flex-col sm:flex-row gap-3">
+                        <Link
+                          to="/contact"
+                          aria-label={`Get started with ${service.title}`}
+                          className="inline-flex items-center justify-center border-2 border-[#213555] text-[#213555] px-6 py-3 rounded-md text-lg font-medium hover:bg-[#213555] hover:text-white transition-colors"
+                        >
+                          Get Free Estimate
+                        </Link>
+                        <button
+                          onClick={() => handlePortfolioClick(getCategoryFromTitle(service.title))}
+                          aria-label={`View ${service.title} portfolio`}
+                          className="inline-flex items-center justify-center border-2 border-[#213555] text-[#213555] px-6 py-3 rounded-md text-lg font-medium hover:bg-[#213555] hover:text-white transition-colors"
+                        >
+                          View Portfolio
+                          <Image className="ml-2 h-5 w-5" aria-hidden="true" />
+                        </button>
+                      </div>
                     </div>
                   </div>
 
