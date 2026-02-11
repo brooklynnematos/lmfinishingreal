@@ -37,7 +37,7 @@ const FAQ = () => {
       questions: [
         {
           question: "How much does basement finishing cost?",
-          answer: "Basement finishing typically ranges from $25,000-$75,000 depending on size, features, and finishes. A basic 1,000 sq ft basement runs $25-35k, while luxury finishes with bathrooms and bars can reach $50-75k. We provide detailed free estimates for all basement projects in our service areas."
+          answer: "Basement finishing costs vary significantly depending on size, features, finishes, and your specific requirements. Every project is unique, and pricing is affected by factors like square footage, bathroom additions, flooring choices, and custom features. We provide detailed free estimates tailored to your specific basement project. Contact us to discuss your vision and receive an accurate quote."
         },
         {
           question: "How long does basement finishing take?",
@@ -62,7 +62,7 @@ const FAQ = () => {
       questions: [
         {
           question: "How much does custom trim cost?",
-          answer: "Custom trim costs typically range from $8-25 per linear foot installed. Basic baseboards: $8-12/ft, standard crown molding: $15-25/ft, complex multi-piece crown: $25-45/ft. Material choice (pine vs. hardwood) and complexity significantly affect pricing. Costs may vary by region."
+          answer: "Custom trim costs vary based on several factors including material choice (pine vs. hardwood), design complexity, installation difficulty, and project size. Every project is unique, and we provide detailed free estimates for all custom carpentry work. Contact us to discuss your project and receive an accurate quote tailored to your specific needs."
         },
         {
           question: "What's the difference between a finish carpenter and handyman?",

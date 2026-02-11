@@ -39,12 +39,6 @@ const HomeRenovations = () => {
     }
   ];
 
-  const renovationRanges = [
-    { type: "Kitchen Remodel", range: "$25,000 - $75,000", description: "Complete kitchen renovation with cabinets, countertops, and appliances" },
-    { type: "Bathroom Renovation", range: "$15,000 - $45,000", description: "Full bathroom remodel including fixtures, tile, and vanities" },
-    { type: "Living Room Makeover", range: "$10,000 - $35,000", description: "Flooring, lighting, built-ins, and architectural details" },
-    { type: "Whole House Renovation", range: "$75,000 - $200,000+", description: "Complete home transformation including all major systems" }
-  ];
 
   const benefits = [
     {
@@ -212,33 +206,19 @@ const HomeRenovations = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Renovation Investment Ranges</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Transparent pricing for different types of renovation projects
+      {/* Get Quote Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Request Your Custom Renovation Quote</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+              Every renovation project is unique. Pricing varies based on the scope of work, materials, finishes, and your specific requirements.
+              Contact us for a detailed, personalized estimate for your home renovation.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {renovationRanges.map((renovation, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-lg border border-gray-200"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{renovation.type}</h3>
-                <div className="text-2xl font-bold text-green-600 mb-3">{renovation.range}</div>
-                <p className="text-gray-600">{renovation.description}</p>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-12 bg-green-50 p-8 rounded-lg">
-            <h3 className="text-xl font-semibold text-green-900 mb-4">What's Included in Our Renovations:</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-green-50 p-8 rounded-lg mb-8">
+            <h3 className="text-xl font-semibold text-green-900 mb-6 text-center">What's Included in Our Renovations</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               <ul className="space-y-2">
                 <li className="flex items-center text-green-800">
                   <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
@@ -268,35 +248,22 @@ const HomeRenovations = () => {
                 </li>
               </ul>
             </div>
+            <div className="border-t border-green-200 pt-6">
+              <h4 className="font-semibold text-green-900 mb-3 text-center">Value & Investment</h4>
+              <p className="text-green-800 text-center">
+                Quality renovations add significant value to your home. Kitchen and bathroom remodels consistently provide strong returns on investment,
+                while comprehensive whole-house renovations can transform both your living experience and property value.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      {/* ROI Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Return on Investment</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Quality renovations add significant value to your home
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">70-85%</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Kitchen Remodels</h3>
-              <p className="text-gray-600">Average return on investment for quality kitchen renovations</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">60-75%</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Bathroom Renovations</h3>
-              <p className="text-gray-600">Strong returns for bathroom upgrades and additions</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-lg text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">50-70%</div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">Whole House</h3>
-              <p className="text-gray-600">Comprehensive renovations that transform your home's value</p>
-            </div>
+          <div className="text-center">
+            <Link
+              to="/contact"
+              className="bg-green-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-green-700 transition-colors inline-flex items-center"
+            >
+              Get Your Free Estimate
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>

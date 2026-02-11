@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { services } from '../data/content';
-import { ArrowRight, CheckCircle, Image, DollarSign } from 'lucide-react';
+import { ArrowRight, CheckCircle, Image } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
@@ -42,29 +42,6 @@ const Services = () => {
     }
   };
 
-  // Pricing information for each service
-  const servicePricing = {
-    "Basement Finishing": {
-      range: "$30,000 - $85,000",
-      details: "Complete basement finishing including framing, electrical, plumbing, flooring, and finishes",
-      factors: ["Square footage", "Bathroom additions", "Kitchen/bar areas", "Flooring type", "Ceiling height"]
-    },
-    "Home Renovations": {
-      range: "$20,000 - $175,000+",
-      details: "Kitchen remodels, bathroom upgrades, and complete home makeovers",
-      factors: ["Room size", "Material quality", "Appliance upgrades", "Structural changes", "Permit requirements"]
-    },
-    "Custom Carpentry": {
-      range: "$12 - $35 per linear foot",
-      details: "Custom trim work, built-ins, and finish carpentry services",
-      factors: ["Wood species", "Design complexity", "Installation difficulty", "Project size", "Custom features"]
-    },
-    "Exterior Services": {
-      range: "$8,000 - $45,000",
-      details: "Deck construction, patio installation, and exterior improvements",
-      factors: ["Deck size", "Material type", "Site conditions", "Railing style", "Additional features"]
-    }
-  };
 
   // Schema markup for services
   const servicesSchema = {
@@ -139,18 +116,16 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-16">
             {services.map((service, index) => {
-              const pricing = servicePricing[service.title as keyof typeof servicePricing];
-              
               return (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8 }}
-                  className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start"
+                  className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start"
                 >
                   {/* Service Image */}
-                  <div className={`order-1 ${index % 2 === 0 ? 'lg:order-1' : 'lg:order-3'}`}>
+                  <div className={index % 2 === 0 ? 'lg:order-1' : 'lg:order-2'}>
                     <img
                       src={service.imageUrl}
                       alt={`${service.title} contractor showcasing professional craftsmanship in ${service.title.toLowerCase()} projects`}
@@ -159,12 +134,12 @@ const Services = () => {
                   </div>
 
                   {/* Service Details */}
-                  <div className="order-2 lg:col-span-1">
+                  <div className={index % 2 === 0 ? 'lg:order-2' : 'lg:order-1'}>
                     <h2 className="text-3xl font-bold text-[#213555] mb-6">{service.title}</h2>
                     <p className="text-lg text-gray-700 mb-6">{service.description}</p>
 
                     <ul className="space-y-3 mb-8" aria-label={`Features of ${service.title}`}>
-                      {service.features.slice(0, 4).map((feature, featureIndex) => (
+                      {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start text-gray-700">
                           <CheckCircle className="h-5 w-5 text-[#213555] mr-3 mt-0.5 flex-shrink-0" aria-hidden="true" />
                           <span className="text-sm">{feature}</span>
@@ -197,40 +172,6 @@ const Services = () => {
                           View Portfolio
                           <Image className="ml-2 h-5 w-5" aria-hidden="true" />
                         </button>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Pricing Information */}
-                  <div className={`order-3 ${index % 2 === 0 ? 'lg:order-3' : 'lg:order-1'}`}>
-                    <div className="bg-gray-50 p-6 rounded-lg shadow-lg">
-                      <div className="flex items-center mb-4">
-                        <DollarSign className="h-6 w-6 text-[#213555] mr-2" aria-hidden="true" />
-                        <h3 className="text-xl font-semibold text-[#213555]">General Pricing</h3>
-                      </div>
-                      
-                      <div className="mb-4">
-                        <div className="text-2xl font-bold text-[#213555] mb-2">{pricing.range}</div>
-                        <p className="text-sm text-gray-600">{pricing.details}</p>
-                      </div>
-
-                      <div className="mb-4">
-                        <h4 className="font-semibold text-gray-800 mb-2">Pricing factors include:</h4>
-                        <ul className="space-y-1">
-                          {pricing.factors.map((factor, factorIndex) => (
-                            <li key={factorIndex} className="flex items-center text-sm text-gray-600">
-                              <span className="w-1.5 h-1.5 bg-[#213555] rounded-full mr-2 flex-shrink-0" aria-hidden="true"></span>
-                              {factor}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <div className="bg-blue-50 p-3 rounded border-l-4 border-[#213555]">
-                        <p className="text-sm text-gray-700">
-                          <strong>Note:</strong> Prices vary based on project scope, materials, and site conditions.
-                          Contact us for a detailed estimate tailored to your specific project.
-                        </p>
                       </div>
                     </div>
                   </div>
@@ -358,7 +299,7 @@ const Services = () => {
               },
               {
                 question: "How much does basement finishing typically cost?",
-                answer: "Basement finishing typically ranges from $30,000-$85,000 depending on size, features, and finishes. We provide free detailed estimates for all basement projects."
+                answer: "Basement finishing costs vary significantly based on size, features, finishes, and specific project requirements. We provide free detailed estimates tailored to your specific basement project. Contact us to discuss your vision and receive an accurate quote."
               },
               {
                 question: "Do you work with general contractors?",

@@ -39,12 +39,6 @@ const ExteriorServices = () => {
     }
   ];
 
-  const deckOptions = [
-    { material: "Pressure-Treated Pine", price: "$15-25/sq ft", description: "Economical option with natural wood appeal" },
-    { material: "Cedar", price: "$25-35/sq ft", description: "Natural resistance to insects and weather" },
-    { material: "Composite Decking", price: "$30-45/sq ft", description: "Low maintenance with wood-like appearance" },
-    { material: "PVC Decking", price: "$35-50/sq ft", description: "Premium option with maximum durability" }
-  ];
 
   const benefits = [
     {
@@ -212,62 +206,91 @@ const ExteriorServices = () => {
         </div>
       </section>
 
-      {/* Deck Materials & Pricing Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Deck Materials & Pricing</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Choose from a variety of materials to match your style and budget
+      {/* Materials & Quote Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Quality Materials & Custom Pricing</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+              We work with a variety of decking materials to match your style, budget, and maintenance preferences.
+              Pricing varies based on materials, deck size, design complexity, and site conditions.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {deckOptions.map((option, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-lg border border-gray-200"
-              >
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{option.material}</h3>
-                <div className="text-2xl font-bold text-emerald-600 mb-3">{option.price}</div>
-                <p className="text-gray-600">{option.description}</p>
-              </motion.div>
-            ))}
-          </div>
-          <div className="mt-12 bg-emerald-50 p-8 rounded-lg">
-            <h3 className="text-xl font-semibold text-emerald-900 mb-4">What's Included in Our Deck Construction:</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <ul className="space-y-2">
-                <li className="flex items-center text-emerald-800">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
-                  Professional design and planning
-                </li>
-                <li className="flex items-center text-emerald-800">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
-                  All permits and inspections
-                </li>
-                <li className="flex items-center text-emerald-800">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
-                  Quality materials and hardware
-                </li>
-              </ul>
-              <ul className="space-y-2">
-                <li className="flex items-center text-emerald-800">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
-                  Expert construction and finishing
-                </li>
-                <li className="flex items-center text-emerald-800">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
-                  Complete cleanup and debris removal
-                </li>
-                <li className="flex items-center text-emerald-800">
-                  <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
-                  1-year warranty on workmanship
-                </li>
-              </ul>
+          <div className="bg-emerald-50 p-8 rounded-lg mb-8">
+            <h3 className="text-xl font-semibold text-emerald-900 mb-6 text-center">Deck Material Options</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div>
+                <h4 className="font-semibold text-emerald-800 mb-3">Natural Wood</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-700">Pressure-Treated Pine - Economical with natural appeal</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-700">Cedar - Natural resistance to insects and weather</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h4 className="font-semibold text-emerald-800 mb-3">Composite Options</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-700">Composite Decking - Low maintenance with wood-like look</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                    <span className="text-gray-700">PVC Decking - Premium durability and minimal upkeep</span>
+                  </li>
+                </ul>
+              </div>
             </div>
+            <div className="border-t border-emerald-200 pt-6">
+              <h4 className="font-semibold text-emerald-900 mb-3 text-center">Every Project Includes</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <ul className="space-y-2">
+                  <li className="flex items-center text-emerald-800">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
+                    Professional design and planning
+                  </li>
+                  <li className="flex items-center text-emerald-800">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
+                    All permits and inspections
+                  </li>
+                  <li className="flex items-center text-emerald-800">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
+                    Quality materials and hardware
+                  </li>
+                </ul>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-emerald-800">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
+                    Expert construction and finishing
+                  </li>
+                  <li className="flex items-center text-emerald-800">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
+                    Complete cleanup and debris removal
+                  </li>
+                  <li className="flex items-center text-emerald-800">
+                    <CheckCircle className="h-5 w-5 text-emerald-600 mr-2" />
+                    1-year warranty on workmanship
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="text-center">
+            <p className="text-lg text-gray-700 mb-6">
+              Contact us to discuss your exterior construction project and receive a detailed estimate based on your specific needs.
+            </p>
+            <Link
+              to="/contact"
+              className="bg-emerald-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-emerald-700 transition-colors inline-flex items-center"
+            >
+              Get Your Free Estimate
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, DollarSign, Award, Users, Shield } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, Award, Users, Shield } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 
 const BasementFinishing = () => {
@@ -39,14 +39,6 @@ const BasementFinishing = () => {
     }
   ];
 
-  const pricingFactors = [
-    "Square footage of basement space",
-    "Bathroom and kitchen additions", 
-    "Flooring type and quality",
-    "Electrical and plumbing requirements",
-    "Custom built-ins and features",
-    "Ceiling height and complexity"
-  ];
 
   const benefits = [
     {
@@ -214,50 +206,54 @@ const BasementFinishing = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Basement Finishing Investment</h2>
-              <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <div className="flex items-center mb-4">
-                  <DollarSign className="h-6 w-6 text-blue-600 mr-2" />
-                  <h3 className="text-xl font-semibold text-blue-900">Typical Range</h3>
-                </div>
-                <div className="text-3xl font-bold text-blue-900 mb-2">$30,000 - $85,000</div>
-                <p className="text-blue-700">Complete basement finishing including all materials, labor, and permits</p>
-              </div>
-              <p className="text-gray-700 mb-6">
-                Investment varies based on size, features, and finishes. We provide detailed estimates with no hidden costs.
-              </p>
-              <Link
-                to="/contact"
-                className="bg-blue-600 text-white px-6 py-3 rounded-md font-medium hover:bg-blue-700 transition-colors inline-flex items-center"
-              >
-                Get Detailed Estimate
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Factors Affecting Investment</h3>
-              <ul className="space-y-3">
-                {pricingFactors.map((factor, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
-                    <span className="text-gray-700">{factor}</span>
-                  </li>
-                ))}
+      {/* Get Quote Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">Request Your Custom Quote</h2>
+          <p className="text-lg text-gray-700 mb-8">
+            Every basement finishing project is unique. Pricing varies based on size, features, finishes, and your specific requirements.
+            Contact us for a detailed, personalized estimate tailored to your vision and budget.
+          </p>
+          <div className="bg-blue-50 p-8 rounded-lg mb-8">
+            <h3 className="text-xl font-semibold text-blue-900 mb-4">What Affects Your Project Cost?</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-gray-700">Square footage of basement space</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-gray-700">Bathroom and kitchen additions</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-gray-700">Flooring type and quality</span>
+                </li>
               </ul>
-              <div className="bg-gray-50 p-6 rounded-lg mt-8">
-                <h4 className="font-semibold text-gray-900 mb-2">Return on Investment</h4>
-                <p className="text-gray-700">
-                  Professional basement finishing typically adds 60-80% of the project cost to your home's value, 
-                  making it one of the best home improvement investments.
-                </p>
-              </div>
+              <ul className="space-y-2">
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-gray-700">Electrical and plumbing requirements</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-gray-700">Custom built-ins and features</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="w-2 h-2 bg-blue-600 rounded-full mr-3 mt-2 flex-shrink-0"></span>
+                  <span className="text-gray-700">Ceiling height and complexity</span>
+                </li>
+              </ul>
             </div>
           </div>
+          <Link
+            to="/contact"
+            className="bg-blue-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-blue-700 transition-colors inline-flex items-center"
+          >
+            Get Your Free Estimate
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Link>
         </div>
       </section>
 
