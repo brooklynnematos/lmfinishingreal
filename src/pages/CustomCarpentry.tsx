@@ -181,7 +181,7 @@ const CustomCarpentry = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1600566752547-c06598f4a0d5"
+                src='/images/portfolio/carpentry/carpentry-1.webp'
                 alt="Custom built-in entertainment center"
                 className="rounded-lg shadow-xl"
               />

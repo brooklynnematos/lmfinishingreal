@@ -181,7 +181,7 @@ const BasementFinishing = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1600573472591-ee6981cf35b6"
+                src='/images/portfolio/basement/basement-2.webp'
                 alt="Modern basement entertainment area"
                 className="rounded-lg shadow-xl"
               />

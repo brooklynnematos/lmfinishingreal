@@ -181,7 +181,7 @@ const ExteriorServices = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
+                src='/images/portfolio/exteriors/exteriors-7.webp'
                 alt="Outdoor living space with pergola"
                 className="rounded-lg shadow-xl"
               />
