@@ -12,7 +12,7 @@ export const services: Service[] = [
   {
     title: "Basement Finishing",
     description: "Transform your unfinished basement into a beautiful, functional living space that adds significant value to your home. Our experienced team handles all aspects from moisture control to final finishes.",
-    imageUrl: "https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?w=600&h=800&fit=crop", // 👈 VERTICAL BASEMENT FINISHING PHOTO
+    imageUrl: '/images/portfolio/basement/basement-3.webp', // 👈 VERTICAL BASEMENT FINISHING PHOTO
     features: [
       "Custom design and planning",
       "Full electrical and plumbing work",
@@ -25,7 +25,7 @@ export const services: Service[] = [
   {
     title: "Home Renovations",
     description: "Comprehensive home renovation services including kitchen remodels, bathroom upgrades, and complete home makeovers. We work with homeowners and general contractors to deliver exceptional results.",
-    imageUrl: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=800&fit=crop", // 👈 VERTICAL HOME RENOVATIONS PHOTO
+    imageUrl: '/images/portfolio/renovations/renovations-7.webp', // 👈 VERTICAL HOME RENOVATIONS PHOTO
     features: [
       "Kitchen remodeling",
       "Bathroom renovations and upgrades",
@@ -38,7 +38,7 @@ export const services: Service[] = [
   {
     title: "Custom Carpentry",
     description: "Expert finish carpentry and custom woodworking services. Our skilled craftsmen create beautiful built-ins, custom trim work, and detailed millwork that enhances your home's character and value.",
-    imageUrl: "https://images.unsplash.com/photo-1581858726788-75bc0f6a952d?w=600&h=800&fit=crop", // 👈 VERTICAL CUSTOM CARPENTRY PHOTO
+    imageUrl: '/images/portfolio/carpentry/carpentry-38.webp', // 👈 VERTICAL CUSTOM CARPENTRY PHOTO
     features: [
       "Built-in entertainment centers",
       "Custom cabinets and shelving",
@@ -51,7 +51,7 @@ export const services: Service[] = [
   {
     title: "Exterior Services",
     description: "Enhance your home's curb appeal and outdoor living spaces with our expert exterior construction services. We build custom decks, patios, and outdoor features designed to last.",
-    imageUrl: "https://images.unsplash.com/photo-1600566753151-384129cf4e3e?w=600&h=800&fit=crop", // 👈 VERTICAL EXTERIOR SERVICES PHOTO
+    imageUrl: '/images/portfolio/exteriors/exteriors-24.webp', // 👈 VERTICAL EXTERIOR SERVICES PHOTO
     features: [
       "Custom deck construction",
       "Patio installations",
@@ -142,7 +142,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Essential tips to consider before starting your basement renovation project.",
     content: "Planning a basement renovation can be an exciting yet challenging endeavor...",
     date: "2025-02-15",
-    imageUrl: "https://utahhomeremodel.net/wp-content/uploads/2024/02/Utah-basement-remodel-with-bar-2-1080x675.jpg"
+    imageUrl: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
   },
   {
     title: "Why Hire a Finish Carpenter Instead of a General Handyman?",
@@ -166,7 +166,7 @@ export const blogPosts: BlogPost[] = [
     excerpt: "Essential questions to ask contractors before hiring. Protect your investment with our comprehensive guide to vetting contractors for your home renovation project.",
     content: "Hiring the right contractor for your home renovation project is one of the most important decisions you'll make...",
     date: "2025-01-05",
-    imageUrl: "https://pixabay.com/photos/woman-construction-helmet-tool-2759503/"
+    imageUrl: "https://images.unsplash.com/photo-1504307651254-35680f356dfd"
   }
 ];
 
