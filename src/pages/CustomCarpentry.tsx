@@ -281,10 +281,6 @@ const CustomCarpentry = () => {
                     <CheckCircle className="h-5 w-5 text-amber-600 mr-2" />
                     Complete cleanup and debris removal
                   </li>
-                  <li className="flex items-center text-amber-800">
-                    <CheckCircle className="h-5 w-5 text-amber-600 mr-2" />
-                    1-year craftsmanship warranty
-                  </li>
                 </ul>
               </div>
             </div>
