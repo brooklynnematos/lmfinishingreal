@@ -363,7 +363,7 @@ const ExteriorServices = () => {
                 <ImageOptimizer
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-80 object-cover"
+                  className="w-full h-80 object-contain bg-gray-100"
                   width={600}
                   height={400}
                 />

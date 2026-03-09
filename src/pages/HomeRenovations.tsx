@@ -228,11 +228,11 @@ const HomeRenovations = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {portfolioImages.slice(0, 6).map((image, index) => (
-              <div key={index} className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
+              <div key={index} className="relative h-64 rounded-lg overflow-hidden shadow-lg group bg-gray-100">
                 <ImageOptimizer
                   src={image.url}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
                   width={600}
                   height={400}
                 />
