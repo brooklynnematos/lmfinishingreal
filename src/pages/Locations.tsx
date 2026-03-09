@@ -5,7 +5,7 @@ import SEOHead from '../components/SEOHead';
 import { MapPin } from 'lucide-react';
 
 const areaImages = {
-  'Utah': 'https://unsplash.com/photos/brown-rock-formation-under-blue-sky-during-daytime-T1cN5Fkjiv4?utm_source=unsplash&utm_medium=referral&utm_content=creditShareLink',
+  'Utah': 'https://images.unsplash.com/photo-1579723313746-8d26e44d43c8?w=800&h=600&fit=crop',
   'DMV Area': 'https://images.unsplash.com/photo-1617581629397-a72507c3de9e'
 };
 
