@@ -12,7 +12,7 @@ export const services: Service[] = [
   {
     title: "Basement Finishing",
     description: "Transform your unfinished basement into a beautiful, functional living space that adds significant value to your home. Our experienced team handles all aspects from moisture control to final finishes.",
-    imageUrl: '/images/portfolio/basement/basement-3.webp', // 👈 VERTICAL BASEMENT FINISHING PHOTO
+    imageUrl: '/images/portfolio/basement/basement-6.webp', // 👈 VERTICAL BASEMENT FINISHING PHOTO
     features: [
       "Custom design and planning",
       "Full electrical and plumbing work",

@@ -6,6 +6,38 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isResourcesOpen, setIsResourcesOpen] = useState(false);
+  const [servicesTimeout, setServicesTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [resourcesTimeout, setResourcesTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  const handleServicesEnter = () => {
+    if (servicesTimeout) {
+      clearTimeout(servicesTimeout);
+      setServicesTimeout(null);
+    }
+    setIsServicesOpen(true);
+  };
+
+  const handleServicesLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsServicesOpen(false);
+    }, 150);
+    setServicesTimeout(timeout);
+  };
+
+  const handleResourcesEnter = () => {
+    if (resourcesTimeout) {
+      clearTimeout(resourcesTimeout);
+      setResourcesTimeout(null);
+    }
+    setIsResourcesOpen(true);
+  };
+
+  const handleResourcesLeave = () => {
+    const timeout = setTimeout(() => {
+      setIsResourcesOpen(false);
+    }, 150);
+    setResourcesTimeout(timeout);
+  };
 
   const navItems = [
     { name: 'Home', path: '/' },
@@ -61,8 +93,8 @@ const Navbar = () => {
             {/* Services Dropdown */}
             <div
               className="relative"
-              onMouseEnter={() => setIsServicesOpen(true)}
-              onMouseLeave={() => setIsServicesOpen(false)}
+              onMouseEnter={handleServicesEnter}
+              onMouseLeave={handleServicesLeave}
             >
               <button
                 className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
@@ -74,17 +106,19 @@ const Navbar = () => {
               </button>
 
               {isServicesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
-                  {serviceItems.map((service) => (
-                    <Link
-                      key={service.name}
-                      to={service.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600"
-                      onClick={() => setIsServicesOpen(false)}
-                    >
-                      {service.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-56 z-50">
+                  <div className="bg-white rounded-md shadow-lg border border-gray-200 py-1">
+                    {serviceItems.map((service) => (
+                      <Link
+                        key={service.name}
+                        to={service.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600"
+                        onClick={() => setIsServicesOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
@@ -92,8 +126,8 @@ const Navbar = () => {
             {/* Resources Dropdown */}
             <div
               className="relative"
-              onMouseEnter={() => setIsResourcesOpen(true)}
-              onMouseLeave={() => setIsResourcesOpen(false)}
+              onMouseEnter={handleResourcesEnter}
+              onMouseLeave={handleResourcesLeave}
             >
               <button
                 className="text-gray-700 hover:text-primary-600 px-3 py-2 rounded-md text-sm font-medium flex items-center"
@@ -105,17 +139,19 @@ const Navbar = () => {
               </button>
 
               {isResourcesOpen && (
-                <div className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50">
-                  {resourceItems.map((resource) => (
-                    <Link
-                      key={resource.name}
-                      to={resource.path}
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600"
-                      onClick={() => setIsResourcesOpen(false)}
-                    >
-                      {resource.name}
-                    </Link>
-                  ))}
+                <div className="absolute top-full left-0 pt-2 w-56 z-50">
+                  <div className="bg-white rounded-md shadow-lg border border-gray-200 py-1">
+                    {resourceItems.map((resource) => (
+                      <Link
+                        key={resource.name}
+                        to={resource.path}
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-primary-600"
+                        onClick={() => setIsResourcesOpen(false)}
+                      >
+                        {resource.name}
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
