@@ -5,8 +5,10 @@ import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, DollarSign, Award, U
 import SEOHead from '../components/SEOHead';
 import ImageOptimizer from '../components/ImageOptimizer';
 import { portfolioImages } from '../data/images';
+import { services as servicesData } from '../data/content';
 
 const CustomCarpentry = () => {
+  const serviceData = servicesData.find(s => s.title === 'Custom Carpentry');
   const services = [
     "Custom trim work and crown molding",
     "Built-in entertainment centers",
@@ -70,7 +72,7 @@ const CustomCarpentry = () => {
 
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-amber-900 to-amber-700">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1581858726788-75bc0f6a952d')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url('${serviceData?.imageUrl}')` }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -113,10 +115,13 @@ const CustomCarpentry = () => {
               </motion.div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1581858726788-75bc0f6a952d"
+              <ImageOptimizer
+                src={serviceData?.imageUrl || ''}
                 alt="Custom carpentry and finish work"
                 className="rounded-lg shadow-2xl"
+                width={800}
+                height={600}
+                priority
               />
             </div>
           </div>

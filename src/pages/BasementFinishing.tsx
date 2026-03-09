@@ -5,8 +5,10 @@ import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, Award, Users, Shield
 import SEOHead from '../components/SEOHead';
 import ImageOptimizer from '../components/ImageOptimizer';
 import { portfolioImages } from '../data/images';
+import { services } from '../data/content';
 
 const BasementFinishing = () => {
+  const serviceData = services.find(s => s.title === 'Basement Finishing');
   const features = [
     "Complete moisture assessment and waterproofing",
     "Professional framing and electrical rough-in",
@@ -70,7 +72,7 @@ const BasementFinishing = () => {
 
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-blue-900 to-blue-700">
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b')] bg-cover bg-center opacity-20"></div>
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url('${serviceData?.imageUrl}')` }}></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -113,10 +115,13 @@ const BasementFinishing = () => {
               </motion.div>
             </div>
             <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b"
+              <ImageOptimizer
+                src={serviceData?.imageUrl || ''}
                 alt="Beautiful finished basement with modern design"
                 className="rounded-lg shadow-2xl"
+                width={800}
+                height={600}
+                priority
               />
             </div>
           </div>
