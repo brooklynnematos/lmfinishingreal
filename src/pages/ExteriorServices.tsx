@@ -1,8 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, DollarSign, Award, Users, Shield, TreePine } from 'lucide-react';
+import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, DollarSign, Award, Users, Shield, TreePine, Image as ImageIcon } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
+import ImageOptimizer from '../components/ImageOptimizer';
+import { portfolioImages } from '../data/images';
 
 const ExteriorServices = () => {
   const services = [
@@ -325,6 +327,50 @@ const ExteriorServices = () => {
               <p className="text-gray-600 mb-3">December - February</p>
               <p className="text-sm text-gray-700">Planning season. Design and permits for spring construction.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Photo Gallery Section */}
+      <section className="py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Exterior Construction Work</h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Explore our completed deck, patio, and outdoor living projects
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {portfolioImages['Exterior'].slice(0, 6).map((image, index) => (
+              <motion.div
+                key={image.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="bg-white rounded-lg shadow-lg overflow-hidden"
+              >
+                <ImageOptimizer
+                  src={image.url}
+                  alt={image.title}
+                  className="w-full h-80 object-cover"
+                  width={600}
+                  height={400}
+                />
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{image.title}</h3>
+                  <p className="text-sm text-gray-600">{image.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center">
+            <Link
+              to="/portfolio?category=Exterior"
+              className="inline-flex items-center bg-emerald-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-emerald-700 transition-colors"
+            >
+              View All Exterior Projects
+              <ImageIcon className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>
