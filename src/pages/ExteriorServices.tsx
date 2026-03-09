@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, DollarSign, Award, Users, Shield, TreePine, Image as ImageIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Phone, Award, Shield, TreePine, Image as ImageIcon } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ImageOptimizer from '../components/ImageOptimizer';
 import { portfolioImages } from '../data/images';
@@ -181,7 +181,7 @@ const ExteriorServices = () => {
             </div>
             <div className="relative">
               <img
-                src='/images/portfolio/exteriors/exteriors-7.webp'
+                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c"
                 alt="Outdoor living space with pergola"
                 className="rounded-lg shadow-xl"
               />

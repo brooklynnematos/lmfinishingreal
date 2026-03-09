@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { ArrowRight, CheckCircle, Star, Phone, Mail, Clock, DollarSign, Award, Users, Shield, Home, Image as ImageIcon } from 'lucide-react';
+import { ArrowRight, CheckCircle, Phone, Award, Shield, Home } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import ImageOptimizer from '../components/ImageOptimizer';
 import { portfolioImages } from '../data/images';
@@ -179,7 +179,7 @@ const HomeRenovations = () => {
             </div>
             <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl">
               <ImageOptimizer
-                src='/images/portfolio/renovations/renovations-2.webp'
+                src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d"
                 alt="Modern kitchen renovation"
                 className="w-full h-full object-cover"
                 width={800}
@@ -227,17 +227,17 @@ const HomeRenovations = () => {
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {portfolioImages.slice(0, 6).map((image, index) => (
+            {portfolioImages['Home Renovations'].slice(0, 6).map((image, index) => (
               <div key={index} className="relative h-64 rounded-lg overflow-hidden shadow-lg group bg-gray-100">
                 <ImageOptimizer
                   src={image.url}
-                  alt={image.alt}
-                  className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105"
+                  alt={image.title}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   width={600}
                   height={400}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                  <p className="text-white font-medium">{image.alt}</p>
+                  <p className="text-white font-medium">{image.title}</p>
                 </div>
               </div>
             ))}
