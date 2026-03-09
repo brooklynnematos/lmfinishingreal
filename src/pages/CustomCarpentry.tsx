@@ -181,7 +181,7 @@ const CustomCarpentry = () => {
             </div>
             <div className="relative">
               <img
-                src='/images/portfolio/carpentry/carpentry-1.webp'
+                src="https://images.unsplash.com/photo-1600566752547-c06598f4a0d5"
                 alt="Custom built-in entertainment center"
                 className="rounded-lg shadow-xl"
               />
@@ -263,27 +263,6 @@ const CustomCarpentry = () => {
                 </ul>
               </div>
             </div>
-            <div className="border-t border-amber-200 pt-6">
-              <h4 className="font-semibold text-amber-900 mb-3 text-center">Every Project Includes</h4>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <ul className="space-y-2">
-                  <li className="flex items-center text-amber-800">
-                    <CheckCircle className="h-5 w-5 text-amber-600 mr-2" />
-                    Premium materials and hardware
-                  </li>
-                  <li className="flex items-center text-amber-800">
-                    <CheckCircle className="h-5 w-5 text-amber-600 mr-2" />
-                    Expert installation and finishing
-                  </li>
-                </ul>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-amber-800">
-                    <CheckCircle className="h-5 w-5 text-amber-600 mr-2" />
-                    Complete cleanup and debris removal
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div className="text-center">
             <p className="text-lg text-gray-700 mb-6">
@@ -321,7 +300,7 @@ const CustomCarpentry = () => {
                 <ImageOptimizer
                   src={image.url}
                   alt={image.title}
-                  className="w-full h-80 object-contain bg-gray-100"
+                  className="w-full h-80 object-cover"
                   width={600}
                   height={400}
                 />
