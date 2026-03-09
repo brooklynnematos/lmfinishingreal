@@ -71,8 +71,14 @@ const ExteriorServices = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-emerald-900 to-emerald-700">
-        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url('${serviceData?.imageUrl}')` }}></div>
+      <section className="relative py-24 bg-gradient-to-br from-emerald-900 to-emerald-700 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src={serviceData?.imageUrl}
+            alt=""
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -118,7 +124,7 @@ const ExteriorServices = () => {
               <ImageOptimizer
                 src={serviceData?.imageUrl || ''}
                 alt="Custom deck and outdoor living space"
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl object-cover w-full h-[400px]"
                 width={800}
                 height={600}
                 priority

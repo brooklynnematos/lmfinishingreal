@@ -71,8 +71,14 @@ const HomeRenovations = () => {
       />
 
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-green-900 to-green-700">
-        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: `url('${serviceData?.imageUrl}')` }}></div>
+      <section className="relative py-24 bg-gradient-to-br from-green-900 to-green-700 overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img
+            src={serviceData?.imageUrl}
+            alt=""
+            className="w-full h-full object-cover object-center"
+          />
+        </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -118,7 +124,7 @@ const HomeRenovations = () => {
               <ImageOptimizer
                 src={serviceData?.imageUrl || ''}
                 alt="Beautiful home renovation kitchen"
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl object-cover w-full h-[400px]"
                 width={800}
                 height={600}
                 priority
@@ -132,52 +138,52 @@ const HomeRenovations = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose Our Renovation Team</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Comprehensive renovation services with the expertise and systems to deliver exceptional results
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Why Choose Us for Your Home Renovation
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Professional renovation services backed by years of experience in custom home construction
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white p-8 rounded-lg shadow-lg text-center"
-              >
-                <div className="flex justify-center mb-4">{benefit.icon}</div>
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md">
+                <div className="mb-4">{benefit.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                <p className="text-gray-700">{benefit.description}</p>
-              </motion.div>
+                <p className="text-gray-600">{benefit.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* Renovation Types Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Complete Home Renovation Services</h2>
-              <p className="text-lg text-gray-700 mb-8">
-                Whether you're updating a single room or transforming your entire home, our renovation team has the experience and systems to deliver outstanding results.
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+                Complete Home Renovation Services
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                From single-room updates to whole house renovations, we handle every aspect of your project with expertise and professionalism.
               </p>
               <ul className="space-y-4">
                 {renovationTypes.map((type, index) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-green-600 mr-3 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-6 w-6 text-green-600 mr-3 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{type}</span>
                   </li>
                 ))}
               </ul>
             </div>
-            <div className="relative">
-              <img
-                src="https://images.unsplash.com/photo-1552321554-5fefe8c9ef14"
-                alt="Luxury bathroom renovation"
-                className="rounded-lg shadow-xl"
+            <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl">
+              <ImageOptimizer
+                src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d"
+                alt="Modern kitchen renovation"
+                className="w-full h-full object-cover"
+                width={800}
+                height={1000}
               />
             </div>
           </div>
@@ -188,160 +194,89 @@ const HomeRenovations = () => {
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Renovation Process</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              A systematic approach that ensures your renovation stays on schedule and within budget
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Our Renovation Process
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              A proven, systematic approach that ensures quality results and client satisfaction
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white p-6 rounded-lg shadow-lg text-center"
-              >
-                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 mx-auto">
+              <div key={index} className="bg-white p-8 rounded-lg shadow-md relative">
+                <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center text-xl font-bold mb-6">
                   {step.step}
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-3">{step.title}</h3>
-                <p className="text-gray-700">{step.description}</p>
-              </motion.div>
+                <p className="text-gray-600">{step.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Get Quote Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Request Your Custom Renovation Quote</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
-              Every renovation project is unique. Pricing varies based on the scope of work, materials, finishes, and your specific requirements.
-              Contact us for a detailed, personalized estimate for your home renovation.
-            </p>
-          </div>
-          <div className="bg-green-50 p-8 rounded-lg mb-8">
-            <h3 className="text-xl font-semibold text-green-900 mb-6 text-center">What's Included in Our Renovations</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-              <ul className="space-y-2">
-                <li className="flex items-center text-green-800">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
-                  Detailed project planning and design
-                </li>
-                <li className="flex items-center text-green-800">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
-                  All permits and inspections
-                </li>
-                <li className="flex items-center text-green-800">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
-                  Quality materials and finishes
-                </li>
-              </ul>
-              <ul className="space-y-2">
-                <li className="flex items-center text-green-800">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
-                  Expert installation and craftsmanship
-                </li>
-                <li className="flex items-center text-green-800">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
-                  Complete cleanup and debris removal
-                </li>
-                <li className="flex items-center text-green-800">
-                  <CheckCircle className="h-5 w-5 text-green-600 mr-2" />
-                  1-year warranty on workmanship
-                </li>
-              </ul>
-            </div>
-            <div className="border-t border-green-200 pt-6">
-              <h4 className="font-semibold text-green-900 mb-3 text-center">Value & Investment</h4>
-              <p className="text-green-800 text-center">
-                Quality renovations add significant value to your home. Kitchen and bathroom remodels consistently provide strong returns on investment,
-                while comprehensive whole-house renovations can transform both your living experience and property value.
-              </p>
-            </div>
-          </div>
-          <div className="text-center">
-            <Link
-              to="/contact"
-              className="bg-green-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-green-700 transition-colors inline-flex items-center"
-            >
-              Get Your Free Estimate
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Photo Gallery Section */}
-      <section className="py-20">
+      {/* Gallery Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Home Renovation Work</h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Browse through our completed renovation projects showcasing quality craftsmanship and attention to detail
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Recent Renovation Projects
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Browse our portfolio of completed renovation projects
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {portfolioImages['Home Renovations'].slice(0, 6).map((image, index) => (
-              <motion.div
-                key={image.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white rounded-lg shadow-lg overflow-hidden"
-              >
+            {portfolioImages.slice(0, 6).map((image, index) => (
+              <div key={index} className="relative h-64 rounded-lg overflow-hidden shadow-lg group">
                 <ImageOptimizer
                   src={image.url}
-                  alt={image.title}
-                  className="w-full h-80 object-cover"
+                  alt={image.alt}
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   width={600}
                   height={400}
                 />
-                <div className="p-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{image.title}</h3>
-                  <p className="text-sm text-gray-600">{image.description}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                  <p className="text-white font-medium">{image.alt}</p>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
           <div className="text-center">
             <Link
-              to="/portfolio?category=Home Renovations"
+              to="/portfolio"
               className="inline-flex items-center bg-green-600 text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-green-700 transition-colors"
             >
-              View All Renovation Projects
-              <ImageIcon className="ml-2 h-5 w-5" />
+              View Full Portfolio
+              <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-green-600">
+      <section className="py-20 bg-green-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Home?
           </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your renovation vision and get your detailed estimate
+            Get a free consultation and estimate for your renovation project. We'll help bring your vision to life.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               to="/contact"
-              className="bg-white text-green-600 px-8 py-3 rounded-md text-lg font-medium hover:bg-green-50 transition-colors inline-flex items-center justify-center"
+              className="bg-white text-green-900 px-8 py-4 rounded-md text-lg font-medium hover:bg-green-50 transition-colors inline-flex items-center justify-center"
             >
               Get Free Estimate
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <a
               href="tel:+13855008437"
-              className="border-2 border-white text-white px-8 py-3 rounded-md text-lg font-medium hover:bg-white hover:text-green-600 transition-colors inline-flex items-center justify-center"
+              className="border-2 border-white text-white px-8 py-4 rounded-md text-lg font-medium hover:bg-white hover:text-green-900 transition-colors inline-flex items-center justify-center"
             >
               <Phone className="mr-2 h-5 w-5" />
-              Call (385) 500-8437
+              (385) 500-8437
             </a>
           </div>
         </div>
