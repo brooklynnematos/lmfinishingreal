@@ -179,7 +179,7 @@ const HomeRenovations = () => {
             </div>
             <div className="relative h-[600px] rounded-lg overflow-hidden shadow-xl">
               <ImageOptimizer
-                src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d"
+                src='/images/portfolio/renovations/renovations-2.webp'
                 alt="Modern kitchen renovation"
                 className="w-full h-full object-cover"
                 width={800}
