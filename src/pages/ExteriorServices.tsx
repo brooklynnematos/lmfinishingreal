@@ -325,43 +325,6 @@ const ExteriorServices = () => {
               </div>
             </div>
 
-            <div className="border-t border-emerald-200 pt-6">
-              <h4 className="mb-3 text-center font-semibold text-emerald-900">
-                Every Project Includes
-              </h4>
-
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                <ul className="space-y-2">
-                  <li className="flex items-center text-emerald-800">
-                    <CheckCircle className="mr-2 h-5 w-5 text-emerald-600" />
-                    Professional design and planning
-                  </li>
-                  <li className="flex items-center text-emerald-800">
-                    <CheckCircle className="mr-2 h-5 w-5 text-emerald-600" />
-                    All permits and inspections
-                  </li>
-                  <li className="flex items-center text-emerald-800">
-                    <CheckCircle className="mr-2 h-5 w-5 text-emerald-600" />
-                    Quality materials and hardware
-                  </li>
-                </ul>
-
-                <ul className="space-y-2">
-                  <li className="flex items-center text-emerald-800">
-                    <CheckCircle className="mr-2 h-5 w-5 text-emerald-600" />
-                    Expert construction and finishing
-                  </li>
-                  <li className="flex items-center text-emerald-800">
-                    <CheckCircle className="mr-2 h-5 w-5 text-emerald-600" />
-                    Complete cleanup and debris removal
-                  </li>
-                  <li className="flex items-center text-emerald-800">
-                    <CheckCircle className="mr-2 h-5 w-5 text-emerald-600" />
-                    1-year warranty on workmanship
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
 
           <div className="text-center">

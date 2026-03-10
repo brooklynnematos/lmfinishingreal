@@ -149,20 +149,20 @@ const Services = () => {
 
                     <div className="flex flex-col gap-3">
                       <Link
-                        to={getServicePageUrl(service.title)}
-                        aria-label={`Learn more about ${service.title}`}
+                        to="/contact"
+                        aria-label={`Get started with ${service.title}`}
                         className="inline-flex items-center justify-center bg-[#213555] text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-[#182943] transition-colors"
                       >
-                        Learn More
-                        <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
+                        Get Free Estimate
                       </Link>
                       <div className="flex flex-col sm:flex-row gap-3">
                         <Link
-                          to="/contact"
-                          aria-label={`Get started with ${service.title}`}
+                          to={getServicePageUrl(service.title)}
+                          aria-label={`Learn more about ${service.title}`}
                           className="inline-flex items-center justify-center border-2 border-[#213555] text-[#213555] px-6 py-3 rounded-md text-lg font-medium hover:bg-[#213555] hover:text-white transition-colors"
                         >
-                          Get Free Estimate
+                          Learn More
+                          <ArrowRight className="ml-2 h-5 w-5" aria-hidden="true" />
                         </Link>
                         <button
                           onClick={() => handlePortfolioClick(getCategoryFromTitle(service.title))}
@@ -280,58 +280,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-20 bg-gray-50" aria-labelledby="faq-heading">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 id="faq-heading" className="text-3xl font-bold text-[#213555] mb-4">
-              Common Questions
-            </h2>
-            <p className="text-lg text-gray-700">
-              Frequently asked questions about our construction services.
-            </p>
-          </div>
-          <div className="space-y-8">
-            {[
-              {
-                question: "What types of projects do you specialize in?",
-                answer: "We specialize in basement finishing, custom carpentry, home renovations, and exterior services. Our expertise was developed through years of custom home construction experience."
-              },
-              {
-                question: "How much does basement finishing typically cost?",
-                answer: "Basement finishing costs vary significantly based on size, features, finishes, and specific project requirements. We provide free detailed estimates tailored to your specific basement project. Contact us to discuss your vision and receive an accurate quote."
-              },
-              {
-                question: "Do you work with general contractors?",
-                answer: "Absolutely! We partner with general contractors and specialize in finish carpentry, custom trim work, and detailed millwork for residential projects."
-              },
-              {
-                question: "What sets your basement finishing apart?",
-                answer: "Our basement finishing expertise was developed through years of custom home construction. We understand proper moisture control techniques, local building codes, and insulation methods for lasting results."
-              },
-              {
-                question: "Do you handle permits?",
-                answer: "Yes! We handle all permit applications and inspections, ensuring compliance with all local building codes and regulations."
-              },
-              {
-                question: "What is your service area?",
-                answer: "We proudly serve the local area. Contact us to confirm we service your specific location and to schedule your free consultation."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-6 rounded-lg shadow-lg"
-              >
-                <h3 className="text-xl font-semibold text-[#213555] mb-3">{faq.question}</h3>
-                <p className="text-gray-700 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

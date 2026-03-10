@@ -289,68 +289,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* FAQ Section - Simplified */}
-      <section className="py-20 bg-gray-50" aria-labelledby="faq-heading">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-lg text-gray-600">
-              Quick answers to common questions about our services
-            </p>
-          </div>
-          <div className="space-y-4">
-            {[
-              {
-                question: "How much does custom trim cost?",
-                answer: "Custom trim costs typically range from $8-35 per linear foot, depending on the complexity of the design, wood species, and installation requirements."
-              },
-              {
-                question: "What to expect when remodeling your basement?",
-                answer: "Basement remodeling typically takes 4-8 weeks and includes moisture assessment, framing, electrical/plumbing rough-in, insulation, drywall, flooring, and finish work."
-              },
-              {
-                question: "Why hire a finish carpenter instead of a handyman?",
-                answer: "Finish carpenters specialize in detailed woodwork, custom trim installation, and precision joinery that requires years of training and expertise."
-              },
-              {
-                question: "What areas do you serve?",
-                answer: "We serve multiple markets including Washington DC, Maryland, Virginia, and Utah. Contact us to confirm service availability in your area."
-              },
-              {
-                question: "Do you handle permits for construction projects?",
-                answer: "Yes! We handle all permit applications and inspections required in your area, ensuring your project meets all local building codes."
-              },
-              {
-                question: "Do you offer free estimates?",
-                answer: "Yes! We provide free, detailed estimates for all custom carpentry and remodeling projects with no-obligation consultations."
-              }
-            ].map((faq, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white border-l-4 border-[#2563EB] p-6 rounded-r-lg shadow-sm hover:shadow-md transition-shadow"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </div>
-          <div className="text-center mt-10">
-            <Link
-              to="/faq"
-              className="inline-flex items-center text-[#2563EB] font-medium hover:text-blue-700 transition-colors"
-            >
-              View All FAQs
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Google Reviews Section */}
       <GoogleReviews />
 
