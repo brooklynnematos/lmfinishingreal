@@ -5,7 +5,7 @@ import SEOHead from '../components/SEOHead';
 import { MapPin } from 'lucide-react';
 
 const areaImages: Record<string, string> = {
-  Utah: '/Utah.png',
+  Utah: '/images/Utah.png',
   'DMV Area':
     'https://images.unsplash.com/photo-1617581629397-a72507c3de9e?auto=format&fit=crop&w=1200&q=80'
 };
