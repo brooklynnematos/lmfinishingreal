@@ -292,15 +292,15 @@ const Home = () => {
       {/* FAQ Section - Simplified */}
       <section className="py-20 bg-gray-50" aria-labelledby="faq-heading">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 id="faq-heading" className="text-3xl font-bold text-gray-900 mb-4">
-              Frequently Asked Questions About Custom Carpentry & Remodeling
+              Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-700">
-              Get answers to the most common questions homeowners ask about finish carpentry, basement finishing, and home renovations.
+            <p className="text-lg text-gray-600">
+              Quick answers to common questions about our services
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-4">
             {[
               {
                 question: "How much does custom trim cost?",
@@ -332,12 +332,21 @@ const Home = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white p-5 rounded-lg shadow-lg"
+                className="bg-white border-l-4 border-[#2563EB] p-6 rounded-r-lg shadow-sm hover:shadow-md transition-shadow"
               >
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{faq.question}</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">{faq.answer}</p>
+                <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
               </motion.div>
             ))}
+          </div>
+          <div className="text-center mt-10">
+            <Link
+              to="/faq"
+              className="inline-flex items-center text-[#2563EB] font-medium hover:text-blue-700 transition-colors"
+            >
+              View All FAQs
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </div>
         </div>
       </section>
