@@ -174,7 +174,7 @@ const About = () => {
               {/* Experience & Projects Stats */}
               <div className="grid grid-cols-2 gap-6 pt-6">
                 <div className="bg-gray-50 p-6 rounded-lg text-center" role="status">
-                  <div className="text-2xl font-bold text-[#213555] mb-2" aria-label="Years of Finish Carpentry Experience">8+</div>
+                  <div className="text-2xl font-bold text-[#213555] mb-2" aria-label="Years of Finish Carpentry Experience">10+</div>
                   <div className="text-gray-700">Years Experience</div>
                 </div>
                 <div className="bg-gray-50 p-6 rounded-lg text-center" role="status">
